@@ -30,11 +30,11 @@ export const Navbar: React.FC<NavbarProps> = ({
             onClick={() => navigate('/dashboard')}
             className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="h-9 px-2.5 py-1 bg-white rounded-lg flex items-center justify-center shadow-xs border border-white/20 shrink-0 group-hover:brightness-105 transition-all">
+            <div className="flex items-center shrink-0 group-hover:opacity-90 transition-opacity">
               <img
                 src={LAISON_LOGO_DATA_URI}
                 alt="Laison Logo"
-                className="h-6 w-auto object-contain"
+                className="h-7 w-auto object-contain drop-shadow-sm"
               />
             </div>
             <div>

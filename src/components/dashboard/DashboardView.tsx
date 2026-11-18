@@ -72,11 +72,11 @@ export const DashboardView: React.FC = () => {
       {/* Welcome Banner */}
       <div className="bg-gradient-to-r from-[#0c2340] via-[#11325d] to-[#0c2340] rounded-2xl p-6 text-white shadow-sm border border-blue-900/50 flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex flex-col sm:flex-row sm:items-center gap-4">
-          <div className="h-14 px-3.5 py-2 bg-white rounded-xl shadow-xs border border-white/20 flex items-center justify-center shrink-0 w-fit">
+          <div className="flex items-center shrink-0 w-fit">
             <img
               src={LAISON_LOGO_DATA_URI}
               alt="Laison Official Logo"
-              className="h-9 w-auto object-contain"
+              className="h-10 md:h-12 w-auto object-contain drop-shadow-sm"
             />
           </div>
           <div>
