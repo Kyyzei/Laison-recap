@@ -289,7 +289,7 @@ export const ImportExportView: React.FC = () => {
                   type="text"
                   value={customFilename}
                   onChange={(e) => setCustomFilename(e.target.value)}
-                  placeholder="AquaLink_Device_Recap_Terbaru"
+                  placeholder="Laison_Device_Recap_Terbaru"
                   className="w-full text-xs px-3.5 py-2.5 rounded-xl border border-slate-200 bg-slate-50 focus:bg-white focus:outline-none focus:ring-2 focus:ring-blue-600"
                 />
                 <span className="ml-2 text-xs font-mono font-bold text-slate-400">

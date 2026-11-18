@@ -36,7 +36,7 @@ export class ExcelExportService {
   static exportDevices(devices: Device[], options?: ExportOptions): void {
     const format = options?.format || 'xlsx';
     const timestamp = new Date().toISOString().slice(0, 10);
-    const defaultFilename = `AquaLink_Device_Recap_${timestamp}.${format}`;
+    const defaultFilename = `Laison_Device_Recap_${timestamp}.${format}`;
     const filename = options?.filename ? `${options.filename}.${format}` : defaultFilename;
     const sheetName = options?.sheetName || 'Data Perangkat';
 
@@ -120,7 +120,7 @@ export class ExcelExportService {
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, 'Template Device');
 
-    const filename = `AquaLink_Template_Device.${format}`;
+    const filename = `Laison_Template_Device.${format}`;
     if (format === 'csv') {
       XLSX.writeFile(workbook, filename, { bookType: 'csv' });
     } else {

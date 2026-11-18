@@ -41,7 +41,7 @@ export const WarehouseMovementModal: React.FC<WarehouseMovementModalProps> = ({
         setStatusPerangkat(device.status === 'Stok' ? 'Terpasang' : device.status);
         setCatatan('');
       } else {
-        setLokasi('Gudang Utama AquaLink');
+        setLokasi('Gudang Utama Laison');
         setPenerima('');
         setKeperluan('Pengembalian ke Gudang');
         setStatusPerangkat('Stok');
@@ -97,7 +97,7 @@ export const WarehouseMovementModal: React.FC<WarehouseMovementModalProps> = ({
       updateDevice(device.id, {
         tanggalKembali: tanggal,
         posisiGudang: 'DI_GUDANG',
-        lokasi: lokasi.trim() || 'Gudang Utama AquaLink',
+        lokasi: lokasi.trim() || 'Gudang Utama Laison',
         status: statusPerangkat,
         riwayatGudang: [newMovement, ...existingHistory],
       });

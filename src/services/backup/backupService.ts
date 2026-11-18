@@ -6,7 +6,7 @@ export class BackupService {
   static exportBackup(): void {
     const devices = LocalStorageService.getDevices();
     const backup: BackupData = {
-      appName: 'AquaLink Device Recap',
+      appName: 'Laison Recap',
       version: '2.0.0',
       exportedAt: new Date().toISOString(),
       deviceCount: devices.length,
@@ -18,7 +18,7 @@ export class BackupService {
     const dateStr = new Date().toISOString().slice(0, 10);
     const a = document.createElement('a');
     a.href = url;
-    a.download = `AquaLink_Backup_${dateStr}.json`;
+    a.download = `Laison_Backup_${dateStr}.json`;
     document.body.appendChild(a);
     a.click();
     document.body.removeChild(a);

@@ -66,10 +66,10 @@ export const DashboardView: React.FC = () => {
             </span>
           </div>
           <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white">
-            AquaLink Device Recap
+            Laison Recap
           </h1>
           <p className="text-xs md:text-sm text-slate-300 mt-1 max-w-xl">
-            Sistem pencatatan dan monitoring perangkat IoT AquaLink (LoRaWAN & NB-IoT). Menggantikan pencatatan Excel manual.
+            Sistem pencatatan dan monitoring perangkat IoT Laison (LoRaWAN & NB-IoT). Menggantikan pencatatan Excel manual.
           </p>
         </div>
 

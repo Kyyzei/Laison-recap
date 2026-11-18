@@ -210,7 +210,7 @@ export const DUMMY_DEVICES: Device[] = [
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
     "status": "Stok",
-    "lokasi": "Gudang Utama AquaLink",
+    "lokasi": "Gudang Utama Laison",
     "catatan": "Siap pasang",
     "posisiGudang": "DI_GUDANG",
     "tanggalKeluar": "2026-10-15",

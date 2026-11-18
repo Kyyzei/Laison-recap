@@ -310,7 +310,7 @@ export const SettingsView: React.FC = () => {
                 <RotateCcw className="w-4 h-4 text-sky-600" /> Muat Ulang Data Dummy
               </h4>
               <p className="text-[11px] text-slate-500">
-                Kembalikan 12 unit data perangkat contoh AquaLink lengkap dengan status dan telemetrinya.
+                Kembalikan 107 unit data perangkat Laison lengkap dengan status dan telemetrinya.
               </p>
             </div>
             <button
@@ -345,7 +345,7 @@ export const SettingsView: React.FC = () => {
       <ConfirmModal
         isOpen={isResetDummyModalOpen}
         title="Muat Ulang Data Asli?"
-        message="Tindakan ini akan memulihkan 107 data perangkat dari file Excel asli (Test Lab AquaLink). Perubahan manual yang belum dibackup akan tertimpa."
+        message="Tindakan ini akan memulihkan 107 data perangkat dari file Excel asli (Laison). Perubahan manual yang belum dibackup akan tertimpa."
         confirmLabel="Ya, Muat Ulang"
         cancelLabel="Batal"
         variant="warning"

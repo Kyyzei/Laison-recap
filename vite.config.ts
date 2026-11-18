@@ -19,7 +19,8 @@ export default defineConfig({
       name: 'post-build-clean-and-sync',
       closeBundle() {
         const distFile = path.resolve('dist/index.html');
-        const offlineFile = path.resolve('AquaLink_Device_Recap_Offline.html');
+        const laisonFile = path.resolve('Laison_Device_Recap_Offline.html');
+        const legacyFile = path.resolve('AquaLink_Device_Recap_Offline.html');
         if (fs.existsSync(distFile)) {
           let html = fs.readFileSync(distFile, 'utf8');
           // 1. Clean invalid HTML attributes injected by vite-plugin-singlefile
@@ -39,7 +40,8 @@ export default defineConfig({
           html = html.replace(/-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;/gi, 'line-clamp:1;-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;');
           html = html.replace(/-webkit-user-select:none;user-select:none/gi, '-webkit-user-select:none;-moz-user-select:none;user-select:none');
 
-          fs.writeFileSync(offlineFile, html, 'utf8');
+          fs.writeFileSync(laisonFile, html, 'utf8');
+          fs.writeFileSync(legacyFile, html, 'utf8');
 
           // Hapus folder temporary dist agar struktur folder tetap bersih dan rapi
           try {

@@ -35,10 +35,10 @@ export const Navbar: React.FC<NavbarProps> = ({
             <div>
               <div className="flex items-center gap-2">
                 <span className="font-bold text-base tracking-tight text-white">
-                  Aqua<span className="text-sky-400">Link</span>
+                  Laison <span className="text-sky-400">Recap</span>
                 </span>
                 <span className="text-[10px] uppercase font-bold tracking-wider px-1.5 py-0.2 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30">
-                  Recap
+                  IoT
                 </span>
               </div>
               <p className="text-[11px] text-slate-300 hidden sm:block leading-none mt-0.5">

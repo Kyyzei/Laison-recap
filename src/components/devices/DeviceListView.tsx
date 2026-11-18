@@ -43,7 +43,7 @@ export const DeviceListView: React.FC = () => {
 
   const handleExportFiltered = () => {
     ExcelExportService.exportDevices(filteredDevices, {
-      filename: `AquaLink_Device_Export_${filteredDevices.length}units`,
+      filename: `Laison_Device_Export_${filteredDevices.length}units`,
     });
   };
 
@@ -55,7 +55,7 @@ export const DeviceListView: React.FC = () => {
           <div className="flex items-center gap-2">
             <Cpu className="w-5 h-5 text-blue-900" />
             <h1 className="text-base md:text-lg font-bold text-slate-900">
-              Data Perangkat AquaLink
+              Data Perangkat Laison
             </h1>
           </div>
           <p className="text-xs text-slate-500 mt-0.5">
@@ -176,7 +176,7 @@ export const DeviceListView: React.FC = () => {
         onClose={() => setIsResetModalOpen(false)}
         onConfirm={() => resetToDummy()}
         title="Muat Ulang Data Asli?"
-        message="Ini akan memulihkan 107 data perangkat dari file Excel asli (Test Lab AquaLink). Perubahan manual yang belum dibackup mungkin tertimpa."
+        message="Ini akan memulihkan 107 data perangkat dari file Excel asli (Laison). Perubahan manual yang belum dibackup mungkin tertimpa."
         confirmLabel="Ya, Muat Ulang"
         variant="warning"
       />

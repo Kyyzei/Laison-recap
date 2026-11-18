@@ -1,6 +1,6 @@
-# AquaLink Device Recap - Sistem Inventaris IoT
+# Laison Recap - Sistem Inventaris IoT
 
-Aplikasi web modern untuk merekap dan mengelola data perangkat **AquaLink** (LoRaWAN & NB-IoT), menggantikan pencatatan manual spreadsheet Excel.
+Aplikasi web modern untuk merekap dan mengelola data perangkat **Laison** (LoRaWAN & NB-IoT), menggantikan pencatatan manual spreadsheet Excel.
 
 ---
 
@@ -13,7 +13,7 @@ Anda tidak perlu membuka terminal ataupun mengetik perintah yang rumit:
 - Aplikasi akan langsung otomatis terbuka di browser Chrome / Microsoft Edge Anda.
 
 ### Opsi 2 (Langsung Buka File HTML):
-- **Double-click** file **`AquaLink_Device_Recap_Offline.html`**.
+- **Double-click** file **`Laison_Device_Recap_Offline.html`** (atau `AquaLink_Device_Recap_Offline.html`).
 - File ini adalah file mandiri (*standalone single-file*) yang sudah menyertakan seluruh sistem, tampilan, dan 107 data perangkat dari Excel Anda tanpa butuh koneksi internet.
 
 ### Opsi 3 (Mode Development Server):
