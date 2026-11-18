@@ -7,11 +7,11 @@ import {
   Database,
   Settings,
   X,
-  Radio,
   Layers,
 } from 'lucide-react';
 import { useDevices } from '../../context/DeviceContext';
 import { DeviceModel } from '../../types/device';
+import { LAISON_LOGO_DATA_URI } from '../../assets/logo';
 
 interface SidebarProps {
   isMobileOpen: boolean;
@@ -44,9 +44,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
     <div className="flex flex-col h-full bg-white border-r border-slate-200 w-64 select-none">
       {/* Mobile Header */}
       <div className="flex items-center justify-between p-4 border-b border-slate-100 lg:hidden">
-        <div className="flex items-center gap-2">
-          <Radio className="w-5 h-5 text-sky-600" />
-          <span className="font-semibold text-slate-800">Menu</span>
+        <div className="h-7 px-2 py-0.5 bg-slate-100 rounded flex items-center">
+          <img src={LAISON_LOGO_DATA_URI} alt="Laison" className="h-5 w-auto object-contain" />
         </div>
         <button onClick={onCloseMobile} className="p-1 rounded-md text-slate-400 hover:bg-slate-100">
           <X className="w-5 h-5" />
@@ -238,7 +237,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
       </div>
 
       {/* Quick Summary Pill at bottom */}
-      <div className="p-3 m-3 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-1.5">
+      <div className="p-3 m-3 rounded-lg bg-slate-50 border border-slate-200 text-xs text-slate-600 space-y-2">
+        <div className="flex items-center justify-center pb-2 border-b border-slate-200/80">
+          <img src={LAISON_LOGO_DATA_URI} alt="Laison" className="h-6 w-auto object-contain opacity-90" />
+        </div>
         <div className="flex justify-between">
           <span className="text-slate-500">LoRaWAN:</span>
           <span className="font-semibold text-slate-800">{stats.lopiwan} unit</span>

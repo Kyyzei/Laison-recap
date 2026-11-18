@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Waves, Search, Plus, Menu, HardDrive } from 'lucide-react';
+import { Search, Plus, Menu, HardDrive } from 'lucide-react';
 import { useDevices } from '../../context/DeviceContext';
+import { LAISON_LOGO_DATA_URI } from '../../assets/logo';
 
 interface NavbarProps {
   onToggleMobileSidebar: () => void;
@@ -15,8 +16,8 @@ export const Navbar: React.FC<NavbarProps> = ({
 
   return (
     <header className="sticky top-0 z-30 bg-[#0c2340] border-b border-blue-900/60 text-white shadow-sm">
-      <div className="px-4 lg:px-6 py-2.5 flex items-center justify-between gap-4">
-        {/* Left: Brand */}
+      <div className="px-4 lg:px-6 py-2 flex items-center justify-between gap-4">
+        {/* Left: Brand with Official Laison Logo */}
         <div className="flex items-center gap-3">
           <button
             onClick={onToggleMobileSidebar}
@@ -27,10 +28,14 @@ export const Navbar: React.FC<NavbarProps> = ({
 
           <div
             onClick={() => navigate('/dashboard')}
-            className="flex items-center gap-2.5 cursor-pointer"
+            className="flex items-center gap-3 cursor-pointer group"
           >
-            <div className="w-8 h-8 rounded-lg bg-sky-500 flex items-center justify-center text-blue-950 font-bold shadow-xs">
-              <Waves className="w-5 h-5 text-white" />
+            <div className="h-9 px-2.5 py-1 bg-white rounded-lg flex items-center justify-center shadow-xs border border-white/20 shrink-0 group-hover:brightness-105 transition-all">
+              <img
+                src={LAISON_LOGO_DATA_URI}
+                alt="Laison Logo"
+                className="h-6 w-auto object-contain"
+              />
             </div>
             <div>
               <div className="flex items-center gap-2">
@@ -42,7 +47,7 @@ export const Navbar: React.FC<NavbarProps> = ({
                 </span>
               </div>
               <p className="text-[11px] text-slate-300 hidden sm:block leading-none mt-0.5">
-                Data Perangkat IoT
+                Sistem Rekap Perangkat
               </p>
             </div>
           </div>

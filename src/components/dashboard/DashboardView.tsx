@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDevices } from '../../context/DeviceContext';
 import { DeviceStatus, DeviceModel, getDeviceWarehouseStatus } from '../../types/device';
 import { StatusBadge } from '../common/StatusBadge';
+import { LAISON_LOGO_DATA_URI } from '../../assets/logo';
 import {
   Cpu,
   CheckCircle2,
@@ -70,18 +71,27 @@ export const DashboardView: React.FC = () => {
     <div className="space-y-6">
       {/* Welcome Banner */}
       <div className="bg-gradient-to-r from-[#0c2340] via-[#11325d] to-[#0c2340] rounded-2xl p-6 text-white shadow-sm border border-blue-900/50 flex flex-col md:flex-row md:items-center justify-between gap-4">
-        <div>
-          <div className="flex items-center gap-2 mb-1">
-            <span className="text-xs uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30">
-              Sistem Rekap Device
-            </span>
+        <div className="flex flex-col sm:flex-row sm:items-center gap-4">
+          <div className="h-14 px-3.5 py-2 bg-white rounded-xl shadow-xs border border-white/20 flex items-center justify-center shrink-0 w-fit">
+            <img
+              src={LAISON_LOGO_DATA_URI}
+              alt="Laison Official Logo"
+              className="h-9 w-auto object-contain"
+            />
           </div>
-          <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white">
-            Laison Recap
-          </h1>
-          <p className="text-xs md:text-sm text-slate-300 mt-1 max-w-xl">
-            Sistem pencatatan dan monitoring perangkat IoT Laison (LoRaWAN & NB-IoT). Menggantikan pencatatan Excel manual.
-          </p>
+          <div>
+            <div className="flex items-center gap-2 mb-1">
+              <span className="text-xs uppercase font-bold tracking-wider px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                Sistem Rekap Device
+              </span>
+            </div>
+            <h1 className="text-xl md:text-2xl font-bold tracking-tight text-white">
+              Laison Recap
+            </h1>
+            <p className="text-xs md:text-sm text-slate-300 mt-1 max-w-xl">
+              Sistem pencatatan dan monitoring perangkat IoT Laison (AquaLink, Ultrasonic, MIU). Menggantikan pencatatan Excel manual.
+            </p>
+          </div>
         </div>
 
         <div className="flex items-center gap-2.5 shrink-0">
