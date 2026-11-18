@@ -26,21 +26,26 @@ export class LocalStorageService {
         return DUMMY_DEVICES;
       }
 
-      // Pastikan seluruh device di lokasi P. Kelapa Dua terisi tanggal keluar 14 Juli 2026 dan PIC Enviro
+      // Pastikan seluruh device memiliki model dan device P. Kelapa Dua terisi tanggal keluar
       let needsSave = false;
       const updated = (parsed as Device[]).map((d) => {
-        if ((d.lokasi || '').toLowerCase().includes('kelapa')) {
-          if (d.tanggalKeluar !== '2026-07-14' || d.penerimaKeluar !== 'Enviro') {
+        let dev = d;
+        if (!dev.model) {
+          needsSave = true;
+          dev = { ...dev, model: 'AquaLink' };
+        }
+        if ((dev.lokasi || '').toLowerCase().includes('kelapa')) {
+          if (dev.tanggalKeluar !== '2026-07-14' || dev.penerimaKeluar !== 'Enviro') {
             needsSave = true;
-            return {
-              ...d,
+            dev = {
+              ...dev,
               tanggalKeluar: '2026-07-14',
               penerimaKeluar: 'Enviro',
-              posisiGudang: (d.tanggalKembali ? 'DI_GUDANG' : 'DI_LUAR') as WarehousePosition,
-              keperluanKeluar: d.keperluanKeluar || 'Instalasi Lapangan',
-              riwayatGudang: d.riwayatGudang && d.riwayatGudang.length > 0 ? d.riwayatGudang : [
+              posisiGudang: (dev.tanggalKembali ? 'DI_GUDANG' : 'DI_LUAR') as WarehousePosition,
+              keperluanKeluar: dev.keperluanKeluar || 'Instalasi Lapangan',
+              riwayatGudang: dev.riwayatGudang && dev.riwayatGudang.length > 0 ? dev.riwayatGudang : [
                 {
-                  id: 'mov-kd-' + d.seri,
+                  id: 'mov-kd-' + dev.seri,
                   tipe: 'KELUAR' as const,
                   tanggal: '2026-07-14',
                   lokasi: 'P. Kelapa Dua',
@@ -53,7 +58,7 @@ export class LocalStorageService {
             };
           }
         }
-        return d;
+        return dev;
       });
 
       if (needsSave || !localStorage.getItem(STORAGE_KEY)) {

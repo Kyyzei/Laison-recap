@@ -1,5 +1,5 @@
 import * as XLSX from 'xlsx';
-import { Device, DeviceStatus, ConnectionType } from '../../types/device';
+import { Device, DeviceStatus, ConnectionType, DeviceModel } from '../../types/device';
 import { ImportPreviewItem, ImportSummary } from '../../types/common';
 import { LocalStorageService } from '../storage/localStorageService';
 
@@ -7,6 +7,7 @@ export class ExcelImportService {
   private static normalizeKey(header: string): string {
     const clean = header.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
     if (['no', 'nomor'].includes(clean)) return 'no';
+    if (['model', 'modeldevice', 'kategori', 'kategoriperangkat', 'device'].includes(clean)) return 'model';
     if (['seri', 'serial', 'serialnumber', 'noseri'].includes(clean)) return 'seri';
     if (['koneksi', 'connection', 'tipe'].includes(clean)) return 'koneksi';
     if (['readaddress', 'readaddr', 'address'].includes(clean)) return 'readAddress';
@@ -83,6 +84,15 @@ export class ExcelImportService {
               }
             }
 
+            // Model normalization
+            const rawModel = String(mapped.model || '').toLowerCase();
+            let model: DeviceModel = 'AquaLink';
+            if (rawModel.includes('ultra')) {
+              model = 'Ultrasonic';
+            } else if (rawModel.includes('miu') || rawModel.includes('interface')) {
+              model = 'MIU';
+            }
+
             // Koneksi normalization
             const rawKoneksi = String(mapped.koneksi || '').toUpperCase();
             let koneksi: ConnectionType = 'LoRaWAN';
@@ -129,6 +139,7 @@ export class ExcelImportService {
             items.push({
               rowNumber,
               data: {
+                model,
                 seri,
                 koneksi,
                 readAddress: mapped.readAddress || '',
@@ -208,6 +219,7 @@ export class ExcelImportService {
       } else {
         const newDev: Device = {
           id: 'dev-' + Date.now() + '-' + Math.random().toString(36).substring(2, 6),
+          model: d.model || 'AquaLink',
           seri: d.seri,
           koneksi: d.koneksi || 'LoRaWAN',
           readAddress: d.readAddress || '',

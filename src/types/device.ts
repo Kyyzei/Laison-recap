@@ -15,6 +15,40 @@ export const DEVICE_STATUS_LIST: DeviceStatus[] = [
   'Dipinjamkan',
 ];
 
+export type DeviceModel = 'AquaLink' | 'Ultrasonic' | 'MIU';
+
+export interface DeviceModelInfo {
+  id: DeviceModel;
+  label: string;
+  shortLabel: string;
+  icon: string;
+  description: string;
+}
+
+export const DEVICE_MODELS: DeviceModelInfo[] = [
+  {
+    id: 'AquaLink',
+    label: 'AquaLink',
+    shortLabel: 'AquaLink',
+    icon: '💧',
+    description: 'Smart Water Meter & IoT Controller',
+  },
+  {
+    id: 'Ultrasonic',
+    label: 'Ultrasonic',
+    shortLabel: 'Ultrasonic',
+    icon: '🔊',
+    description: 'Ultrasonic Flow Meter & Sensor',
+  },
+  {
+    id: 'MIU',
+    label: 'Meter Interface Unit (MIU)',
+    shortLabel: 'MIU',
+    icon: '📟',
+    description: 'Pulse Reader & Interface Unit',
+  },
+];
+
 export type ConnectionType = 'LoRaWAN' | 'NB-IoT';
 
 export const CONNECTION_TYPES: ConnectionType[] = ['LoRaWAN', 'NB-IoT'];
@@ -34,6 +68,7 @@ export interface WarehouseMovement {
 
 export interface Device {
   id: string;              // Internal unique ID
+  model?: DeviceModel;     // Model/Kategori: AquaLink | Ultrasonic | MIU (default: AquaLink)
   seri: string;            // Serial number (unique, e.g. 6604290016)
   koneksi: ConnectionType; // LoRaWAN or NB-IoT
   readAddress: string;     // e.g. AF066604290016
@@ -61,6 +96,10 @@ export interface Device {
   updatedAt: string;
 }
 
+export function getDeviceModel(d: Device): DeviceModel {
+  return d.model || 'AquaLink';
+}
+
 export function getDeviceWarehouseStatus(d: Device): WarehousePosition {
   if (d.posisiGudang) return d.posisiGudang;
   if (d.tanggalKeluar && (!d.tanggalKembali || d.tanggalKeluar > d.tanggalKembali)) {
@@ -75,10 +114,12 @@ export interface DeviceFilters {
   koneksi: string;      // 'ALL' or 'LoRaWAN' or 'NB-IoT'
   lokasi: string;       // 'ALL' or specific location
   posisiGudang: string; // 'ALL' or 'DI_GUDANG' or 'DI_LUAR'
+  model: 'ALL' | DeviceModel; // 'ALL' or 'AquaLink' | 'Ultrasonic' | 'MIU'
 }
 
 export type SortField =
   | 'seri'
+  | 'model'
   | 'koneksi'
   | 'status'
   | 'lokasi'

@@ -17,7 +17,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280002",
@@ -35,7 +36,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280003",
@@ -53,7 +55,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280004",
@@ -71,7 +74,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280005",
@@ -89,7 +93,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280006",
@@ -107,7 +112,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280007",
@@ -125,7 +131,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280008",
@@ -143,7 +150,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280009",
@@ -177,7 +185,8 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280010",
@@ -195,7 +204,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "rusak",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280011",
@@ -240,7 +250,8 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280012",
@@ -258,7 +269,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280013",
@@ -276,7 +288,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280014",
@@ -294,7 +307,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280015",
@@ -312,7 +326,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280016",
@@ -330,7 +345,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280017",
@@ -348,7 +364,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280018",
@@ -366,7 +383,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280019",
@@ -384,7 +402,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6508280020",
@@ -402,7 +421,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6601230001",
@@ -436,7 +456,8 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6601230003",
@@ -470,7 +491,8 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6601230008",
@@ -488,7 +510,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6601230009",
@@ -506,7 +529,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6601230010",
@@ -524,7 +548,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Env. Semarang",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290003",
@@ -558,7 +583,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290005",
@@ -576,7 +602,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290006",
@@ -610,7 +637,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290007",
@@ -644,7 +672,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290008",
@@ -678,7 +707,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290012",
@@ -712,7 +742,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290015",
@@ -730,7 +761,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290016",
@@ -764,7 +796,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290017",
@@ -798,7 +831,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290019",
@@ -832,7 +866,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290022",
@@ -850,7 +885,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290023",
@@ -884,7 +920,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290025",
@@ -918,7 +955,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290026",
@@ -952,7 +990,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290027",
@@ -986,7 +1025,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290028",
@@ -1020,7 +1060,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290029",
@@ -1054,7 +1095,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290031",
@@ -1072,7 +1114,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290032",
@@ -1090,7 +1133,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290033",
@@ -1108,7 +1152,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290034",
@@ -1126,7 +1171,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290035",
@@ -1144,7 +1190,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290036",
@@ -1162,7 +1209,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290037",
@@ -1180,7 +1228,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290038",
@@ -1198,7 +1247,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290039",
@@ -1216,7 +1266,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290040",
@@ -1234,7 +1285,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290041",
@@ -1252,7 +1304,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290042",
@@ -1270,7 +1323,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290043",
@@ -1288,7 +1342,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290044",
@@ -1306,7 +1361,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290046",
@@ -1324,7 +1380,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290048",
@@ -1342,7 +1399,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290049",
@@ -1360,7 +1418,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Semarang",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290050",
@@ -1378,7 +1437,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Semarang",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290051",
@@ -1412,7 +1472,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290052",
@@ -1430,7 +1491,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290053",
@@ -1448,7 +1510,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290054",
@@ -1466,7 +1529,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290055",
@@ -1500,7 +1564,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290056",
@@ -1534,7 +1599,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290057",
@@ -1568,7 +1634,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290058",
@@ -1602,7 +1669,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290059",
@@ -1620,7 +1688,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290060",
@@ -1654,7 +1723,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290061",
@@ -1672,7 +1742,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290062",
@@ -1690,7 +1761,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290063",
@@ -1724,7 +1796,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290064",
@@ -1758,7 +1831,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290065",
@@ -1776,7 +1850,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290066",
@@ -1810,7 +1885,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290067",
@@ -1844,7 +1920,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290068",
@@ -1878,7 +1955,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290070",
@@ -1896,7 +1974,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290071",
@@ -1930,7 +2009,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290072",
@@ -1964,7 +2044,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290073",
@@ -1982,7 +2063,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290074",
@@ -2000,7 +2082,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290075",
@@ -2034,7 +2117,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290076",
@@ -2052,7 +2136,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290077",
@@ -2070,7 +2155,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290078",
@@ -2088,7 +2174,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290079",
@@ -2122,7 +2209,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290080",
@@ -2156,7 +2244,8 @@ export const DUMMY_DEVICES: Device[] = [
         "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
-    ]
+    ],
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290081",
@@ -2174,7 +2263,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290082",
@@ -2192,7 +2282,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290083",
@@ -2210,7 +2301,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290084",
@@ -2228,7 +2320,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290085",
@@ -2246,7 +2339,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Triarta",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290086",
@@ -2264,7 +2358,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290088",
@@ -2282,7 +2377,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "SCTK",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290089",
@@ -2300,7 +2396,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290091",
@@ -2318,7 +2415,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Env. Semarang",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290092",
@@ -2336,7 +2434,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290093",
@@ -2354,7 +2453,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290094",
@@ -2372,7 +2472,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290095",
@@ -2390,7 +2491,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290096",
@@ -2408,7 +2510,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290097",
@@ -2426,7 +2529,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290098",
@@ -2444,7 +2548,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Supermall",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290099",
@@ -2462,7 +2567,8 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   },
   {
     "id": "dev-6604290100",
@@ -2480,6 +2586,7 @@ export const DUMMY_DEVICES: Device[] = [
     "lokasi": "Bukit Asam",
     "catatan": "",
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z"
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink"
   }
 ];

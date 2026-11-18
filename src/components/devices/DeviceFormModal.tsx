@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Device, ConnectionType, DeviceStatus, DEVICE_STATUS_LIST, WarehousePosition } from '../../types/device';
+import { Device, ConnectionType, DeviceStatus, DEVICE_STATUS_LIST, WarehousePosition, DeviceModel } from '../../types/device';
 import { useDevices } from '../../context/DeviceContext';
 import { X, Check, Calendar } from 'lucide-react';
 
@@ -14,8 +14,9 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
   onClose,
   editDevice,
 }) => {
-  const { addDevice, updateDevice, uniqueLokasi } = useDevices();
+  const { addDevice, updateDevice, uniqueLokasi, filters } = useDevices();
 
+  const [model, setModel] = useState<DeviceModel>('AquaLink');
   const [koneksi, setKoneksi] = useState<ConnectionType>('LoRaWAN');
   const [seri, setSeri] = useState('');
   const [readAddress, setReadAddress] = useState('');
@@ -44,6 +45,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
   if (prevTrackKey !== currentTrackKey) {
     setPrevTrackKey(currentTrackKey);
     if (editDevice) {
+      setModel(editDevice.model || 'AquaLink');
       setKoneksi(editDevice.koneksi);
       setSeri(editDevice.seri);
       setReadAddress(editDevice.readAddress || '');
@@ -62,6 +64,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
       setPenerimaKeluar(editDevice.penerimaKeluar || '');
       setKeperluanKeluar(editDevice.keperluanKeluar || '');
     } else {
+      setModel(filters.model !== 'ALL' ? filters.model : 'AquaLink');
       setKoneksi('LoRaWAN');
       setSeri('');
       setReadAddress('');
@@ -92,6 +95,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
     }
 
     const payload = {
+      model,
       seri: seri.trim(),
       koneksi,
       readAddress: readAddress.trim(),
@@ -139,6 +143,56 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
 
         {/* Form Body */}
         <form onSubmit={handleSubmit} className="p-6 space-y-4 max-h-[80vh] overflow-y-auto">
+          {/* Model / Kategori Perangkat */}
+          <div>
+            <label className="block text-xs font-semibold text-slate-700 mb-1.5">
+              Model / Kategori Perangkat <span className="text-rose-500">*</span>
+            </label>
+            <div className="grid grid-cols-3 gap-2">
+              <button
+                type="button"
+                onClick={() => setModel('AquaLink')}
+                className={`py-2 px-2.5 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                  model === 'AquaLink'
+                    ? 'bg-blue-900 text-white border-blue-900 shadow-xs ring-2 ring-blue-500/20'
+                    : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                }`}
+              >
+                <span>💧</span>
+                <span>AquaLink</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setModel('Ultrasonic')}
+                className={`py-2 px-2.5 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                  model === 'Ultrasonic'
+                    ? 'bg-blue-900 text-white border-blue-900 shadow-xs ring-2 ring-blue-500/20'
+                    : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                }`}
+              >
+                <span>🔊</span>
+                <span>Ultrasonic</span>
+              </button>
+
+              <button
+                type="button"
+                onClick={() => setModel('MIU')}
+                className={`py-2 px-2.5 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                  model === 'MIU'
+                    ? 'bg-blue-900 text-white border-blue-900 shadow-xs ring-2 ring-blue-500/20'
+                    : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                }`}
+              >
+                <span>📟</span>
+                <span>MIU</span>
+              </button>
+            </div>
+            <p className="text-[11px] text-slate-400 mt-1">
+              Perangkat akan ditempatkan di tab kategori {model === 'AquaLink' ? 'AquaLink' : model === 'Ultrasonic' ? 'Ultrasonic' : 'Meter Interface Unit (MIU)'}
+            </p>
+          </div>
+
           {/* Koneksi Selector */}
           <div>
             <label className="block text-xs font-semibold text-slate-700 mb-1">

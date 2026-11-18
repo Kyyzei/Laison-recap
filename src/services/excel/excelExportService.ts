@@ -13,6 +13,7 @@ export class ExcelExportService {
       const posisiGudang = getDeviceWarehouseStatus(d);
       return {
         NO: index + 1,
+        MODEL: d.model || 'AquaLink',
         SERI: d.seri,
         KONEKSI: d.koneksi,
         'READ ADDRESS': d.readAddress,
@@ -46,6 +47,7 @@ export class ExcelExportService {
     // Column widths
     worksheet['!cols'] = [
       { wch: 6 },  // NO
+      { wch: 16 }, // MODEL
       { wch: 14 }, // SERI
       { wch: 12 }, // KONEKSI
       { wch: 18 }, // READ ADDRESS
@@ -78,6 +80,7 @@ export class ExcelExportService {
     const templateData = [
       {
         NO: 1,
+        MODEL: 'AquaLink',
         SERI: '6604290016',
         KONEKSI: 'LoRaWAN',
         'READ ADDRESS': 'AF066604290016',
@@ -97,6 +100,7 @@ export class ExcelExportService {
       },
       {
         NO: 2,
+        MODEL: 'Ultrasonic',
         SERI: '6604290051',
         KONEKSI: 'NB-IoT',
         'READ ADDRESS': 'EA066604290051',

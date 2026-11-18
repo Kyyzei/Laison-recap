@@ -1,5 +1,5 @@
 import React from 'react';
-import { Device, SortField, getDeviceWarehouseStatus } from '../../types/device';
+import { Device, SortField, getDeviceWarehouseStatus, getDeviceModel } from '../../types/device';
 import { StatusBadge } from '../common/StatusBadge';
 import { useDevices } from '../../context/DeviceContext';
 import {
@@ -35,6 +35,7 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
     currentPage,
     rowsPerPage,
     openWarehouseModal,
+    filters,
   } = useDevices();
 
   const handleSort = (field: SortField) => {
@@ -125,7 +126,11 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
           {devices.length === 0 ? (
             <tr>
               <td colSpan={14} className="py-12 text-center text-slate-400">
-                Tidak ada data perangkat yang cocok dengan pencarian / filter.
+                {filters.model === 'Ultrasonic'
+                  ? 'Belum ada data perangkat Ultrasonic. Anda dapat menambahkannya melalui tombol "+ Tambah Device" di atas.'
+                  : filters.model === 'MIU'
+                  ? 'Belum ada data perangkat Meter Interface Unit (MIU). Anda dapat menambahkannya melalui tombol "+ Tambah Device" di atas.'
+                  : 'Tidak ada data perangkat yang cocok dengan pencarian / filter.'}
               </td>
             </tr>
           ) : (
@@ -158,13 +163,28 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
 
                   {/* SERI */}
                   <td className="py-2.5 px-3 font-bold text-blue-950 font-mono text-xs">
-                    <button
-                      onClick={() => onOpenDetail(d)}
-                      className="hover:underline text-left cursor-pointer"
-                      title="Klik untuk detail"
-                    >
-                      {d.seri}
-                    </button>
+                    <div className="flex items-center gap-1.5 flex-wrap">
+                      <button
+                        onClick={() => onOpenDetail(d)}
+                        className="hover:underline text-left cursor-pointer"
+                        title="Klik untuk detail"
+                      >
+                        {d.seri}
+                      </button>
+                      {filters.model === 'ALL' && (
+                        <span
+                          className={`text-[9px] font-sans font-bold px-1.5 py-0.2 rounded ${
+                            getDeviceModel(d) === 'AquaLink'
+                              ? 'bg-blue-100 text-blue-800'
+                              : getDeviceModel(d) === 'Ultrasonic'
+                              ? 'bg-purple-100 text-purple-800'
+                              : 'bg-emerald-100 text-emerald-800'
+                          }`}
+                        >
+                          {getDeviceModel(d) === 'AquaLink' ? '💧 AquaLink' : getDeviceModel(d) === 'Ultrasonic' ? '🔊 Ultrasonic' : '📟 MIU'}
+                        </span>
+                      )}
+                    </div>
                   </td>
 
                   {/* KONEKSI */}

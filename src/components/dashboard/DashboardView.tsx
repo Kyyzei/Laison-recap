@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useDevices } from '../../context/DeviceContext';
-import { DeviceStatus, getDeviceWarehouseStatus } from '../../types/device';
+import { DeviceStatus, DeviceModel, getDeviceWarehouseStatus } from '../../types/device';
 import { StatusBadge } from '../common/StatusBadge';
 import {
   Cpu,
@@ -39,6 +39,17 @@ export const DashboardView: React.FC = () => {
       ...prev,
       posisiGudang,
       status: 'ALL',
+      search: '',
+    }));
+    navigate('/devices');
+  };
+
+  const handleNavigateModel = (model: DeviceModel) => {
+    setFilters((prev) => ({
+      ...prev,
+      model,
+      status: 'ALL',
+      posisiGudang: 'ALL',
       search: '',
     }));
     navigate('/devices');
@@ -164,6 +175,94 @@ export const DashboardView: React.FC = () => {
             <span className="text-sm font-semibold text-slate-800">NB: <span className="font-bold text-sky-600">{stats.nbiot}</span></span>
           </div>
           <div className="text-[11px] text-slate-400 mt-1">LoRaWAN & NB-IoT</div>
+        </div>
+      </div>
+
+      {/* 3 Model Perangkat Category Cards */}
+      <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
+        <div className="flex items-center justify-between mb-3.5">
+          <div>
+            <h2 className="text-sm font-bold text-slate-900">Kategori Model Perangkat</h2>
+            <p className="text-xs text-slate-500">Pilih model untuk membuka data di tab kategori masing-masing</p>
+          </div>
+          <span className="text-xs font-semibold text-slate-400">3 Model Terdaftar</span>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+          {/* AquaLink */}
+          <div
+            onClick={() => handleNavigateModel('AquaLink')}
+            className="p-4 rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white hover:border-blue-400 hover:shadow-xs transition-all cursor-pointer group"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <div className="w-9 h-9 rounded-lg bg-blue-100 text-blue-900 flex items-center justify-center text-xl">
+                💧
+              </div>
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-900">
+                {stats.aqualink} unit
+              </span>
+            </div>
+            <h3 className="text-sm font-bold text-slate-900 group-hover:text-blue-900 transition-colors">
+              AquaLink
+            </h3>
+            <p className="text-[11px] text-slate-500 mt-0.5">
+              Smart Water Meter & IoT Controller
+            </p>
+            <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-blue-900 font-semibold">
+              <span>Buka Tab AquaLink</span>
+              <span className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </div>
+          </div>
+
+          {/* Ultrasonic */}
+          <div
+            onClick={() => handleNavigateModel('Ultrasonic')}
+            className="p-4 rounded-xl border border-purple-200 bg-gradient-to-br from-purple-50/60 to-white hover:border-purple-400 hover:shadow-xs transition-all cursor-pointer group"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <div className="w-9 h-9 rounded-lg bg-purple-100 text-purple-900 flex items-center justify-center text-xl">
+                🔊
+              </div>
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-900">
+                {stats.ultrasonic} unit
+              </span>
+            </div>
+            <h3 className="text-sm font-bold text-slate-900 group-hover:text-purple-900 transition-colors">
+              Ultrasonic
+            </h3>
+            <p className="text-[11px] text-slate-500 mt-0.5">
+              Ultrasonic Flow Meter & Sensor
+            </p>
+            <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-purple-900 font-semibold">
+              <span>Buka Tab Ultrasonic</span>
+              <span className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </div>
+          </div>
+
+          {/* Meter Interface Unit (MIU) */}
+          <div
+            onClick={() => handleNavigateModel('MIU')}
+            className="p-4 rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-50/60 to-white hover:border-emerald-400 hover:shadow-xs transition-all cursor-pointer group"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <div className="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-900 flex items-center justify-center text-xl">
+                📟
+              </div>
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900">
+                {stats.miu} unit
+              </span>
+            </div>
+            <h3 className="text-sm font-bold text-slate-900 group-hover:text-emerald-900 transition-colors">
+              Meter Interface Unit (MIU)
+            </h3>
+            <p className="text-[11px] text-slate-500 mt-0.5">
+              Pulse Reader & Interface Unit
+            </p>
+            <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-emerald-900 font-semibold">
+              <span>Buka Tab MIU</span>
+              <span className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </div>
+          </div>
         </div>
       </div>
 

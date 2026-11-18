@@ -35,6 +35,9 @@ export const DeviceListView: React.FC = () => {
     setSelectedDeviceForDetail,
     setSelectedDeviceForEdit,
     setIsCreateModalOpen,
+    filters,
+    setFilters,
+    stats,
   } = useDevices();
 
   const [deviceToDelete, setDeviceToDelete] = useState<Device | null>(null);
@@ -67,7 +70,7 @@ export const DeviceListView: React.FC = () => {
           {selectedDeviceIds.length > 0 && (
             <button
               onClick={() => setIsBulkDeleteModalOpen(true)}
-              className="px-3 py-1.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 hover:bg-rose-100 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+              className="px-3 py-1.5 rounded-lg bg-rose-50 border border-rose-200 text-rose-700 hover:bg-rose-100 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
             >
               <Trash2 className="w-3.5 h-3.5" />
               <span>Hapus ({selectedDeviceIds.length})</span>
@@ -76,7 +79,7 @@ export const DeviceListView: React.FC = () => {
 
           <button
             onClick={handleExportFiltered}
-            className="px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-semibold flex items-center gap-1.5 transition-colors"
+            className="px-3 py-1.5 rounded-lg border border-slate-200 text-slate-700 hover:bg-slate-50 text-xs font-semibold flex items-center gap-1.5 transition-colors cursor-pointer"
             title="Download Excel dari data saat ini"
           >
             <FileSpreadsheet className="w-3.5 h-3.5 text-emerald-600" />
@@ -85,7 +88,7 @@ export const DeviceListView: React.FC = () => {
 
           <button
             onClick={() => setIsResetModalOpen(true)}
-            className="px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 text-xs transition-colors"
+            className="px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 text-xs transition-colors cursor-pointer"
             title="Muat ulang 107 data default dari Excel"
           >
             <RotateCcw className="w-3.5 h-3.5" />
@@ -93,13 +96,132 @@ export const DeviceListView: React.FC = () => {
 
           <button
             onClick={() => setIsCreateModalOpen(true)}
-            className="px-3.5 py-1.5 rounded-lg bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold flex items-center gap-1.5 transition-colors shadow-xs"
+            className="px-3.5 py-1.5 rounded-lg bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold flex items-center gap-1.5 transition-colors shadow-xs cursor-pointer"
           >
             <Plus className="w-4 h-4" />
             <span>Tambah Device</span>
           </button>
         </div>
       </div>
+
+      {/* Category Tabs: AquaLink, Ultrasonic, MIU, Semua Model */}
+      <div className="bg-white p-2.5 rounded-xl border border-slate-200 shadow-2xs">
+        <div className="flex flex-col md:flex-row md:items-center justify-between gap-2.5">
+          <div className="flex flex-wrap items-center gap-1.5">
+            {/* AquaLink */}
+            <button
+              onClick={() => setFilters((p) => ({ ...p, model: 'AquaLink' }))}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                filters.model === 'AquaLink'
+                  ? 'bg-blue-900 text-white shadow-xs'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+              }`}
+            >
+              <span className="text-base leading-none">💧</span>
+              <span>AquaLink</span>
+              <span
+                className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                  filters.model === 'AquaLink' ? 'bg-sky-400 text-blue-950' : 'bg-slate-100 text-slate-600'
+                }`}
+              >
+                {stats.aqualink}
+              </span>
+            </button>
+
+            {/* Ultrasonic */}
+            <button
+              onClick={() => setFilters((p) => ({ ...p, model: 'Ultrasonic' }))}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                filters.model === 'Ultrasonic'
+                  ? 'bg-blue-900 text-white shadow-xs'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+              }`}
+            >
+              <span className="text-base leading-none">🔊</span>
+              <span>Ultrasonic</span>
+              <span
+                className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                  filters.model === 'Ultrasonic' ? 'bg-sky-400 text-blue-950' : 'bg-slate-100 text-slate-600'
+                }`}
+              >
+                {stats.ultrasonic}
+              </span>
+            </button>
+
+            {/* Meter Interface Unit (MIU) */}
+            <button
+              onClick={() => setFilters((p) => ({ ...p, model: 'MIU' }))}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                filters.model === 'MIU'
+                  ? 'bg-blue-900 text-white shadow-xs'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+              }`}
+            >
+              <span className="text-base leading-none">📟</span>
+              <span>Meter Interface Unit (MIU)</span>
+              <span
+                className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                  filters.model === 'MIU' ? 'bg-sky-400 text-blue-950' : 'bg-slate-100 text-slate-600'
+                }`}
+              >
+                {stats.miu}
+              </span>
+            </button>
+
+            <div className="h-5 w-px bg-slate-200 mx-1 hidden lg:block" />
+
+            {/* Semua Model */}
+            <button
+              onClick={() => setFilters((p) => ({ ...p, model: 'ALL' }))}
+              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+                filters.model === 'ALL'
+                  ? 'bg-slate-800 text-white font-bold shadow-xs'
+                  : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
+              }`}
+            >
+              <span>Semua Model</span>
+              <span
+                className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${
+                  filters.model === 'ALL' ? 'bg-slate-700 text-white' : 'bg-slate-100 text-slate-600'
+                }`}
+              >
+                {stats.total}
+              </span>
+            </button>
+          </div>
+
+          <div className="text-[11px] text-slate-500 px-2.5 py-1 bg-slate-50 rounded-lg border border-slate-100 shrink-0 self-start md:self-center">
+            {filters.model === 'AquaLink' && 'Kategori: AquaLink (Smart Water Meter)'}
+            {filters.model === 'Ultrasonic' && 'Kategori: Ultrasonic Flow Meter'}
+            {filters.model === 'MIU' && 'Kategori: Meter Interface Unit (Pulse Reader)'}
+            {filters.model === 'ALL' && 'Kategori: Seluruh Model Perangkat'}
+          </div>
+        </div>
+      </div>
+
+      {/* Empty State Banner when category has 0 items */}
+      {filteredDevices.length === 0 && filters.model !== 'ALL' && (
+        <div className="bg-gradient-to-r from-blue-50/70 via-sky-50/50 to-blue-50/70 p-6 md:p-8 rounded-2xl border border-dashed border-blue-300 text-center space-y-3">
+          <div className="w-14 h-14 mx-auto rounded-2xl bg-white shadow-xs border border-blue-200 flex items-center justify-center text-3xl">
+            {filters.model === 'Ultrasonic' ? '🔊' : '📟'}
+          </div>
+          <div>
+            <h3 className="text-base font-bold text-slate-900">
+              Kategori {filters.model === 'Ultrasonic' ? 'Ultrasonic' : 'Meter Interface Unit (MIU)'} Siap Digunakan
+            </h3>
+            <p className="text-xs text-slate-600 max-w-lg mx-auto mt-1">
+              Ruang kategori untuk model {filters.model === 'Ultrasonic' ? 'Ultrasonic Flow Meter' : 'Meter Interface Unit (MIU)'} telah siap. Anda dapat langsung menginput data unit baru atau mengimpor file Excel ke dalam kategori ini.
+            </p>
+          </div>
+          <button
+            onClick={() => setIsCreateModalOpen(true)}
+            className="px-4 py-2 bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold rounded-lg inline-flex items-center gap-1.5 shadow-xs cursor-pointer"
+          >
+            <Plus className="w-4 h-4" />
+            <span>Tambah Perangkat {filters.model === 'Ultrasonic' ? 'Ultrasonic' : 'MIU'} Baru</span>
+          </button>
+        </div>
+      )}
 
       {/* Filter Component */}
       <DeviceFilters />

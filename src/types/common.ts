@@ -21,6 +21,10 @@ export interface DeviceStats {
   // Logistik Gudang
   diGudang: number;
   diLuar: number;
+  // Kategori Model
+  aqualink: number;
+  ultrasonic: number;
+  miu: number;
 }
 
 export interface ImportPreviewItem {

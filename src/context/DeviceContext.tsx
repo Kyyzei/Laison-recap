@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from 'react';
-import { Device, DeviceFilters, DeviceSort, getDeviceWarehouseStatus } from '../types/device';
+import { Device, DeviceFilters, DeviceSort, getDeviceWarehouseStatus, getDeviceModel } from '../types/device';
 import { DeviceStats } from '../types/common';
 import { LocalStorageService } from '../services/storage/localStorageService';
 import { useToast } from './ToastContext';
@@ -62,6 +62,7 @@ const DEFAULT_FILTERS: DeviceFilters = {
   koneksi: 'ALL',
   lokasi: 'ALL',
   posisiGudang: 'ALL',
+  model: 'ALL',
 };
 
 const DEFAULT_SORT: DeviceSort = {
@@ -136,6 +137,9 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       nbiot: 0,
       diGudang: 0,
       diLuar: 0,
+      aqualink: 0,
+      ultrasonic: 0,
+      miu: 0,
     };
 
     for (const d of devices) {
@@ -152,6 +156,11 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       const whStatus = getDeviceWarehouseStatus(d);
       if (whStatus === 'DI_LUAR') s.diLuar++;
       else s.diGudang++;
+
+      const devModel = getDeviceModel(d);
+      if (devModel === 'AquaLink') s.aqualink++;
+      else if (devModel === 'Ultrasonic') s.ultrasonic++;
+      else if (devModel === 'MIU') s.miu++;
     }
 
     return s;
@@ -192,6 +201,10 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       if (filters.posisiGudang !== 'ALL') {
         const whStatus = getDeviceWarehouseStatus(d);
         if (whStatus !== filters.posisiGudang) return false;
+      }
+      if (filters.model !== 'ALL') {
+        const m = getDeviceModel(d);
+        if (m !== filters.model) return false;
       }
 
       return true;

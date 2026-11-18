@@ -1,5 +1,5 @@
 import React from 'react';
-import { Device, getDeviceWarehouseStatus } from '../../types/device';
+import { Device, getDeviceWarehouseStatus, getDeviceModel } from '../../types/device';
 import { StatusBadge } from '../common/StatusBadge';
 import { useDevices } from '../../context/DeviceContext';
 import { X, Copy, Edit2, Check, LogOut, LogIn, Calendar, User, History } from 'lucide-react';
@@ -38,9 +38,14 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
         <div className="flex items-center justify-between px-6 py-4 bg-[#0c2340] text-white">
           <div className="flex items-center gap-3">
             <div>
-              <span className="text-[10px] text-sky-300 font-mono tracking-wider uppercase">
-                {device.koneksi} DEVICE
-              </span>
+              <div className="flex items-center gap-2 mb-0.5">
+                <span className="text-[10px] text-sky-300 font-mono tracking-wider uppercase">
+                  {device.koneksi} DEVICE
+                </span>
+                <span className="text-[10px] font-bold px-2 py-0.2 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                  {getDeviceModel(device) === 'AquaLink' ? '💧 AquaLink' : getDeviceModel(device) === 'Ultrasonic' ? '🔊 Ultrasonic' : '📟 MIU'}
+                </span>
+              </div>
               <h2 className="text-lg font-bold font-mono">SERI: {device.seri}</h2>
             </div>
           </div>
