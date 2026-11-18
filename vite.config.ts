@@ -40,15 +40,12 @@ export default defineConfig({
           html = html.replace(/-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;/gi, 'line-clamp:1;-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;');
           html = html.replace(/-webkit-user-select:none;user-select:none/gi, '-webkit-user-select:none;-moz-user-select:none;user-select:none');
 
+          // Write cleaned HTML to dist/index.html for Vercel / Web deployment
+          fs.writeFileSync(distFile, html, 'utf8');
+
+          // Also save standalone offline copies in repository root
           fs.writeFileSync(laisonFile, html, 'utf8');
           fs.writeFileSync(legacyFile, html, 'utf8');
-
-          // Hapus folder temporary dist agar struktur folder tetap bersih dan rapi
-          try {
-            fs.rmSync(path.resolve('dist'), { recursive: true, force: true });
-          } catch {
-            // abaikan jika proses sedang mengakses file
-          }
         }
       },
     },
