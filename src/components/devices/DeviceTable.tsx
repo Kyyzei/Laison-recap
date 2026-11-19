@@ -11,6 +11,7 @@ import {
   LogOut,
   LogIn,
   History,
+  CardSim,
 } from 'lucide-react';
 
 interface DeviceTableProps {
@@ -210,10 +211,13 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
                   <td className="py-2.5 px-3 font-mono text-[11px] text-slate-700">
                     {isLora ? (
                       d.devEui || '-'
-                    ) : (
-                      <span className="text-emerald-700 font-medium">
-                        {d.noSim || '-'}
+                    ) : d.noSim ? (
+                      <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold" title="SIM Card Terhubung & Tersinkronisasi">
+                        <CardSim className="w-3 h-3 text-emerald-600 shrink-0" />
+                        <span>{d.noSim}</span>
                       </span>
+                    ) : (
+                      <span className="text-slate-400 italic">Tanpa SIM</span>
                     )}
                   </td>
 

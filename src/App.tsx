@@ -2,10 +2,12 @@ import React, { useState } from 'react';
 import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { ToastProvider } from './context/ToastContext';
 import { DeviceProvider, useDevices } from './context/DeviceContext';
+import { SimCardProvider } from './context/SimCardContext';
 import { Navbar } from './components/common/Navbar';
 import { Sidebar } from './components/common/Sidebar';
 import { DashboardView } from './components/dashboard/DashboardView';
 import { DeviceListView } from './components/devices/DeviceListView';
+import { SimCardListView } from './components/simcards/SimCardListView';
 import { ImportExportView } from './components/importExport/ImportExportView';
 import { BackupRestoreView } from './components/backupRestore/BackupRestoreView';
 import { SettingsView } from './components/settings/SettingsView';
@@ -35,6 +37,7 @@ const AppLayout: React.FC = () => {
             <Route path="/" element={<DashboardView />} />
             <Route path="/dashboard" element={<DashboardView />} />
             <Route path="/devices" element={<DeviceListView />} />
+            <Route path="/simcards" element={<SimCardListView />} />
             <Route path="/import-export" element={<ImportExportView />} />
             <Route path="/backup-restore" element={<BackupRestoreView />} />
             <Route path="/settings" element={<SettingsView />} />
@@ -59,9 +62,11 @@ export function App() {
     <ErrorBoundary>
       <ToastProvider>
         <DeviceProvider>
-          <HashRouter>
-            <AppLayout />
-          </HashRouter>
+          <SimCardProvider>
+            <HashRouter>
+              <AppLayout />
+            </HashRouter>
+          </SimCardProvider>
         </DeviceProvider>
       </ToastProvider>
     </ErrorBoundary>

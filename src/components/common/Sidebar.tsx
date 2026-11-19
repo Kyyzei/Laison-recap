@@ -8,8 +8,10 @@ import {
   Settings,
   X,
   Layers,
+  CardSim,
 } from 'lucide-react';
 import { useDevices } from '../../context/DeviceContext';
+import { useSimCards } from '../../context/SimCardContext';
 import { DeviceModel } from '../../types/device';
 import { LAISON_LOGO_DATA_URI } from '../../assets/logo';
 
@@ -23,6 +25,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
   onCloseMobile,
 }) => {
   const { stats, filters, setFilters } = useDevices();
+  const { stats: simStats } = useSimCards();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -172,6 +175,48 @@ export const Sidebar: React.FC<SidebarProps> = ({
           </div>
         </div>
 
+        {/* Section: Inventaris Jaringan & SIM Card */}
+        <div>
+          <div className="px-3 pb-1.5 flex items-center justify-between text-[11px] font-bold text-slate-400 uppercase tracking-wider">
+            <span>Inventaris Jaringan</span>
+            <CardSim className="w-3 h-3 text-slate-400" />
+          </div>
+          <div className="space-y-1">
+            <button
+              onClick={() => handleSelectPage('/simcards')}
+              className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
+                currentPath === 'simcards'
+                  ? 'bg-blue-900 text-white shadow-xs font-semibold'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+              }`}
+            >
+              <div className="flex items-center gap-2.5">
+                <CardSim className={`w-4 h-4 ${currentPath === 'simcards' ? 'text-sky-300' : 'text-slate-500'}`} />
+                <span>Stok SIM Card</span>
+              </div>
+              <div className="flex items-center gap-1">
+                {simStats.stock > 0 && (
+                  <span
+                    className={`text-[10px] px-1.5 py-0.2 rounded-full font-bold ${
+                      currentPath === 'simcards' ? 'bg-amber-400 text-blue-950' : 'bg-amber-100 text-amber-800'
+                    }`}
+                    title={`${simStats.stock} kartu dalam stok gudang`}
+                  >
+                    {simStats.stock} Stok
+                  </span>
+                )}
+                <span
+                  className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                    currentPath === 'simcards' ? 'bg-sky-400 text-blue-950' : 'bg-slate-100 text-slate-600'
+                  }`}
+                >
+                  {simStats.total}
+                </span>
+              </div>
+            </button>
+          </div>
+        </div>
+
         {/* Section: Menu Lainnya */}
         <div>
           <div className="px-3 pb-1.5 text-[11px] font-bold text-slate-400 uppercase tracking-wider">
@@ -248,6 +293,14 @@ export const Sidebar: React.FC<SidebarProps> = ({
         <div className="flex justify-between">
           <span className="text-slate-500">NB-IoT:</span>
           <span className="font-semibold text-slate-800">{stats.nbiot} unit</span>
+        </div>
+        <div className="flex justify-between border-t border-slate-200/60 pt-1.5">
+          <span className="text-slate-500">SIM Online:</span>
+          <span className="font-semibold text-emerald-600">{simStats.online} unit</span>
+        </div>
+        <div className="flex justify-between">
+          <span className="text-slate-500">SIM Stok:</span>
+          <span className="font-semibold text-amber-600">{simStats.stock} unit</span>
         </div>
         {stats.rusak > 0 && (
           <div className="flex justify-between text-rose-600 pt-1 border-t border-slate-200">

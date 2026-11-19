@@ -1,5 +1,6 @@
 import * as XLSX from 'xlsx';
 import { Device, getDeviceWarehouseStatus, getDeviceFullHistory } from '../../types/device';
+import { SimCard } from '../../types/simcard';
 
 export interface ExportOptions {
   filename?: string;
@@ -69,6 +70,96 @@ export class ExcelExportService {
     const workbook = XLSX.utils.book_new();
     XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
 
+    if (format === 'csv') {
+      XLSX.writeFile(workbook, filename, { bookType: 'csv' });
+    } else {
+      XLSX.writeFile(workbook, filename, { bookType: 'xlsx' });
+    }
+  }
+
+  /**
+   * Ekspor data stok SIM Card ke file Excel.
+   */
+  static exportSimCards(simCards: SimCard[], options?: ExportOptions): void {
+    const format = options?.format || 'xlsx';
+    const timestamp = new Date().toISOString().slice(0, 10);
+    const defaultFilename = `Laison_Stok_SIM_Card_${timestamp}.${format}`;
+    const filename = options?.filename ? `${options.filename}.${format}` : defaultFilename;
+    const sheetName = options?.sheetName || 'Stok SIM Card';
+
+    const formattedData = simCards.map((s, idx) => ({
+      NO: idx + 1,
+      'NO SIM': s.noSim,
+      ICCID: s.iccid || '',
+      OPERATOR: s.operator,
+      STATUS: s.status,
+      'PERANGKAT TERHUBUNG': s.deviceSeri ? `${s.deviceModel || 'AquaLink'} (${s.deviceSeri})` : 'Belum Terpasang (Stok)',
+      'MODEL PERANGKAT': s.deviceModel || '',
+      'SERI PERANGKAT': s.deviceSeri || '',
+      'IP SERVER': s.ip || '',
+      'APN & BAND': s.apnBand || '',
+      LOKASI: s.lokasi || '',
+      KUOTA: s.kuota || '',
+      'MASA AKTIF': s.masaAktif || '',
+      'TGL PASANG': s.tanggalPasang || '',
+      CATATAN: s.catatan || '',
+    }));
+
+    const worksheet = XLSX.utils.json_to_sheet(formattedData);
+    worksheet['!cols'] = [
+      { wch: 6 },  // NO
+      { wch: 18 }, // NO SIM
+      { wch: 24 }, // ICCID
+      { wch: 18 }, // OPERATOR
+      { wch: 14 }, // STATUS
+      { wch: 28 }, // PERANGKAT TERHUBUNG
+      { wch: 16 }, // MODEL PERANGKAT
+      { wch: 16 }, // SERI PERANGKAT
+      { wch: 16 }, // IP SERVER
+      { wch: 22 }, // APN & BAND
+      { wch: 20 }, // LOKASI
+      { wch: 16 }, // KUOTA
+      { wch: 14 }, // MASA AKTIF
+      { wch: 14 }, // TGL PASANG
+      { wch: 30 }, // CATATAN
+    ];
+
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, sheetName);
+
+    if (format === 'csv') {
+      XLSX.writeFile(workbook, filename, { bookType: 'csv' });
+    } else {
+      XLSX.writeFile(workbook, filename, { bookType: 'xlsx' });
+    }
+  }
+
+  /**
+   * Ekspor template kosong untuk import SIM Card baru.
+   */
+  static exportSimCardTemplate(format: 'xlsx' | 'csv' = 'xlsx'): void {
+    const templateData = [
+      {
+        NO: 1,
+        'NO SIM': '0851-5378-4850',
+        ICCID: '89620100085153784850',
+        OPERATOR: 'Telkomsel IoT',
+        STATUS: 'Stock',
+        'SERI PERANGKAT': '',
+        'IP SERVER': '147.93.81.149',
+        'APN & BAND': 'NBIOT,3,20,28,8',
+        LOKASI: 'Gudang Utama Laison',
+        KUOTA: '500 MB / Bulan',
+        'MASA AKTIF': '2027-12-31',
+        CATATAN: 'Stok baru cadangan',
+      },
+    ];
+
+    const worksheet = XLSX.utils.json_to_sheet(templateData);
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, 'Template SIM Card');
+
+    const filename = `Laison_Template_SIM_Card.${format}`;
     if (format === 'csv') {
       XLSX.writeFile(workbook, filename, { bookType: 'csv' });
     } else {

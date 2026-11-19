@@ -1,5 +1,6 @@
 import { Device, WarehousePosition, DeviceHistoryEntry, ParameterDiff, DeviceHistoryCategory } from '../../types/device';
 import { DUMMY_DEVICES } from '../../data/dummyDevices';
+import { SimCardStorageService } from './simCardStorageService';
 
 const STORAGE_KEY = 'laison_devices_v7';
 
@@ -242,6 +243,11 @@ export class LocalStorageService {
       updatedAt: now,
     };
 
+    // Sinkronisasi otomatis ke inventaris SIM Card jika ada perubahan noSim
+    if (updates.noSim !== undefined && updates.noSim !== prevDevice.noSim) {
+      SimCardStorageService.handleDeviceSimChange(prevDevice, updates.noSim);
+    }
+
     current[index] = updatedDevice;
     this.saveDevices(current);
     return updatedDevice;
@@ -322,6 +328,10 @@ export class LocalStorageService {
    */
   static deleteDevice(id: string): void {
     const current = this.getDevices();
+    const target = current.find((d) => d.id === id);
+    if (target) {
+      SimCardStorageService.handleDeviceDeleted(target);
+    }
     this.saveDevices(current.filter((d) => d.id !== id));
   }
 
@@ -331,6 +341,11 @@ export class LocalStorageService {
   static bulkDeleteDevices(ids: string[]): number {
     const current = this.getDevices();
     const set = new Set(ids);
+    current.forEach((d) => {
+      if (set.has(d.id)) {
+        SimCardStorageService.handleDeviceDeleted(d);
+      }
+    });
     const updated = current.filter((d) => !set.has(d.id));
     const count = current.length - updated.length;
     this.saveDevices(updated);

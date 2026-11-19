@@ -28,6 +28,7 @@ import {
   Package,
   Layers,
   FileSpreadsheet,
+  CardSim,
 } from 'lucide-react';
 
 interface DeviceDetailModalProps {
@@ -312,7 +313,15 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                     <div className="bg-white p-2.5 rounded-lg border border-sky-100 flex flex-col justify-between">
-                      <span className="text-[10px] text-slate-500 font-medium">No SIM</span>
+                      <div className="flex items-center justify-between">
+                        <span className="text-[10px] text-slate-500 font-medium">No SIM</span>
+                        {device.noSim && (
+                          <span className="text-[9px] px-1.5 py-0.2 rounded-full font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                            <CardSim className="w-2.5 h-2.5" />
+                            <span>Sinkron</span>
+                          </span>
+                        )}
+                      </div>
                       <span className="font-mono font-bold text-emerald-700 text-xs mt-1">
                         {device.noSim || '-'}
                       </span>

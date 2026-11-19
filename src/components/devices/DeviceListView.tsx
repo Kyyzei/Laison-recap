@@ -13,8 +13,11 @@ import {
   Trash2,
   Cpu,
   RotateCcw,
+  CardSim,
 } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 import { ExcelExportService } from '../../services/excel/excelExportService';
+import { useSimCards } from '../../context/SimCardContext';
 
 export const DeviceListView: React.FC = () => {
   const {
@@ -39,6 +42,8 @@ export const DeviceListView: React.FC = () => {
     setFilters,
     stats,
   } = useDevices();
+  const { stats: simStats } = useSimCards();
+  const navigate = useNavigate();
 
   const [deviceToDelete, setDeviceToDelete] = useState<Device | null>(null);
   const [isBulkDeleteModalOpen, setIsBulkDeleteModalOpen] = useState(false);
@@ -187,6 +192,21 @@ export const DeviceListView: React.FC = () => {
                 }`}
               >
                 {stats.total}
+              </span>
+            </button>
+
+            <div className="h-5 w-px bg-slate-200 mx-1 hidden lg:block" />
+
+            {/* Stok SIM Card Quick Tab Button */}
+            <button
+              onClick={() => navigate('/simcards')}
+              className="flex items-center gap-2 px-3 py-1.5 rounded-lg text-xs font-semibold text-slate-700 hover:text-blue-900 hover:bg-blue-50 border border-slate-200 hover:border-blue-300 transition-all cursor-pointer shadow-2xs group"
+              title="Buka kategori & inventaris Stok SIM Card"
+            >
+              <CardSim className="w-4 h-4 text-blue-900 group-hover:scale-110 transition-transform" />
+              <span>Stok SIM Card</span>
+              <span className="text-[10px] px-1.5 py-0.2 rounded-full font-bold bg-amber-100 text-amber-800">
+                {simStats.total} ({simStats.stock} Stok)
               </span>
             </button>
           </div>
