@@ -1,28 +1,18 @@
 import { User, StoredUserAccount, AuthSession, LoginCredentials } from '../../types/auth';
 
 const SESSION_KEY = 'laison_auth_session';
-const USERS_KEY = 'laison_users_v1';
+const USERS_KEY = 'laison_users_v2';
 
 const DEFAULT_USERS: StoredUserAccount[] = [
   {
-    id: 'user-admin',
-    username: 'admin',
+    id: 'user-laison',
+    username: 'laison',
     name: 'Administrator Laison',
     role: 'ADMIN',
     roleLabel: 'Super Admin',
     email: 'admin@laison.com',
-    passwordHash: 'admin123',
+    passwordHash: 'meterin',
     avatar: '👨‍💼',
-  },
-  {
-    id: 'user-teknisi',
-    username: 'teknisi',
-    name: 'Teknisi Lapangan Enviro',
-    role: 'TEKNISI',
-    roleLabel: 'Teknisi Lapangan',
-    email: 'teknisi@laison.com',
-    passwordHash: 'teknisi123',
-    avatar: '👷‍♂️',
   },
 ];
 
@@ -32,6 +22,13 @@ export class AuthService {
    */
   static getUsers(): StoredUserAccount[] {
     try {
+      // Migrasi / pembersihan dari versi lama jika ada
+      if (localStorage.getItem('laison_users_v1')) {
+        localStorage.removeItem('laison_users_v1');
+        localStorage.setItem(USERS_KEY, JSON.stringify(DEFAULT_USERS));
+        return DEFAULT_USERS;
+      }
+
       const raw = localStorage.getItem(USERS_KEY);
       if (!raw) {
         localStorage.setItem(USERS_KEY, JSON.stringify(DEFAULT_USERS));
@@ -42,6 +39,14 @@ export class AuthService {
         localStorage.setItem(USERS_KEY, JSON.stringify(DEFAULT_USERS));
         return DEFAULT_USERS;
       }
+
+      // Pastikan akun laison ada
+      const hasLaison = parsed.some((u) => u.username.toLowerCase() === 'laison');
+      if (!hasLaison) {
+        localStorage.setItem(USERS_KEY, JSON.stringify(DEFAULT_USERS));
+        return DEFAULT_USERS;
+      }
+
       return parsed;
     } catch {
       return DEFAULT_USERS;
@@ -64,10 +69,8 @@ export class AuthService {
    */
   static getSession(): AuthSession | null {
     try {
-      // Cek localStorage dulu (rememberMe = true)
       let raw = localStorage.getItem(SESSION_KEY);
       if (!raw) {
-        // Cek sessionStorage (rememberMe = false)
         raw = sessionStorage.getItem(SESSION_KEY);
       }
       if (!raw) return null;
@@ -111,17 +114,14 @@ export class AuthService {
     const targetUser = users.find((u) => u.username.toLowerCase() === cleanUser);
 
     if (!targetUser) {
-      return { success: false, error: 'Username tidak ditemukan dalam sistem.' };
+      return { success: false, error: 'Username atau password yang Anda masukkan salah.' };
     }
 
-    // Validasi password (mendukung password utama atau shortcut bawaan admin/admin123)
-    const isValidPassword =
-      targetUser.passwordHash === cleanPass ||
-      (targetUser.username === 'admin' && (cleanPass === 'admin' || cleanPass === 'admin123')) ||
-      (targetUser.username === 'teknisi' && (cleanPass === 'teknisi' || cleanPass === 'teknisi123'));
+    // Validasi kata sandi rahasia
+    const isValidPassword = targetUser.passwordHash === cleanPass;
 
     if (!isValidPassword) {
-      return { success: false, error: 'Password yang Anda masukkan salah.' };
+      return { success: false, error: 'Username atau password yang Anda masukkan salah.' };
     }
 
     // Update lastLogin
@@ -147,7 +147,6 @@ export class AuthService {
       rememberMe,
     };
 
-    // Simpan ke storage sesuai preferensi rememberMe
     try {
       const sessionStr = JSON.stringify(session);
       if (rememberMe) {
@@ -195,9 +194,7 @@ export class AuthService {
     }
 
     const user = users[idx];
-    const isOldValid =
-      user.passwordHash === oldPass ||
-      (user.username === 'admin' && (oldPass === 'admin' || oldPass === 'admin123'));
+    const isOldValid = user.passwordHash === oldPass;
 
     if (!isOldValid) {
       return { success: false, error: 'Password lama tidak sesuai.' };

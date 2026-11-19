@@ -97,7 +97,7 @@ export const SettingsView: React.FC = () => {
 
   const handleResetAuthToDefault = () => {
     AuthService.resetToDefault();
-    success('Kredensial Direset', 'Akun admin telah dikembalikan ke default: admin / admin123');
+    success('Kredensial Direset', 'Akun administrator telah dikembalikan ke pengaturan awal.');
     setIsResetAuthModalOpen(false);
   };
 
@@ -180,7 +180,7 @@ export const SettingsView: React.FC = () => {
               <div className="space-y-1.5 pt-2 text-xs border-t border-slate-200/60">
                 <div className="flex justify-between py-0.5">
                   <span className="text-slate-400">Username:</span>
-                  <span className="font-mono font-bold text-slate-700">@{user?.username || 'admin'}</span>
+                  <span className="font-mono font-bold text-slate-700">@{user?.username || 'laison'}</span>
                 </div>
                 <div className="flex justify-between py-0.5">
                   <span className="text-slate-400">Email:</span>
@@ -515,7 +515,7 @@ export const SettingsView: React.FC = () => {
       <ConfirmModal
         isOpen={isResetAuthModalOpen}
         title="Reset Kredensial Administrator?"
-        message="Tindakan ini akan mengembalikan akun dan password ke pengaturan awal bawaan (Username: admin, Password: admin123). Anda akan dapat masuk kembali dengan akun tersebut."
+        message="Tindakan ini akan mengembalikan akun dan password administrator ke pengaturan awal bawaan. Anda dapat masuk kembali dengan akun tersebut."
         confirmLabel="Ya, Reset Kredensial"
         cancelLabel="Batal"
         variant="warning"

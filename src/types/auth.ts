@@ -1,4 +1,4 @@
-export type UserRole = 'ADMIN' | 'TEKNISI';
+export type UserRole = 'ADMIN';
 
 export interface User {
   id: string;
@@ -12,7 +12,7 @@ export interface User {
 }
 
 export interface StoredUserAccount extends User {
-  passwordHash: string; // Plain/Base64 hash for standalone client storage
+  passwordHash: string;
 }
 
 export interface AuthSession {
