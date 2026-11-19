@@ -14,7 +14,7 @@ Anda tidak perlu membuka terminal ataupun mengetik perintah yang rumit:
 
 ### Opsi 2 (Langsung Buka File HTML):
 - **Double-click** file **`Laison_Device_Recap_Offline.html`** (atau `AquaLink_Device_Recap_Offline.html`).
-- File ini adalah file mandiri (*standalone single-file*) yang sudah menyertakan seluruh sistem, tampilan, dan 107 data perangkat dari Excel Anda tanpa butuh koneksi internet.
+- File ini adalah file mandiri (*standalone single-file*) yang sudah menyertakan seluruh sistem, tampilan, dan 80 data perangkat resmi dari Excel Anda tanpa butuh koneksi internet.
 
 ### Opsi 3 (Mode Development Server):
 Jika Anda ingin menjalankan dev server lokal:

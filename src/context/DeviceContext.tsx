@@ -1,5 +1,5 @@
 import React, { createContext, useContext, useState, useEffect, useMemo, useCallback } from 'react';
-import { Device, DeviceFilters, DeviceSort, getDeviceWarehouseStatus, getDeviceModel } from '../types/device';
+import { Device, DeviceFilters, DeviceSort, getDeviceWarehouseStatus, getDeviceModel, DeviceHistoryEntry } from '../types/device';
 import { DeviceStats } from '../types/common';
 import { LocalStorageService } from '../services/storage/localStorageService';
 import { useToast } from './ToastContext';
@@ -44,7 +44,8 @@ interface DeviceContextValue {
 
   // CRUD actions
   addDevice: (data: Omit<Device, 'id' | 'createdAt' | 'updatedAt'>) => boolean;
-  updateDevice: (id: string, updates: Partial<Omit<Device, 'id' | 'createdAt'>>) => boolean;
+  updateDevice: (id: string, updates: Partial<Omit<Device, 'id' | 'createdAt'>>, pic?: string) => boolean;
+  addDeviceHistory: (deviceId: string, entry: Omit<DeviceHistoryEntry, 'id' | 'timestamp'> & { timestamp?: string }) => boolean;
   duplicateDevice: (id: string) => boolean;
   deleteDevice: (id: string) => boolean;
   bulkDeleteDevices: (ids: string[]) => boolean;
@@ -265,14 +266,29 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   );
 
   const updateDevice = useCallback(
-    (id: string, updates: Partial<Omit<Device, 'id' | 'createdAt'>>): boolean => {
+    (id: string, updates: Partial<Omit<Device, 'id' | 'createdAt'>>, pic: string = 'Admin'): boolean => {
       try {
-        const updated = LocalStorageService.updateDevice(id, updates);
+        const updated = LocalStorageService.updateDevice(id, updates, pic);
         refreshDevices();
         success('Perangkat Diperbarui', `Perangkat seri ${updated.seri} berhasil diperbarui.`);
         return true;
       } catch (err: any) {
         error('Gagal Memperbarui', err.message || 'Terjadi kesalahan.');
+        return false;
+      }
+    },
+    [refreshDevices, success, error]
+  );
+
+  const addDeviceHistory = useCallback(
+    (deviceId: string, entry: Omit<DeviceHistoryEntry, 'id' | 'timestamp'> & { timestamp?: string }): boolean => {
+      try {
+        const updated = LocalStorageService.addDeviceHistory(deviceId, entry);
+        refreshDevices();
+        success('Riwayat Ditambahkan', `Catatan riwayat untuk perangkat seri ${updated.seri} berhasil disimpan.`);
+        return true;
+      } catch (err: any) {
+        error('Gagal Menambah Riwayat', err.message || 'Terjadi kesalahan.');
         return false;
       }
     },
@@ -330,7 +346,7 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
   const resetToDummy = useCallback(() => {
     LocalStorageService.resetToDummy();
     refreshDevices();
-    info('Data Dimuat Ulang', '107 data perangkat dari Excel berhasil dimuat ulang.');
+    info('Data Dimuat Ulang', '80 data perangkat dari Excel berhasil dimuat ulang.');
   }, [refreshDevices, info]);
 
   const clearAll = useCallback(() => {
@@ -373,6 +389,7 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         setIsCreateModalOpen,
         addDevice,
         updateDevice,
+        addDeviceHistory,
         duplicateDevice,
         deleteDevice,
         bulkDeleteDevices,

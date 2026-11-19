@@ -66,6 +66,27 @@ export interface WarehouseMovement {
   createdAt: string;
 }
 
+// --- History & Audit Trail Types ---
+export type DeviceHistoryCategory = 'GUDANG' | 'PARAMETER' | 'STATUS' | 'SISTEM' | 'MANUAL';
+
+export interface ParameterDiff {
+  field: string;
+  fieldLabel: string;
+  oldValue: string;
+  newValue: string;
+}
+
+export interface DeviceHistoryEntry {
+  id: string;
+  timestamp: string; // ISO 8601 string
+  kategori: DeviceHistoryCategory; // 'GUDANG' | 'PARAMETER' | 'STATUS' | 'SISTEM' | 'MANUAL'
+  judul: string; // e.g. "Keluar dari Gudang", "Perubahan Parameter", "Status Diubah", "Perangkat Didaftarkan"
+  deskripsi?: string; // Penjelasan singkat
+  pic?: string; // PIC / Teknisi / Admin
+  perubahan?: ParameterDiff[]; // Rincian parameter yang berubah
+  metadata?: Record<string, any>;
+}
+
 export interface Device {
   id: string;              // Internal unique ID
   model?: DeviceModel;     // Model/Kategori: AquaLink | Ultrasonic | MIU (default: AquaLink)
@@ -91,7 +112,8 @@ export interface Device {
   posisiGudang?: WarehousePosition; // Posisi saat ini: Di Gudang / Di Luar
   penerimaKeluar?: string;   // Teknisi / PIC yang membawa
   keperluanKeluar?: string;  // Keperluan (Instalasi, Maintenance, dll.)
-  riwayatGudang?: WarehouseMovement[]; // Log riwayat mutasi
+  riwayatGudang?: WarehouseMovement[]; // Log riwayat mutasi gudang (kompatibilitas)
+  riwayat?: DeviceHistoryEntry[];      // Log riwayat terpadu (gudang, parameter, status, manual)
   createdAt: string;
   updatedAt: string;
 }
@@ -106,6 +128,44 @@ export function getDeviceWarehouseStatus(d: Device): WarehousePosition {
     return 'DI_LUAR';
   }
   return 'DI_GUDANG';
+}
+
+/**
+ * Mengambil seluruh riwayat perangkat secara komprehensif (menggabungkan riwayat terpadu dan riwayat gudang),
+ * terurut dari yang paling terbaru.
+ */
+export function getDeviceFullHistory(device: Device): DeviceHistoryEntry[] {
+  const list: DeviceHistoryEntry[] = [...(device.riwayat || [])];
+  const seenIds = new Set(list.map((h) => h.id));
+
+  // Konversi riwayatGudang jika belum ada di riwayat terpadu
+  if (device.riwayatGudang && device.riwayatGudang.length > 0) {
+    for (const m of device.riwayatGudang) {
+      const convertedId = 'hist-' + m.id;
+      if (!seenIds.has(convertedId) && !seenIds.has(m.id)) {
+        list.push({
+          id: convertedId,
+          timestamp: m.createdAt || `${m.tanggal}T08:00:00.000Z`,
+          kategori: 'GUDANG',
+          judul: m.tipe === 'KELUAR' ? 'Keluar dari Gudang' : 'Kembali ke Gudang',
+          deskripsi: m.catatan || (m.tipe === 'KELUAR' 
+            ? `Keluar ke lokasi ${m.lokasi || '-'} ${m.penerima ? `(PIC: ${m.penerima})` : ''}` 
+            : `Kembali disimpan di ${m.lokasi || 'Gudang'}`),
+          pic: m.penerima,
+          metadata: {
+            tipe: m.tipe,
+            lokasi: m.lokasi,
+            keperluan: m.keperluan,
+            tanggal: m.tanggal,
+          },
+        });
+        seenIds.add(convertedId);
+      }
+    }
+  }
+
+  // Urutkan waktu terbaru di atas
+  return list.sort((a, b) => new Date(b.timestamp).getTime() - new Date(a.timestamp).getTime());
 }
 
 export interface DeviceFilters {

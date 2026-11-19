@@ -10,11 +10,12 @@ import {
   Trash2,
   LogOut,
   LogIn,
+  History,
 } from 'lucide-react';
 
 interface DeviceTableProps {
   devices: Device[];
-  onOpenDetail: (device: Device) => void;
+  onOpenDetail: (device: Device, tab?: 'info' | 'history') => void;
   onOpenEdit: (device: Device) => void;
   onDuplicate: (id: string) => void;
   onDeleteRequest: (device: Device) => void;
@@ -306,11 +307,18 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
                       )}
 
                       <button
-                        onClick={() => onOpenDetail(d)}
-                        title="Lihat Detail"
+                        onClick={() => onOpenDetail(d, 'info')}
+                        title="Lihat Detail Teknis"
                         className="p-1 rounded text-slate-500 hover:text-blue-900 hover:bg-slate-100 cursor-pointer"
                       >
                         <Eye className="w-3.5 h-3.5" />
+                      </button>
+                      <button
+                        onClick={() => onOpenDetail(d, 'history')}
+                        title="Lihat Riwayat & Mutasi"
+                        className="p-1 rounded text-slate-500 hover:text-indigo-700 hover:bg-indigo-50 cursor-pointer"
+                      >
+                        <History className="w-3.5 h-3.5" />
                       </button>
                       <button
                         onClick={() => onOpenEdit(d)}

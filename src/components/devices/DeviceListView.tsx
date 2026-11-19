@@ -43,6 +43,7 @@ export const DeviceListView: React.FC = () => {
   const [deviceToDelete, setDeviceToDelete] = useState<Device | null>(null);
   const [isBulkDeleteModalOpen, setIsBulkDeleteModalOpen] = useState(false);
   const [isResetModalOpen, setIsResetModalOpen] = useState(false);
+  const [detailInitialTab, setDetailInitialTab] = useState<'info' | 'history'>('info');
 
   const handleExportFiltered = () => {
     ExcelExportService.exportDevices(filteredDevices, {
@@ -89,7 +90,7 @@ export const DeviceListView: React.FC = () => {
           <button
             onClick={() => setIsResetModalOpen(true)}
             className="px-2.5 py-1.5 rounded-lg border border-slate-200 text-slate-500 hover:bg-slate-50 text-xs transition-colors cursor-pointer"
-            title="Muat ulang 107 data default dari Excel"
+            title="Muat ulang 80 data default dari Excel"
           >
             <RotateCcw className="w-3.5 h-3.5" />
           </button>
@@ -229,7 +230,10 @@ export const DeviceListView: React.FC = () => {
       {/* Device Table */}
       <DeviceTable
         devices={paginatedDevices}
-        onOpenDetail={(d) => setSelectedDeviceForDetail(d)}
+        onOpenDetail={(d, tab = 'info') => {
+          setDetailInitialTab(tab);
+          setSelectedDeviceForDetail(d);
+        }}
         onOpenEdit={(d) => setSelectedDeviceForEdit(d)}
         onDuplicate={(id) => duplicateDevice(id)}
         onDeleteRequest={(d) => setDeviceToDelete(d)}
@@ -250,6 +254,7 @@ export const DeviceListView: React.FC = () => {
         <DeviceDetailModal
           device={selectedDeviceForDetail}
           isOpen={!!selectedDeviceForDetail}
+          initialTab={detailInitialTab}
           onClose={() => setSelectedDeviceForDetail(null)}
           onEdit={(d) => {
             setSelectedDeviceForDetail(null);
@@ -298,7 +303,7 @@ export const DeviceListView: React.FC = () => {
         onClose={() => setIsResetModalOpen(false)}
         onConfirm={() => resetToDummy()}
         title="Muat Ulang Data Asli?"
-        message="Ini akan memulihkan 107 data perangkat dari file Excel asli (Laison). Perubahan manual yang belum dibackup mungkin tertimpa."
+        message="Ini akan memulihkan 80 data perangkat dari file Excel resmi Enviro LORAWAN & NBIOT. Perubahan manual yang belum dibackup mungkin tertimpa."
         confirmLabel="Ya, Muat Ulang"
         variant="warning"
       />

@@ -1,5 +1,5 @@
 import * as XLSX from 'xlsx';
-import { Device, getDeviceWarehouseStatus } from '../../types/device';
+import { Device, getDeviceWarehouseStatus, getDeviceFullHistory } from '../../types/device';
 
 export interface ExportOptions {
   filename?: string;
@@ -74,6 +74,45 @@ export class ExcelExportService {
     } else {
       XLSX.writeFile(workbook, filename, { bookType: 'xlsx' });
     }
+  }
+
+  /**
+   * Ekspor riwayat lengkap sebuah perangkat ke file Excel.
+   */
+  static exportDeviceHistory(device: Device): void {
+    const history = getDeviceFullHistory(device);
+    const formatted = history.map((h, idx) => ({
+      NO: idx + 1,
+      TANGGAL: new Date(h.timestamp).toLocaleDateString('id-ID'),
+      WAKTU: new Date(h.timestamp).toLocaleTimeString('id-ID'),
+      KATEGORI: h.kategori,
+      AKTIVITAS: h.judul,
+      'PIC / TEKNISI': h.pic || '-',
+      DESKRIPSI: h.deskripsi || '-',
+      'RINCIAN PERUBAHAN PARAMETER': h.perubahan && h.perubahan.length > 0
+        ? h.perubahan.map((p) => `${p.fieldLabel}: ${p.oldValue} ➔ ${p.newValue}`).join('; ')
+        : '-',
+      LOKASI: h.metadata?.lokasi || '-',
+      KEPERLUAN: h.metadata?.keperluan || '-',
+    }));
+
+    const worksheet = XLSX.utils.json_to_sheet(formatted);
+    worksheet['!cols'] = [
+      { wch: 6 },  // NO
+      { wch: 14 }, // TANGGAL
+      { wch: 12 }, // WAKTU
+      { wch: 14 }, // KATEGORI
+      { wch: 24 }, // AKTIVITAS
+      { wch: 18 }, // PIC / TEKNISI
+      { wch: 40 }, // DESKRIPSI
+      { wch: 45 }, // RINCIAN PERUBAHAN
+      { wch: 20 }, // LOKASI
+      { wch: 22 }, // KEPERLUAN
+    ];
+
+    const workbook = XLSX.utils.book_new();
+    XLSX.utils.book_append_sheet(workbook, worksheet, `Riwayat Seri ${device.seri}`);
+    XLSX.writeFile(workbook, `Laison_Riwayat_${device.seri}.xlsx`, { bookType: 'xlsx' });
   }
 
   static downloadTemplate(format: 'xlsx' | 'csv' = 'xlsx'): void {

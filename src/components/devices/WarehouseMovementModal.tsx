@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Device, DeviceStatus, getDeviceWarehouseStatus } from '../../types/device';
+import { Device, DeviceStatus, getDeviceWarehouseStatus, DeviceHistoryEntry } from '../../types/device';
 import { useDevices } from '../../context/DeviceContext';
 import { X, LogOut, LogIn, Calendar, MapPin, User, FileText, CheckCircle2 } from 'lucide-react';
 
@@ -59,7 +59,8 @@ export const WarehouseMovementModal: React.FC<WarehouseMovementModalProps> = ({
     e.preventDefault();
 
     const movementId = 'mov-' + Date.now();
-    const existingHistory = device.riwayatGudang || [];
+    const existingMovementHistory = device.riwayatGudang || [];
+    const existingUnifiedHistory = device.riwayat || [];
 
     if (isKeluar) {
       const newMovement = {
@@ -73,15 +74,37 @@ export const WarehouseMovementModal: React.FC<WarehouseMovementModalProps> = ({
         createdAt: new Date().toISOString(),
       };
 
-      updateDevice(device.id, {
-        tanggalKeluar: tanggal,
-        posisiGudang: 'DI_LUAR',
-        lokasi: lokasi.trim() || device.lokasi,
-        penerimaKeluar: penerima.trim(),
-        keperluanKeluar: keperluan.trim(),
-        status: statusPerangkat,
-        riwayatGudang: [newMovement, ...existingHistory],
-      });
+      const newHistoryEntry: DeviceHistoryEntry = {
+        id: 'hist-' + movementId,
+        timestamp: new Date().toISOString(),
+        kategori: 'GUDANG',
+        judul: 'Keluar dari Gudang',
+        deskripsi: `Keluar ke lokasi ${lokasi.trim() || device.lokasi || 'Lapangan'}${penerima.trim() ? ` (PIC: ${penerima.trim()})` : ''}${keperluan.trim() ? ` • Keperluan: ${keperluan.trim()}` : ''}${catatan.trim() ? ` • ${catatan.trim()}` : ''}`,
+        pic: penerima.trim() || 'Teknisi',
+        metadata: {
+          tipe: 'KELUAR',
+          tanggal,
+          lokasi: lokasi.trim() || device.lokasi,
+          penerima: penerima.trim(),
+          keperluan: keperluan.trim(),
+          catatan: catatan.trim(),
+        },
+      };
+
+      updateDevice(
+        device.id,
+        {
+          tanggalKeluar: tanggal,
+          posisiGudang: 'DI_LUAR',
+          lokasi: lokasi.trim() || device.lokasi,
+          penerimaKeluar: penerima.trim(),
+          keperluanKeluar: keperluan.trim(),
+          status: statusPerangkat,
+          riwayatGudang: [newMovement, ...existingMovementHistory],
+          riwayat: [newHistoryEntry, ...existingUnifiedHistory],
+        },
+        penerima.trim() || 'Teknisi'
+      );
     } else {
       const newMovement = {
         id: movementId,
@@ -94,13 +117,35 @@ export const WarehouseMovementModal: React.FC<WarehouseMovementModalProps> = ({
         createdAt: new Date().toISOString(),
       };
 
-      updateDevice(device.id, {
-        tanggalKembali: tanggal,
-        posisiGudang: 'DI_GUDANG',
-        lokasi: lokasi.trim() || 'Gudang Utama Laison',
-        status: statusPerangkat,
-        riwayatGudang: [newMovement, ...existingHistory],
-      });
+      const newHistoryEntry: DeviceHistoryEntry = {
+        id: 'hist-' + movementId,
+        timestamp: new Date().toISOString(),
+        kategori: 'GUDANG',
+        judul: 'Kembali ke Gudang',
+        deskripsi: `Kembali ke ${lokasi.trim() || 'Gudang Utama Laison'}${penerima.trim() ? ` (Diserahkan oleh: ${penerima.trim()})` : ''}${catatan.trim() ? ` • ${catatan.trim()}` : ''}`,
+        pic: penerima.trim() || 'Petugas Gudang',
+        metadata: {
+          tipe: 'KEMBALI',
+          tanggal,
+          lokasi: lokasi.trim() || 'Gudang Utama Laison',
+          penerima: penerima.trim(),
+          keperluan: keperluan.trim(),
+          catatan: catatan.trim(),
+        },
+      };
+
+      updateDevice(
+        device.id,
+        {
+          tanggalKembali: tanggal,
+          posisiGudang: 'DI_GUDANG',
+          lokasi: lokasi.trim() || 'Gudang Utama Laison',
+          status: statusPerangkat,
+          riwayatGudang: [newMovement, ...existingMovementHistory],
+          riwayat: [newHistoryEntry, ...existingUnifiedHistory],
+        },
+        penerima.trim() || 'Petugas Gudang'
+      );
     }
 
     onClose();

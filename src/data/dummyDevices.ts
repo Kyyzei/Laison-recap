@@ -2,156 +2,468 @@ import { Device } from '../types/device';
 
 export const DUMMY_DEVICES: Device[] = [
   {
-    "id": "dev-6508280001",
-    "seri": "6508280001",
+    "id": "dev-6604290016",
+    "seri": "6604290016",
     "koneksi": "LoRaWAN",
-    "readAddress": "9C066508280001",
-    "devEui": "8CF95720001930D8",
+    "readAddress": "AF066604290016",
+    "devEui": "8CF9572000193D62",
     "appEui": "8CF9572000000000",
-    "devAddr": "0403824B",
+    "devAddr": "00193D62",
     "noSim": "",
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Rusak",
-    "lokasi": "",
-    "catatan": "rusak",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290016",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290016",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290016",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290016 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
-    "id": "dev-6508280002",
-    "seri": "6508280002",
+    "id": "dev-6604290017",
+    "seri": "6604290017",
     "koneksi": "LoRaWAN",
-    "readAddress": "9D066508280002",
-    "devEui": "8CF957200019306D",
+    "readAddress": "B0066604290017",
+    "devEui": "8CF9572000193060",
     "appEui": "8CF9572000000000",
-    "devAddr": "04022A25",
+    "devAddr": "00193060",
     "noSim": "",
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Rusak",
-    "lokasi": "",
-    "catatan": "rusak",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290017",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290017",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290017",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290017 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
-    "id": "dev-6508280003",
-    "seri": "6508280003",
+    "id": "dev-6604290019",
+    "seri": "6604290019",
     "koneksi": "LoRaWAN",
-    "readAddress": "9E066508280003",
-    "devEui": "8CF9572000192348",
+    "readAddress": "B2066604290019",
+    "devEui": "8CF9572000191B2E",
     "appEui": "8CF9572000000000",
-    "devAddr": "00192348",
+    "devAddr": "00191B2E",
     "noSim": "",
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Rusak",
-    "lokasi": "",
-    "catatan": "rusak",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290019",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290019",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290019",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290019 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
-    "id": "dev-6508280004",
-    "seri": "6508280004",
+    "id": "dev-6604290023",
+    "seri": "6604290023",
     "koneksi": "LoRaWAN",
-    "readAddress": "9F066508280004",
-    "devEui": "8CF9572000191F17",
+    "readAddress": "BC066604290023",
+    "devEui": "8CF9572000192CEC",
     "appEui": "8CF9572000000000",
-    "devAddr": "00191F17",
+    "devAddr": "00192CEC",
     "noSim": "",
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Rusak",
-    "lokasi": "",
-    "catatan": "rusak",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290023",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290023",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290023",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290023 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
-    "id": "dev-6508280005",
-    "seri": "6508280005",
+    "id": "dev-6604290025",
+    "seri": "6604290025",
     "koneksi": "LoRaWAN",
-    "readAddress": "A0066508280005",
-    "devEui": "8CF9572000191CE7",
+    "readAddress": "BE066604290025",
+    "devEui": "8CF957200019207B",
     "appEui": "8CF9572000000000",
-    "devAddr": "00191CE7",
+    "devAddr": "0019207B",
     "noSim": "",
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Rusak",
-    "lokasi": "",
-    "catatan": "rusak",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290025",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290025",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290025",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290025 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
-    "id": "dev-6508280006",
-    "seri": "6508280006",
+    "id": "dev-6604290026",
+    "seri": "6604290026",
     "koneksi": "LoRaWAN",
-    "readAddress": "A1066508280006",
-    "devEui": "8CF9572000193CE4",
+    "readAddress": "BF066604290026",
+    "devEui": "8CF9572000193FA1",
     "appEui": "8CF9572000000000",
-    "devAddr": "00193CE4",
+    "devAddr": "00193FA1",
     "noSim": "",
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Rusak",
-    "lokasi": "",
-    "catatan": "rusak",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290026",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290026",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290026",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290026 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
-    "id": "dev-6508280007",
-    "seri": "6508280007",
+    "id": "dev-6604290027",
+    "seri": "6604290027",
     "koneksi": "LoRaWAN",
-    "readAddress": "A2066508280007",
-    "devEui": "8CF9572000191B2A",
+    "readAddress": "C0066604290027",
+    "devEui": "8CF9572000191B33",
     "appEui": "8CF9572000000000",
-    "devAddr": "00191B2A",
+    "devAddr": "00191B33",
     "noSim": "",
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Rusak",
-    "lokasi": "",
-    "catatan": "rusak",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290027",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290027",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290027",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290027 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
-    "id": "dev-6508280008",
-    "seri": "6508280008",
+    "id": "dev-6604290028",
+    "seri": "6604290028",
     "koneksi": "LoRaWAN",
-    "readAddress": "A3066508280008",
-    "devEui": "8CF95720001934F3",
+    "readAddress": "C1066604290028",
+    "devEui": "8CF9572000192F04",
     "appEui": "8CF9572000000000",
-    "devAddr": "001934F3",
+    "devAddr": "00192F04",
     "noSim": "",
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Rusak",
-    "lokasi": "",
-    "catatan": "rusak",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290028",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290028",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290028",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290028 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6508280009",
@@ -165,9 +477,10 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
-    "catatan": "Unit terpasang di site",
+    "catatan": "",
+    "model": "AquaLink",
     "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
@@ -184,9 +497,755 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6508280009",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6508280009",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280009 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290029",
+    "seri": "6604290029",
+    "koneksi": "LoRaWAN",
+    "readAddress": "C2066604290029",
+    "devEui": "8CF9572000192FB0",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192FB0",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290029",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290029",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290029",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290029 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290003",
+    "seri": "6604290003",
+    "koneksi": "LoRaWAN",
+    "readAddress": "9C066604290003",
+    "devEui": "8CF9572000191CD4",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00191CD4",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290003",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290003",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290003",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290003 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290006",
+    "seri": "6604290006",
+    "koneksi": "LoRaWAN",
+    "readAddress": "9F066604290006",
+    "devEui": "8CF9572000191A20",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00191A20",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290006",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290006",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290006",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290006 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290007",
+    "seri": "6604290007",
+    "koneksi": "LoRaWAN",
+    "readAddress": "A0066604290007",
+    "devEui": "8CF9572000193D5F",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00193D5F",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290007",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290007",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290007",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290007 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290008",
+    "seri": "6604290008",
+    "koneksi": "LoRaWAN",
+    "readAddress": "A1066604290008",
+    "devEui": "8CF9572000192CEA",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192CEA",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290008",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290008",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290008",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290008 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290012",
+    "seri": "6604290012",
+    "koneksi": "LoRaWAN",
+    "readAddress": "AB066604290012",
+    "devEui": "8CF9572000191F1A",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00191F1A",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "P. Kelapa Dua",
+    "catatan": "ada di kantor pak Jo",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Enviro",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-kd-6604290012",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "P. Kelapa Dua",
+        "penerima": "Enviro",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290012",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290012",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290012 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280001",
+    "seri": "6508280001",
+    "koneksi": "LoRaWAN",
+    "readAddress": "9C066508280001",
+    "devEui": "8CF95720001930D8",
+    "appEui": "8CF9572000000000",
+    "devAddr": "0403824B",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Rusak",
+    "lokasi": "",
+    "catatan": "rusak",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-stat-6508280001",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
+      },
+      {
+        "id": "hist-reg-6508280001",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280001 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280002",
+    "seri": "6508280002",
+    "koneksi": "LoRaWAN",
+    "readAddress": "9D066508280002",
+    "devEui": "8CF957200019306D",
+    "appEui": "8CF9572000000000",
+    "devAddr": "04022A25",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Rusak",
+    "lokasi": "",
+    "catatan": "rusak",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-stat-6508280002",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
+      },
+      {
+        "id": "hist-reg-6508280002",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280002 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280003",
+    "seri": "6508280003",
+    "koneksi": "LoRaWAN",
+    "readAddress": "9E066508280003",
+    "devEui": "8CF9572000192348",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192348",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Rusak",
+    "lokasi": "",
+    "catatan": "rusak",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-stat-6508280003",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
+      },
+      {
+        "id": "hist-reg-6508280003",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280003 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280004",
+    "seri": "6508280004",
+    "koneksi": "LoRaWAN",
+    "readAddress": "9F066508280004",
+    "devEui": "8CF9572000191F17",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00191F17",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Rusak",
+    "lokasi": "",
+    "catatan": "rusak",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-stat-6508280004",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
+      },
+      {
+        "id": "hist-reg-6508280004",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280004 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280005",
+    "seri": "6508280005",
+    "koneksi": "LoRaWAN",
+    "readAddress": "A0066508280005",
+    "devEui": "8CF9572000191CE7",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00191CE7",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Rusak",
+    "lokasi": "",
+    "catatan": "rusak",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-stat-6508280005",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
+      },
+      {
+        "id": "hist-reg-6508280005",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280005 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280006",
+    "seri": "6508280006",
+    "koneksi": "LoRaWAN",
+    "readAddress": "A1066508280006",
+    "devEui": "8CF9572000193CE4",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00193CE4",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Rusak",
+    "lokasi": "",
+    "catatan": "rusak",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-stat-6508280006",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
+      },
+      {
+        "id": "hist-reg-6508280006",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280006 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280007",
+    "seri": "6508280007",
+    "koneksi": "LoRaWAN",
+    "readAddress": "A2066508280007",
+    "devEui": "8CF9572000191B2A",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00191B2A",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Rusak",
+    "lokasi": "",
+    "catatan": "rusak",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-stat-6508280007",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
+      },
+      {
+        "id": "hist-reg-6508280007",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280007 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280008",
+    "seri": "6508280008",
+    "koneksi": "LoRaWAN",
+    "readAddress": "A3066508280008",
+    "devEui": "8CF95720001934F3",
+    "appEui": "8CF9572000000000",
+    "devAddr": "001934F3",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Rusak",
+    "lokasi": "",
+    "catatan": "rusak",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-stat-6508280008",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
+      },
+      {
+        "id": "hist-reg-6508280008",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280008 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6508280010",
@@ -203,938 +1262,37 @@ export const DUMMY_DEVICES: Device[] = [
     "status": "Rusak",
     "lokasi": "",
     "catatan": "rusak",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280011",
-    "seri": "6508280011",
-    "koneksi": "NB-IoT",
-    "readAddress": "AC066508280011",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4819",
-    "apnBand": "NB1INTERNET,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "Gudang Utama Laison",
-    "catatan": "Siap pasang",
+    "model": "AquaLink",
     "posisiGudang": "DI_GUDANG",
-    "tanggalKeluar": "2026-10-15",
-    "tanggalKembali": "2026-10-25",
-    "penerimaKeluar": "Ahmad Fauzi",
-    "keperluanKeluar": "Uji Coba Lab",
-    "riwayatGudang": [
+    "riwayatGudang": [],
+    "riwayat": [
       {
-        "id": "mov-04-in",
-        "tipe": "KEMBALI",
-        "tanggal": "2026-10-25",
-        "lokasi": "Gudang Utama",
-        "penerima": "Gudang",
-        "keperluan": "Selesai Uji Coba",
-        "catatan": "Kondisi fisik prima",
-        "createdAt": "2026-10-25T14:20:00.000Z"
+        "id": "hist-stat-6508280010",
+        "timestamp": "2026-10-29T09:00:00.000Z",
+        "kategori": "STATUS",
+        "judul": "Status Diubah ke Rusak",
+        "deskripsi": "Unit ditandai rusak pada saat inspeksi teknis.",
+        "pic": "Teknisi Lab",
+        "perubahan": [
+          {
+            "field": "status",
+            "fieldLabel": "Status",
+            "oldValue": "Aktif",
+            "newValue": "Rusak"
+          }
+        ]
       },
       {
-        "id": "mov-04-out",
-        "tipe": "KELUAR",
-        "tanggal": "2026-10-15",
-        "lokasi": "Lab Kalibrasi",
-        "penerima": "Ahmad Fauzi",
-        "keperluan": "Uji Coba Lab",
-        "catatan": "Kalibrasi sensor",
-        "createdAt": "2026-10-15T09:10:00.000Z"
+        "id": "hist-reg-6508280010",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6508280010 didaftarkan ke sistem.",
+        "pic": "Admin"
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280012",
-    "seri": "6508280012",
-    "koneksi": "NB-IoT",
-    "readAddress": "AD066508280012",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4820",
-    "apnBand": "NB1INTERNET,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280013",
-    "seri": "6508280013",
-    "koneksi": "NB-IoT",
-    "readAddress": "AE066508280013",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4821",
-    "apnBand": "NB1INTERNET,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280014",
-    "seri": "6508280014",
-    "koneksi": "NB-IoT",
-    "readAddress": "AF066508280014",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4822",
-    "apnBand": "NB1INTERNET,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280015",
-    "seri": "6508280015",
-    "koneksi": "NB-IoT",
-    "readAddress": "B0066508280015",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4823",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280016",
-    "seri": "6508280016",
-    "koneksi": "NB-IoT",
-    "readAddress": "B1066508280016",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4789",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280017",
-    "seri": "6508280017",
-    "koneksi": "NB-IoT",
-    "readAddress": "B2066508280017",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4790",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280018",
-    "seri": "6508280018",
-    "koneksi": "NB-IoT",
-    "readAddress": "B3066508280018",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4791",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280019",
-    "seri": "6508280019",
-    "koneksi": "NB-IoT",
-    "readAddress": "B4066508280019",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4792",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6508280020",
-    "seri": "6508280020",
-    "koneksi": "NB-IoT",
-    "readAddress": "BB066508280020",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4794",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6601230001",
-    "seri": "6601230001",
-    "koneksi": "NB-IoT",
-    "readAddress": "91066601230001",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4801",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Env. Semarang",
-    "catatan": "Pemasangan water meter",
-    "posisiGudang": "DI_LUAR",
-    "tanggalKeluar": "2026-11-05",
-    "penerimaKeluar": "Deni Kurniawan",
-    "keperluanKeluar": "Pemasangan / Instalasi",
-    "riwayatGudang": [
-      {
-        "id": "mov-02",
-        "tipe": "KELUAR",
-        "tanggal": "2026-11-05",
-        "lokasi": "Env. Semarang",
-        "penerima": "Deni Kurniawan",
-        "keperluan": "Pemasangan / Instalasi",
-        "catatan": "Instalasi Baru",
-        "createdAt": "2026-11-05T09:00:00.000Z"
-      }
-    ],
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6601230003",
-    "seri": "6601230003",
-    "koneksi": "NB-IoT",
-    "readAddress": "93066601230003",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4802",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "Monitoring pit area",
-    "posisiGudang": "DI_LUAR",
-    "tanggalKeluar": "2026-11-08",
-    "penerimaKeluar": "Rian Pratama",
-    "keperluanKeluar": "Pemasangan / Instalasi",
-    "riwayatGudang": [
-      {
-        "id": "mov-03",
-        "tipe": "KELUAR",
-        "tanggal": "2026-11-08",
-        "lokasi": "Bukit Asam",
-        "penerima": "Rian Pratama",
-        "keperluan": "Pemasangan / Instalasi",
-        "catatan": "",
-        "createdAt": "2026-11-08T07:45:00.000Z"
-      }
-    ],
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6601230008",
-    "seri": "6601230008",
-    "koneksi": "NB-IoT",
-    "readAddress": "98066601230008",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4803",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6601230009",
-    "seri": "6601230009",
-    "koneksi": "NB-IoT",
-    "readAddress": "99066601230009",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4804",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6601230010",
-    "seri": "6601230010",
-    "koneksi": "NB-IoT",
-    "readAddress": "A0066601230010",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4805",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Env. Semarang",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290003",
-    "seri": "6604290003",
-    "koneksi": "LoRaWAN",
-    "readAddress": "9C066604290003",
-    "devEui": "8CF9572000191CD4",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00191CD4",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290003",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290005",
-    "seri": "6604290005",
-    "koneksi": "LoRaWAN",
-    "readAddress": "9E066604290005",
-    "devEui": "8CF95720001930A7",
-    "appEui": "8CF9572000000000",
-    "devAddr": "001930A7",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290006",
-    "seri": "6604290006",
-    "koneksi": "LoRaWAN",
-    "readAddress": "9F066604290006",
-    "devEui": "8CF9572000191A20",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00191A20",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290006",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290007",
-    "seri": "6604290007",
-    "koneksi": "LoRaWAN",
-    "readAddress": "A0066604290007",
-    "devEui": "8CF9572000193D5F",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00193D5F",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290007",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290008",
-    "seri": "6604290008",
-    "koneksi": "LoRaWAN",
-    "readAddress": "A1066604290008",
-    "devEui": "8CF9572000192CEA",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192CEA",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290008",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290012",
-    "seri": "6604290012",
-    "koneksi": "LoRaWAN",
-    "readAddress": "AB066604290012",
-    "devEui": "8CF9572000191F1A",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00191F1A",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "Ada di kantor pak Jo",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290012",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290015",
-    "seri": "6604290015",
-    "koneksi": "LoRaWAN",
-    "readAddress": "AE066604290015",
-    "devEui": "8CF9572000192D4C",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192D4C",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290016",
-    "seri": "6604290016",
-    "koneksi": "LoRaWAN",
-    "readAddress": "AF066604290016",
-    "devEui": "8CF9572000193D62",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00193D62",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290016",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290017",
-    "seri": "6604290017",
-    "koneksi": "LoRaWAN",
-    "readAddress": "B0066604290017",
-    "devEui": "8CF9572000193060",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00193060",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290017",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290019",
-    "seri": "6604290019",
-    "koneksi": "LoRaWAN",
-    "readAddress": "B2066604290019",
-    "devEui": "8CF9572000191B2E",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00191B2E",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290019",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290022",
-    "seri": "6604290022",
-    "koneksi": "LoRaWAN",
-    "readAddress": "BB066604290022",
-    "devEui": "8CF9572000193D09",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00193D09",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290023",
-    "seri": "6604290023",
-    "koneksi": "LoRaWAN",
-    "readAddress": "BC066604290023",
-    "devEui": "8CF9572000192CEC",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192CEC",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290023",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290025",
-    "seri": "6604290025",
-    "koneksi": "LoRaWAN",
-    "readAddress": "BE066604290025",
-    "devEui": "8CF957200019207B",
-    "appEui": "8CF9572000000000",
-    "devAddr": "0019207B",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290025",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290026",
-    "seri": "6604290026",
-    "koneksi": "LoRaWAN",
-    "readAddress": "BF066604290026",
-    "devEui": "8CF9572000193FA1",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00193FA1",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290026",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290027",
-    "seri": "6604290027",
-    "koneksi": "LoRaWAN",
-    "readAddress": "C0066604290027",
-    "devEui": "8CF9572000191B33",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00191B33",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290027",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290028",
-    "seri": "6604290028",
-    "koneksi": "LoRaWAN",
-    "readAddress": "C1066604290028",
-    "devEui": "8CF9572000192F04",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192F04",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290028",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290029",
-    "seri": "6604290029",
-    "koneksi": "LoRaWAN",
-    "readAddress": "C2066604290029",
-    "devEui": "8CF9572000192FB0",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192FB0",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "P. Kelapa Dua",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "tanggalKeluar": "2026-07-14",
-    "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
-    "keperluanKeluar": "Instalasi Lapangan",
-    "riwayatGudang": [
-      {
-        "id": "mov-kd-6604290029",
-        "tipe": "KELUAR",
-        "tanggal": "2026-07-14",
-        "lokasi": "P. Kelapa Dua",
-        "penerima": "Enviro",
-        "keperluan": "Instalasi Lapangan",
-        "catatan": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua",
-        "createdAt": "2026-07-14T08:00:00.000Z"
-      }
-    ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290031",
-    "seri": "6604290031",
-    "koneksi": "LoRaWAN",
-    "readAddress": "CA066604290031",
-    "devEui": "8CF9572000192F59",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192F59",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290032",
-    "seri": "6604290032",
-    "koneksi": "LoRaWAN",
-    "readAddress": "CB066604290032",
-    "devEui": "8CF9572000192CCE",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192CCE",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290033",
@@ -1148,12 +1306,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290033",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290033 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290034",
@@ -1167,12 +1337,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290034",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290034 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290035",
@@ -1186,12 +1368,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290035",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290035 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290036",
@@ -1205,12 +1399,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290036",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290036 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290037",
@@ -1224,12 +1430,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290037",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290037 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290038",
@@ -1243,12 +1461,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290038",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290038 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290039",
@@ -1262,12 +1492,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290039",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290039 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290040",
@@ -1281,107 +1523,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290040",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290040 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290041",
-    "seri": "6604290041",
-    "koneksi": "LoRaWAN",
-    "readAddress": "DA066604290041",
-    "devEui": "8CF957200019195D",
-    "appEui": "8CF9572000000000",
-    "devAddr": "0019195D",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290042",
-    "seri": "6604290042",
-    "koneksi": "LoRaWAN",
-    "readAddress": "DB066604290042",
-    "devEui": "8CF9572000192FD5",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192FD5",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290043",
-    "seri": "6604290043",
-    "koneksi": "LoRaWAN",
-    "readAddress": "DC066604290043",
-    "devEui": "8CF9572000192075",
-    "appEui": "8CF9572000000000",
-    "devAddr": "OO192075",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290044",
-    "seri": "6604290044",
-    "koneksi": "LoRaWAN",
-    "readAddress": "DD066604290044",
-    "devEui": "8CF9572000192CE0",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192CE0",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290046",
-    "seri": "6604290046",
-    "koneksi": "LoRaWAN",
-    "readAddress": "DF066604290046",
-    "devEui": "8CF9572000192DCF",
-    "appEui": "8CF9572000000000",
-    "devAddr": "00192DCF",
-    "noSim": "",
-    "apnBand": "",
-    "ip": "",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290048",
@@ -1395,12 +1554,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290048",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290048 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290049",
@@ -1414,12 +1585,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "Semarang",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290049",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290049 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290050",
@@ -1433,12 +1616,334 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "",
     "ip": "",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "Semarang",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290050",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290050 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290005",
+    "seri": "6604290005",
+    "koneksi": "LoRaWAN",
+    "readAddress": "9E066604290005",
+    "devEui": "8CF95720001930A7",
+    "appEui": "8CF9572000000000",
+    "devAddr": "001930A7",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290005",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290005 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290015",
+    "seri": "6604290015",
+    "koneksi": "LoRaWAN",
+    "readAddress": "AE066604290015",
+    "devEui": "8CF9572000192D4C",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192D4C",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290015",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290015 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290022",
+    "seri": "6604290022",
+    "koneksi": "LoRaWAN",
+    "readAddress": "BB066604290022",
+    "devEui": "8CF9572000193D09",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00193D09",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290022",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290022 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290031",
+    "seri": "6604290031",
+    "koneksi": "LoRaWAN",
+    "readAddress": "CA066604290031",
+    "devEui": "8CF9572000192F59",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192F59",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290031",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290031 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290032",
+    "seri": "6604290032",
+    "koneksi": "LoRaWAN",
+    "readAddress": "CB066604290032",
+    "devEui": "8CF9572000192CCE",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192CCE",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290032",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290032 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290041",
+    "seri": "6604290041",
+    "koneksi": "LoRaWAN",
+    "readAddress": "DA066604290041",
+    "devEui": "8CF957200019195D",
+    "appEui": "8CF9572000000000",
+    "devAddr": "0019195D",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290041",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290041 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290042",
+    "seri": "6604290042",
+    "koneksi": "LoRaWAN",
+    "readAddress": "DB066604290042",
+    "devEui": "8CF9572000192FD5",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192FD5",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290042",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290042 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290043",
+    "seri": "6604290043",
+    "koneksi": "LoRaWAN",
+    "readAddress": "DC066604290043",
+    "devEui": "8CF9572000192075",
+    "appEui": "8CF9572000000000",
+    "devAddr": "OO192075",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290043",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290043 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290044",
+    "seri": "6604290044",
+    "koneksi": "LoRaWAN",
+    "readAddress": "DD066604290044",
+    "devEui": "8CF9572000192CE0",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192CE0",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290044",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290044 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6604290046",
+    "seri": "6604290046",
+    "koneksi": "LoRaWAN",
+    "readAddress": "DF066604290046",
+    "devEui": "8CF9572000192DCF",
+    "appEui": "8CF9572000000000",
+    "devAddr": "00192DCF",
+    "noSim": "",
+    "apnBand": "",
+    "ip": "",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290046",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (LoRaWAN) dengan nomor seri 6604290046 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290051",
@@ -1452,14 +1957,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1473,64 +1977,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290052",
-    "seri": "6604290052",
-    "koneksi": "NB-IoT",
-    "readAddress": "EB066604290052",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290051",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290051",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290051 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290053",
-    "seri": "6604290053",
-    "koneksi": "NB-IoT",
-    "readAddress": "EC066604290053",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290054",
-    "seri": "6604290054",
-    "koneksi": "NB-IoT",
-    "readAddress": "ED066604290054",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4768",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290055",
@@ -1544,14 +2015,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1565,7 +2035,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290055",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290055",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290055 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290056",
@@ -1579,14 +2073,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1600,7 +2093,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290056",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290056",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290056 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290057",
@@ -1614,14 +2131,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1635,7 +2151,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290057",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290057",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290057 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290058",
@@ -1649,14 +2189,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1670,26 +2209,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290059",
-    "seri": "6604290059",
-    "koneksi": "NB-IoT",
-    "readAddress": "F2066604290059",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290058",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290058",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290058 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290060",
@@ -1703,14 +2247,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1724,45 +2267,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290061",
-    "seri": "6604290061",
-    "koneksi": "NB-IoT",
-    "readAddress": "FA066604290061",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290060",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290060",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290060 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290062",
-    "seri": "6604290062",
-    "koneksi": "NB-IoT",
-    "readAddress": "FB066604290062",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290063",
@@ -1776,14 +2305,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1797,7 +2325,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290063",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290063",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290063 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290064",
@@ -1811,14 +2363,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1832,26 +2383,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290065",
-    "seri": "6604290065",
-    "koneksi": "NB-IoT",
-    "readAddress": "FE066604290065",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290064",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290064",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290064 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290066",
@@ -1865,14 +2421,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1886,7 +2441,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290066",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290066",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290066 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290067",
@@ -1900,14 +2479,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1921,7 +2499,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290067",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290067",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290067 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290068",
@@ -1935,14 +2537,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -1956,26 +2557,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290070",
-    "seri": "6604290070",
-    "koneksi": "NB-IoT",
-    "readAddress": "09066604290070",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290068",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290068",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290068 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290071",
@@ -1989,14 +2595,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -2010,7 +2615,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290071",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290071",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290071 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290072",
@@ -2024,14 +2653,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -2045,45 +2673,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290073",
-    "seri": "6604290073",
-    "koneksi": "NB-IoT",
-    "readAddress": "0C066604290073",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
-    "lokasi": "",
-    "catatan": "",
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290072",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290072",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290072 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290074",
-    "seri": "6604290074",
-    "koneksi": "NB-IoT",
-    "readAddress": "0D066604290074",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290075",
@@ -2097,14 +2711,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -2118,64 +2731,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290076",
-    "seri": "6604290076",
-    "koneksi": "NB-IoT",
-    "readAddress": "0F066604290076",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290075",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290075",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290075 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290077",
-    "seri": "6604290077",
-    "koneksi": "NB-IoT",
-    "readAddress": "10066604290077",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290078",
-    "seri": "6604290078",
-    "koneksi": "NB-IoT",
-    "readAddress": "11066604290078",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290079",
@@ -2189,14 +2769,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -2210,7 +2789,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290079",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290079",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290079 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290080",
@@ -2224,14 +2827,13 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "P. Kelapa Dua",
     "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
     "tanggalKeluar": "2026-07-14",
     "penerimaKeluar": "Enviro",
-    "posisiGudang": "DI_LUAR",
     "keperluanKeluar": "Instalasi Lapangan",
     "riwayatGudang": [
       {
@@ -2245,7 +2847,31 @@ export const DUMMY_DEVICES: Device[] = [
         "createdAt": "2026-07-14T08:00:00.000Z"
       }
     ],
-    "model": "AquaLink"
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290080",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi P. Kelapa Dua (PIC: Enviro)",
+        "pic": "Enviro",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "P. Kelapa Dua",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290080",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290080 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290081",
@@ -2259,50 +2885,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290082",
-    "seri": "6604290082",
-    "koneksi": "NB-IoT",
-    "readAddress": "1B066604290082",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290083",
-    "seri": "6604290083",
-    "koneksi": "NB-IoT",
-    "readAddress": "1C066604290083",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290081",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290081 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290084",
@@ -2316,12 +2916,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290084",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290084 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290085",
@@ -2335,12 +2947,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "Triarta",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290085",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290085 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290086",
@@ -2354,12 +2978,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290086",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290086 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290088",
@@ -2373,12 +3009,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "SCTK",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290088",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290088 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290089",
@@ -2392,12 +3040,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290089",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290089 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290091",
@@ -2411,12 +3071,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "Env. Semarang",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290091",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290091 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290092",
@@ -2430,12 +3102,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290092",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290092 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290093",
@@ -2449,12 +3133,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290093",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290093 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290094",
@@ -2468,12 +3164,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290094",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290094 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290095",
@@ -2487,12 +3195,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290095",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290095 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290096",
@@ -2506,31 +3226,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
-    "catatan": "",
-    "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
-  },
-  {
-    "id": "dev-6604290097",
-    "seri": "6604290097",
-    "koneksi": "NB-IoT",
-    "readAddress": "30066604290097",
-    "devEui": "",
-    "appEui": "",
-    "devAddr": "",
-    "noSim": "0851-5378-4815",
-    "apnBand": "NBIOT,3,20,28,8",
-    "ip": "147.93.81.149",
-    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Stok",
+    "status": "Aktif",
     "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290096",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290096 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290098",
@@ -2544,12 +3257,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
+    "status": "Aktif",
     "lokasi": "Supermall",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290098",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290098 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290099",
@@ -2563,12 +3288,24 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290099",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290099 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   },
   {
     "id": "dev-6604290100",
@@ -2582,11 +3319,147 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Terpasang",
-    "lokasi": "Bukit Asam",
+    "status": "Aktif",
+    "lokasi": "",
     "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290100",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290100 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-13T10:15:00.000Z",
-    "model": "AquaLink"
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6601230001",
+    "seri": "6601230001",
+    "koneksi": "NB-IoT",
+    "readAddress": "91066601230001",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4801",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "Triarta",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6601230001",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6601230001 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6601230003",
+    "seri": "6601230003",
+    "koneksi": "NB-IoT",
+    "readAddress": "93066601230003",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4802",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6601230003",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6601230003 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6601230008",
+    "seri": "6601230008",
+    "koneksi": "NB-IoT",
+    "readAddress": "98066601230008",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4803",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6601230008",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6601230008 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6601230010",
+    "seri": "6601230010",
+    "koneksi": "NB-IoT",
+    "readAddress": "A0066601230010",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4805",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Aktif",
+    "lokasi": "Env. Semarang",
+    "catatan": "",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6601230010",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6601230010 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-19T10:00:00.000Z"
   }
 ];
