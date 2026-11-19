@@ -302,11 +302,11 @@ export const DashboardView: React.FC = () => {
           </button>
         </div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3">
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-3.5">
           {/* Online */}
           <div
             onClick={() => navigate('/simcards')}
-            className="p-3 rounded-xl border border-emerald-200 bg-emerald-50/40 hover:bg-emerald-50 hover:border-emerald-300 transition-all cursor-pointer"
+            className="p-3.5 rounded-xl border border-emerald-200 bg-emerald-50/40 hover:bg-emerald-50 hover:border-emerald-300 transition-all cursor-pointer"
           >
             <div className="flex items-center justify-between text-emerald-800 text-xs font-semibold">
               <span className="flex items-center gap-1.5">
@@ -319,45 +319,29 @@ export const DashboardView: React.FC = () => {
               <span className="text-2xl font-black text-emerald-800">{simStats.online}</span>
               <span className="text-xs text-emerald-700 ml-1">kartu</span>
             </div>
-            <p className="text-[10px] text-emerald-600 mt-0.5">Komunikasi aktif</p>
-          </div>
-
-          {/* Terpakai */}
-          <div
-            onClick={() => navigate('/simcards')}
-            className="p-3 rounded-xl border border-blue-200 bg-blue-50/40 hover:bg-blue-50 hover:border-blue-300 transition-all cursor-pointer"
-          >
-            <div className="flex items-center justify-between text-blue-800 text-xs font-semibold">
-              <span>Terpakai</span>
-              <span className="text-[10px] bg-blue-100 text-blue-800 px-1.5 py-0.2 rounded-md">Device</span>
-            </div>
-            <div className="mt-2">
-              <span className="text-2xl font-black text-blue-800">{simStats.terpakai}</span>
-              <span className="text-xs text-blue-700 ml-1">kartu</span>
-            </div>
-            <p className="text-[10px] text-blue-600 mt-0.5">Terpasang di device</p>
+            <p className="text-[10px] text-emerald-600 mt-0.5">Komunikasi aktif terhubung device</p>
           </div>
 
           {/* Offline */}
           <div
             onClick={() => navigate('/simcards')}
-            className="p-3 rounded-xl border border-rose-200 bg-rose-50/40 hover:bg-rose-50 hover:border-rose-300 transition-all cursor-pointer"
+            className="p-3.5 rounded-xl border border-rose-200 bg-rose-50/40 hover:bg-rose-50 hover:border-rose-300 transition-all cursor-pointer"
           >
             <div className="flex items-center justify-between text-rose-800 text-xs font-semibold">
               <span>Offline</span>
-              <span className="text-[10px] bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded-md">Warning</span>
+              <span className="text-[10px] bg-rose-100 text-rose-800 px-1.5 py-0.2 rounded-md">Perlu Cek</span>
             </div>
             <div className="mt-2">
               <span className="text-2xl font-black text-rose-800">{simStats.offline}</span>
               <span className="text-xs text-rose-700 ml-1">kartu</span>
             </div>
-            <p className="text-[10px] text-rose-600 mt-0.5">Sinyal terputus</p>
+            <p className="text-[10px] text-rose-600 mt-0.5">Sinyal terputus di lapangan</p>
           </div>
 
           {/* Stock */}
           <div
             onClick={() => navigate('/simcards')}
-            className="p-3 rounded-xl border border-amber-200 bg-amber-50/40 hover:bg-amber-50 hover:border-amber-300 transition-all cursor-pointer"
+            className="p-3.5 rounded-xl border border-amber-200 bg-amber-50/40 hover:bg-amber-50 hover:border-amber-300 transition-all cursor-pointer"
           >
             <div className="flex items-center justify-between text-amber-800 text-xs font-semibold">
               <span>Stock Gudang</span>
@@ -367,7 +351,7 @@ export const DashboardView: React.FC = () => {
               <span className="text-2xl font-black text-amber-800">{simStats.stock}</span>
               <span className="text-xs text-amber-700 ml-1">kartu</span>
             </div>
-            <p className="text-[10px] text-amber-600 mt-0.5">Siap digunakan</p>
+            <p className="text-[10px] text-amber-600 mt-0.5">Siap pasang / cadangan</p>
           </div>
         </div>
       </div>

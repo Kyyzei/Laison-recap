@@ -1,7 +1,6 @@
-export type SimCardStatus = 'Terpakai' | 'Online' | 'Offline' | 'Stock';
+export type SimCardStatus = 'Online' | 'Offline' | 'Stock';
 
 export const SIM_CARD_STATUS_LIST: SimCardStatus[] = [
-  'Terpakai',
   'Online',
   'Offline',
   'Stock',
@@ -12,7 +11,7 @@ export interface SimCard {
   noSim: string;           // Nomor SIM / MSISDN (e.g. "0851-5378-4819")
   iccid?: string;          // Serial ICCID (opsional, e.g. "896201001234567890")
   operator: string;        // Provider (e.g. "Telkomsel IoT", "XL Axiata", "Indosat Ooredoo")
-  status: SimCardStatus;   // 'Terpakai' | 'Online' | 'Offline' | 'Stock'
+  status: SimCardStatus;   // 'Online' | 'Offline' | 'Stock'
   deviceId?: string;       // ID perangkat terhubung
   deviceSeri?: string;     // Nomor seri perangkat terhubung (e.g. "6604290051")
   deviceModel?: string;    // Model perangkat (e.g. "AquaLink")
@@ -29,7 +28,6 @@ export interface SimCard {
 
 export interface SimCardStats {
   total: number;
-  terpakai: number;
   online: number;
   offline: number;
   stock: number;

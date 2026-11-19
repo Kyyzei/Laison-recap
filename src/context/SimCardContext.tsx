@@ -100,7 +100,6 @@ export const SimCardProvider: React.FC<{ children: React.ReactNode }> = ({ child
   const stats: SimCardStats = useMemo(() => {
     const s: SimCardStats = {
       total: simCards.length,
-      terpakai: 0,
       online: 0,
       offline: 0,
       stock: 0,
@@ -109,7 +108,6 @@ export const SimCardProvider: React.FC<{ children: React.ReactNode }> = ({ child
     simCards.forEach((c) => {
       if (c.status === 'Online') s.online++;
       else if (c.status === 'Offline') s.offline++;
-      else if (c.status === 'Terpakai') s.terpakai++;
       else if (c.status === 'Stock') s.stock++;
     });
 
@@ -348,3 +346,4 @@ export const useSimCards = () => {
   if (!ctx) throw new Error('useSimCards must be used within SimCardProvider');
   return ctx;
 };
+

@@ -76,9 +76,8 @@ export const SimCardFormModal: React.FC<SimCardFormModalProps> = ({
     if (seri) {
       const dev = devices.find((d) => d.seri === seri);
       if (dev) {
-        if (dev.status === 'Aktif') setStatus('Online');
-        else if (dev.status === 'Rusak') setStatus('Offline');
-        else setStatus('Terpakai');
+        if (dev.status === 'Rusak') setStatus('Offline');
+        else setStatus('Online');
 
         if (dev.lokasi) setLokasi(dev.lokasi);
         if (dev.ip) setIp(dev.ip);
@@ -221,8 +220,6 @@ export const SimCardFormModal: React.FC<SimCardFormModalProps> = ({
                   <option key={st} value={st}>
                     {st === 'Online'
                       ? '🟢 Online (Aktif Terhubung)'
-                      : st === 'Terpakai'
-                      ? '🔵 Terpakai (Terpasang)'
                       : st === 'Offline'
                       ? '🔴 Offline (Tidak Terhubung)'
                       : '🟡 Stock (Tersedia di Gudang)'}
@@ -374,3 +371,4 @@ export const SimCardFormModal: React.FC<SimCardFormModalProps> = ({
     </div>
   );
 };
+

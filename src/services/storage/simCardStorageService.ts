@@ -2,7 +2,7 @@ import { SimCard, SimCardStatus, SimCardStats } from '../../types/simcard';
 import { Device } from '../../types/device';
 import { LocalStorageService } from './localStorageService';
 
-const SIM_STORAGE_KEY = 'laison_simcards_v1';
+const SIM_STORAGE_KEY = 'laison_simcards_v2';
 
 export class SimCardStorageService {
   /**
@@ -20,11 +20,10 @@ export class SimCardStorageService {
       if (usedSimSet.has(noSim)) return; // hindari duplikasi MSISDN
       usedSimSet.add(noSim);
 
-      let status: SimCardStatus = 'Terpakai';
-      if (dev.status === 'Aktif') status = 'Online';
-      else if (dev.status === 'Rusak') status = 'Offline';
-      else if (dev.status === 'Terpasang') status = 'Terpakai';
-      else if (dev.status === 'Stok') status = 'Stock';
+      let status: SimCardStatus = 'Online';
+      if (dev.status === 'Rusak') {
+        status = 'Offline';
+      }
 
       simCards.push({
         id: `sim-${noSim.replace(/[^0-9]/g, '')}`,
@@ -47,11 +46,12 @@ export class SimCardStorageService {
       });
     });
 
-    // 2. Tambahkan variasi SIM Offline untuk uji lapangan
+    // 2. Tandai 2 unit sebagai Offline untuk simulasi pemantauan sinyal lapangan
     if (simCards.length >= 4) {
       simCards[2].status = 'Offline';
       simCards[2].catatan = 'Sinyal lemah di lokasi (Offline)';
-      simCards[3].status = 'Terpakai';
+      simCards[3].status = 'Offline';
+      simCards[3].catatan = 'Tidak ada transmisi sinyal 24 jam (Offline)';
     }
 
     // 3. Tambahkan 15 unit SIM Card cadangan di Gudang (Status: Stock)
@@ -104,7 +104,25 @@ export class SimCardStorageService {
    */
   static getSimCards(): SimCard[] {
     try {
-      const raw = localStorage.getItem(SIM_STORAGE_KEY);
+      // Bersihkan atau migrasi cache v1 jika ada
+      const oldRaw = localStorage.getItem('laison_simcards_v1');
+      let raw = localStorage.getItem(SIM_STORAGE_KEY);
+
+      if (!raw && oldRaw) {
+        try {
+          const oldList: any[] = JSON.parse(oldRaw);
+          const migratedList: SimCard[] = oldList.map((item) => ({
+            ...item,
+            status: item.status === 'Terpakai' ? 'Online' : item.status,
+          }));
+          this.saveSimCards(migratedList);
+          localStorage.removeItem('laison_simcards_v1');
+          return migratedList;
+        } catch {
+          // ignore
+        }
+      }
+
       let list: SimCard[] = [];
 
       if (!raw) {
@@ -120,7 +138,22 @@ export class SimCardStorageService {
         return list;
       }
 
-      return list;
+      // Pastikan tidak ada status 'Terpakai' yang tersisa di storage
+      let hasTerpakai = false;
+      const sanitized = list.map((item: any) => {
+        if (item.status === 'Terpakai') {
+          hasTerpakai = true;
+          return { ...item, status: 'Online' as SimCardStatus };
+        }
+        return item as SimCard;
+      });
+
+      if (hasTerpakai) {
+        this.saveSimCards(sanitized);
+        return sanitized;
+      }
+
+      return sanitized;
     } catch (e) {
       console.error('Error reading SIM cards from storage:', e);
       return this.generateInitialSimCards();
@@ -140,13 +173,12 @@ export class SimCardStorageService {
   }
 
   /**
-   * Menghitung statistik SIM card.
+   * Menghitung statistik SIM card (Online, Offline, Stock).
    */
   static getStats(): SimCardStats {
     const list = this.getSimCards();
     const stats: SimCardStats = {
       total: list.length,
-      terpakai: 0,
       online: 0,
       offline: 0,
       stock: 0,
@@ -155,7 +187,6 @@ export class SimCardStorageService {
     list.forEach((s) => {
       if (s.status === 'Online') stats.online++;
       else if (s.status === 'Offline') stats.offline++;
-      else if (s.status === 'Terpakai') stats.terpakai++;
       else if (s.status === 'Stock') stats.stock++;
     });
 
@@ -182,6 +213,7 @@ export class SimCardStorageService {
       ...data,
       id: `sim-${cleanNo.replace(/[^0-9]/g, '') || Date.now()}`,
       noSim: cleanNo,
+      status: data.status,
       createdAt: now,
       updatedAt: now,
     };
@@ -189,7 +221,7 @@ export class SimCardStorageService {
     // Jika dipasangkan langsung ke perangkat saat dibuat
     if (newSim.deviceSeri && newSim.deviceSeri.trim() !== '') {
       this.syncDeviceSimAssignment(newSim.deviceSeri, newSim.noSim, pic);
-      newSim.status = newSim.status === 'Stock' ? 'Terpakai' : newSim.status;
+      newSim.status = newSim.status === 'Stock' ? 'Online' : newSim.status;
     }
 
     list.unshift(newSim);
@@ -233,7 +265,7 @@ export class SimCardStorageService {
         const targetSimNumber = updates.noSim || existing.noSim;
         this.syncDeviceSimAssignment(updates.deviceSeri, targetSimNumber, pic);
         if (updates.status === 'Stock') {
-          updates.status = 'Terpakai';
+          updates.status = 'Online';
         }
       } else {
         // Dilepas, otomatis kembali ke Stock jika status tidak diubah eksplisit
@@ -326,7 +358,7 @@ export class SimCardStorageService {
     targetSim.deviceId = targetDev.id;
     targetSim.deviceSeri = targetDev.seri;
     targetSim.deviceModel = targetDev.model || 'AquaLink';
-    targetSim.status = targetDev.status === 'Aktif' ? 'Online' : 'Terpakai';
+    targetSim.status = targetDev.status === 'Rusak' ? 'Offline' : 'Online';
     targetSim.lokasi = targetDev.lokasi || targetSim.lokasi;
     targetSim.ip = targetDev.ip || targetSim.ip;
     targetSim.apnBand = targetDev.apnBand || targetSim.apnBand;
@@ -403,7 +435,7 @@ export class SimCardStorageService {
           card.deviceSeri = dev.seri;
           card.deviceModel = dev.model || 'AquaLink';
           if (card.status === 'Stock') {
-            card.status = dev.status === 'Aktif' ? 'Online' : 'Terpakai';
+            card.status = dev.status === 'Rusak' ? 'Offline' : 'Online';
           }
           card.lokasi = dev.lokasi || card.lokasi;
           syncedDevices++;
@@ -415,7 +447,7 @@ export class SimCardStorageService {
           noSim,
           iccid: `89620100${noSim.replace(/[^0-9]/g, '').padEnd(12, '0')}`,
           operator: 'Telkomsel IoT',
-          status: dev.status === 'Aktif' ? 'Online' : 'Terpakai',
+          status: dev.status === 'Rusak' ? 'Offline' : 'Online',
           deviceId: dev.id,
           deviceSeri: dev.seri,
           deviceModel: dev.model || 'AquaLink',
@@ -559,7 +591,7 @@ export class SimCardStorageService {
           targetSim.deviceId = device.id;
           targetSim.deviceSeri = device.seri;
           targetSim.deviceModel = device.model || 'AquaLink';
-          targetSim.status = device.status === 'Aktif' ? 'Online' : 'Terpakai';
+          targetSim.status = device.status === 'Rusak' ? 'Offline' : 'Online';
           targetSim.lokasi = device.lokasi || targetSim.lokasi;
           targetSim.updatedAt = new Date().toISOString();
         } else {
@@ -569,7 +601,7 @@ export class SimCardStorageService {
             noSim: newNo,
             iccid: `89620100${newNo.replace(/[^0-9]/g, '').padEnd(12, '0')}`,
             operator: 'Telkomsel IoT',
-            status: device.status === 'Aktif' ? 'Online' : 'Terpakai',
+            status: device.status === 'Rusak' ? 'Offline' : 'Online',
             deviceId: device.id,
             deviceSeri: device.seri,
             deviceModel: device.model || 'AquaLink',

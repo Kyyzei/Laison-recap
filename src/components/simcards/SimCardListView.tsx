@@ -147,7 +147,7 @@ export const SimCardListView: React.FC = () => {
       </div>
 
       {/* KPI Stats Cards */}
-      <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3">
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-3">
         {/* Total SIM */}
         <div
           onClick={() => setFilters((p) => ({ ...p, status: 'ALL' }))}
@@ -189,25 +189,6 @@ export const SimCardListView: React.FC = () => {
           </div>
         </div>
 
-        {/* Terpakai */}
-        <div
-          onClick={() => setFilters((p) => ({ ...p, status: 'Terpakai' }))}
-          className={`p-3.5 rounded-xl border bg-white transition-all cursor-pointer ${
-            filters.status === 'Terpakai'
-              ? 'ring-2 ring-blue-500/30 border-blue-500 shadow-xs'
-              : 'border-slate-200 hover:border-slate-300'
-          }`}
-        >
-          <div className="flex items-center justify-between text-blue-700 text-xs font-medium">
-            <span>Terpakai</span>
-            <CheckCircle className="w-4 h-4 text-blue-600" />
-          </div>
-          <div className="mt-2 flex items-baseline justify-between">
-            <span className="text-xl font-black text-blue-700">{stats.terpakai}</span>
-            <span className="text-[10px] text-blue-600 font-semibold">Terpasang</span>
-          </div>
-        </div>
-
         {/* Offline */}
         <div
           onClick={() => setFilters((p) => ({ ...p, status: 'Offline' }))}
@@ -230,7 +211,7 @@ export const SimCardListView: React.FC = () => {
         {/* Stock */}
         <div
           onClick={() => setFilters((p) => ({ ...p, status: 'Stock' }))}
-          className={`p-3.5 rounded-xl border bg-white transition-all cursor-pointer col-span-2 sm:col-span-1 ${
+          className={`p-3.5 rounded-xl border bg-white transition-all cursor-pointer ${
             filters.status === 'Stock'
               ? 'ring-2 ring-amber-500/30 border-amber-500 shadow-xs'
               : 'border-slate-200 hover:border-slate-300'
@@ -272,17 +253,6 @@ export const SimCardListView: React.FC = () => {
           >
             <span className="w-1.5 h-1.5 rounded-full bg-emerald-400"></span>
             <span>Online ({stats.online})</span>
-          </button>
-
-          <button
-            onClick={() => setFilters((p) => ({ ...p, status: 'Terpakai' }))}
-            className={`px-3 py-1.5 rounded-lg text-xs font-bold flex items-center gap-1.5 transition-all cursor-pointer ${
-              filters.status === 'Terpakai'
-                ? 'bg-blue-700 text-white shadow-xs'
-                : 'text-blue-700 bg-blue-50 hover:bg-blue-100'
-            }`}
-          >
-            <span>Terpakai ({stats.terpakai})</span>
           </button>
 
           <button
@@ -447,12 +417,6 @@ export const SimCardListView: React.FC = () => {
                           <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-emerald-50 text-emerald-700 border border-emerald-200">
                             <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse"></span>
                             Online
-                          </span>
-                        )}
-                        {sim.status === 'Terpakai' && (
-                          <span className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-bold bg-blue-50 text-blue-700 border border-blue-200">
-                            <span className="w-1.5 h-1.5 rounded-full bg-blue-500"></span>
-                            Terpakai
                           </span>
                         )}
                         {sim.status === 'Offline' && (
