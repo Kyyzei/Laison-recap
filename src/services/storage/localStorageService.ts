@@ -1,7 +1,7 @@
 import { Device, WarehousePosition, DeviceHistoryEntry, ParameterDiff, DeviceHistoryCategory } from '../../types/device';
 import { DUMMY_DEVICES } from '../../data/dummyDevices';
 
-const STORAGE_KEY = 'laison_devices_v6';
+const STORAGE_KEY = 'laison_devices_v7';
 
 const FIELD_LABELS: Record<string, string> = {
   model: 'Model Perangkat',
@@ -31,8 +31,8 @@ export class LocalStorageService {
    */
   static getDevices(): Device[] {
     try {
-      // Bersihkan cache versi lama yang menyimpan data 107 atau serial usang
-      ['aqualink_devices', 'aqualink_devices_v2', 'aqualink_devices_v3', 'aqualink_devices_v4', 'laison_devices_v5'].forEach((oldKey) => {
+      // Bersihkan cache versi lama
+      ['aqualink_devices', 'aqualink_devices_v2', 'aqualink_devices_v3', 'aqualink_devices_v4', 'laison_devices_v5', 'laison_devices_v6'].forEach((oldKey) => {
         try {
           if (localStorage.getItem(oldKey)) {
             localStorage.removeItem(oldKey);
@@ -54,10 +54,9 @@ export class LocalStorageService {
         return DUMMY_DEVICES;
       }
 
-      // Validasi integritas: Jika mengandung serial non-resmi 6508280011 atau draft lama
-      const hasObsoleteData = parsed.some((d: any) => d.seri === '6508280011' || d.seri === '6508280012');
-      if (hasObsoleteData) {
-        console.warn('Terdeteksi data lama/tidak resmi di cache browser, mereset ke 80 perangkat resmi Excel.');
+      // Validasi kelengkapan: Jika jumlah perangkat di cache kurang dari DUMMY_DEVICES (107 unit), reset ke DUMMY_DEVICES
+      if (parsed.length < DUMMY_DEVICES.length) {
+        console.info(`Memperbarui cache perangkat ke versi terbaru (${DUMMY_DEVICES.length} unit).`);
         this.saveDevices(DUMMY_DEVICES);
         return DUMMY_DEVICES;
       }

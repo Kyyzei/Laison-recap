@@ -3461,5 +3461,1082 @@ export const DUMMY_DEVICES: Device[] = [
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
     "updatedAt": "2026-11-19T10:00:00.000Z"
+  },
+  {
+    "id": "dev-6508280011",
+    "seri": "6508280011",
+    "koneksi": "NB-IoT",
+    "readAddress": "AC066508280011",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4819",
+    "apnBand": "NB1INTERNET,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "Gudang Utama Laison",
+    "catatan": "Siap pasang",
+    "posisiGudang": "DI_GUDANG",
+    "tanggalKeluar": "2026-10-15",
+    "tanggalKembali": "2026-10-25",
+    "penerimaKeluar": "Ahmad Fauzi",
+    "keperluanKeluar": "Uji Coba Lab",
+    "riwayatGudang": [
+      {
+        "id": "mov-out-6508280011",
+        "tipe": "KELUAR",
+        "tanggal": "2026-10-15",
+        "lokasi": "Lab Pengujian",
+        "penerima": "Ahmad Fauzi",
+        "keperluan": "Uji Coba Lab",
+        "catatan": "Pengambilan unit untuk pengujian integrasi server Laison",
+        "createdAt": "2026-10-15T08:30:00.000Z"
+      },
+      {
+        "id": "mov-in-6508280011",
+        "tipe": "KEMBALI",
+        "tanggal": "2026-10-25",
+        "lokasi": "Gudang Utama Laison",
+        "penerima": "Budi Santoso",
+        "keperluan": "Selesai Uji Coba",
+        "catatan": "Unit dikembalikan dalam kondisi baik setelah uji coba",
+        "createdAt": "2026-10-25T14:15:00.000Z"
+      }
+    ],
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "riwayat": [
+      {
+        "id": "hist-mov-in-6508280011",
+        "timestamp": "2026-10-25T14:15:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Kembali ke Gudang",
+        "deskripsi": "Unit dikembalikan ke Gudang Utama Laison setelah uji coba (PIC: Budi Santoso)",
+        "pic": "Budi Santoso",
+        "metadata": {
+          "tipe": "KEMBALI",
+          "lokasi": "Gudang Utama Laison",
+          "keperluan": "Selesai Uji Coba"
+        }
+      },
+      {
+        "id": "hist-mov-out-6508280011",
+        "timestamp": "2026-10-15T08:30:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengambilan unit untuk pengujian integrasi server Laison (PIC: Ahmad Fauzi)",
+        "pic": "Ahmad Fauzi",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Lab Pengujian",
+          "keperluan": "Uji Coba Lab"
+        }
+      },
+      {
+        "id": "hist-reg-6508280011",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280011 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280012",
+    "seri": "6508280012",
+    "koneksi": "NB-IoT",
+    "readAddress": "AD066508280012",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4820",
+    "apnBand": "NB1INTERNET,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280012",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280012 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280013",
+    "seri": "6508280013",
+    "koneksi": "NB-IoT",
+    "readAddress": "AE066508280013",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4821",
+    "apnBand": "NB1INTERNET,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280013",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280013 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280014",
+    "seri": "6508280014",
+    "koneksi": "NB-IoT",
+    "readAddress": "AF066508280014",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4822",
+    "apnBand": "NB1INTERNET,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280014",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280014 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280015",
+    "seri": "6508280015",
+    "koneksi": "NB-IoT",
+    "readAddress": "B0066508280015",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4823",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280015",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280015 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280016",
+    "seri": "6508280016",
+    "koneksi": "NB-IoT",
+    "readAddress": "B1066508280016",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4789",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280016",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280016 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280017",
+    "seri": "6508280017",
+    "koneksi": "NB-IoT",
+    "readAddress": "B2066508280017",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4790",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280017",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280017 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280018",
+    "seri": "6508280018",
+    "koneksi": "NB-IoT",
+    "readAddress": "B3066508280018",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4791",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280018",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280018 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280019",
+    "seri": "6508280019",
+    "koneksi": "NB-IoT",
+    "readAddress": "B4066508280019",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4792",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280019",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280019 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6508280020",
+    "seri": "6508280020",
+    "koneksi": "NB-IoT",
+    "readAddress": "BB066508280020",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4794",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6508280020",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6508280020 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6601230009",
+    "seri": "6601230009",
+    "koneksi": "NB-IoT",
+    "readAddress": "99066601230009",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4804",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6601230009",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6601230009 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290052",
+    "seri": "6604290052",
+    "koneksi": "NB-IoT",
+    "readAddress": "EB066604290052",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290052",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290052",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290052",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290052 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290053",
+    "seri": "6604290053",
+    "koneksi": "NB-IoT",
+    "readAddress": "EC066604290053",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290053",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290053 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290054",
+    "seri": "6604290054",
+    "koneksi": "NB-IoT",
+    "readAddress": "ED066604290054",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4768",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290054",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290054 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290059",
+    "seri": "6604290059",
+    "koneksi": "NB-IoT",
+    "readAddress": "F2066604290059",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290059",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290059",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290059",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290059 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290061",
+    "seri": "6604290061",
+    "koneksi": "NB-IoT",
+    "readAddress": "FA066604290061",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290061",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290061 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290062",
+    "seri": "6604290062",
+    "koneksi": "NB-IoT",
+    "readAddress": "FB066604290062",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290062",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290062 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290065",
+    "seri": "6604290065",
+    "koneksi": "NB-IoT",
+    "readAddress": "FE066604290065",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290065",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290065 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290070",
+    "seri": "6604290070",
+    "koneksi": "NB-IoT",
+    "readAddress": "09066604290070",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290070",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290070 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290073",
+    "seri": "6604290073",
+    "koneksi": "NB-IoT",
+    "readAddress": "0C066604290073",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290073",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290073 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290074",
+    "seri": "6604290074",
+    "koneksi": "NB-IoT",
+    "readAddress": "0D066604290074",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290074",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290074",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290074",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290074 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290076",
+    "seri": "6604290076",
+    "koneksi": "NB-IoT",
+    "readAddress": "0F066604290076",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290076",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290076",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290076",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290076 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290077",
+    "seri": "6604290077",
+    "koneksi": "NB-IoT",
+    "readAddress": "10066604290077",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290077",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290077",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290077",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290077 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290078",
+    "seri": "6604290078",
+    "koneksi": "NB-IoT",
+    "readAddress": "11066604290078",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290078",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290078",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290078",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290078 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290082",
+    "seri": "6604290082",
+    "koneksi": "NB-IoT",
+    "readAddress": "1B066604290082",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_LUAR",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290082",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
+    "riwayat": [
+      {
+        "id": "hist-mov-6604290082",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
+      {
+        "id": "hist-reg-6604290082",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290082 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290083",
+    "seri": "6604290083",
+    "koneksi": "NB-IoT",
+    "readAddress": "1C066604290083",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290083",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290083 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
+  },
+  {
+    "id": "dev-6604290097",
+    "seri": "6604290097",
+    "koneksi": "NB-IoT",
+    "readAddress": "30066604290097",
+    "devEui": "",
+    "appEui": "",
+    "devAddr": "",
+    "noSim": "0851-5378-4815",
+    "apnBand": "NBIOT,3,20,28,8",
+    "ip": "147.93.81.149",
+    "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
+    "status": "Stok",
+    "lokasi": "",
+    "catatan": "",
+    "createdAt": "2026-10-29T08:00:00.000Z",
+    "updatedAt": "2026-11-13T10:15:00.000Z",
+    "model": "AquaLink",
+    "posisiGudang": "DI_GUDANG",
+    "riwayatGudang": [],
+    "riwayat": [
+      {
+        "id": "hist-reg-6604290097",
+        "timestamp": "2026-10-29T08:00:00.000Z",
+        "kategori": "SISTEM",
+        "judul": "Perangkat Didaftarkan",
+        "deskripsi": "Perangkat model AquaLink (NB-IoT) dengan nomor seri 6604290097 didaftarkan ke sistem.",
+        "pic": "Admin"
+      }
+    ]
   }
 ];
