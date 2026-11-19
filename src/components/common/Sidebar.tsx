@@ -9,9 +9,11 @@ import {
   X,
   Layers,
   CardSim,
+  LogOut,
 } from 'lucide-react';
 import { useDevices } from '../../context/DeviceContext';
 import { useSimCards } from '../../context/SimCardContext';
+import { useAuth } from '../../context/AuthContext';
 import { DeviceModel } from '../../types/device';
 import { LAISON_LOGO_DATA_URI } from '../../assets/logo';
 
@@ -26,6 +28,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
 }) => {
   const { stats, filters, setFilters } = useDevices();
   const { stats: simStats } = useSimCards();
+  const { user, logout } = useAuth();
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -308,6 +311,31 @@ export const Sidebar: React.FC<SidebarProps> = ({
             <span className="font-bold">{stats.rusak} unit</span>
           </div>
         )}
+      </div>
+
+      {/* Logged in User info & Logout */}
+      <div className="p-2.5 mx-3 mb-3 rounded-xl bg-blue-950 text-white border border-blue-900 flex items-center justify-between text-xs">
+        <div className="flex items-center gap-2 overflow-hidden">
+          <div className="w-7 h-7 rounded-full bg-blue-800 flex items-center justify-center text-sm shrink-0">
+            {user?.avatar || '👤'}
+          </div>
+          <div className="truncate">
+            <span className="font-bold text-slate-100 block truncate">{user?.name || 'Administrator'}</span>
+            <span className="text-[10px] text-sky-400 block">{user?.roleLabel || 'Admin'}</span>
+          </div>
+        </div>
+        <button
+          onClick={() => {
+            if (window.confirm('Keluar dari sesi admin?')) {
+              logout();
+              navigate('/login');
+            }
+          }}
+          className="p-1.5 rounded-lg text-slate-400 hover:text-rose-300 hover:bg-rose-500/20 transition-colors cursor-pointer shrink-0"
+          title="Logout Akun"
+        >
+          <LogOut className="w-4 h-4" />
+        </button>
       </div>
     </div>
   );

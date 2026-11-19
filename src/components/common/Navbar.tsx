@@ -1,7 +1,8 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-import { Search, Plus, Menu, HardDrive } from 'lucide-react';
+import { Search, Plus, Menu, HardDrive, LogOut, User as UserIcon } from 'lucide-react';
 import { useDevices } from '../../context/DeviceContext';
+import { useAuth } from '../../context/AuthContext';
 import { LAISON_LOGO_DATA_URI } from '../../assets/logo';
 
 interface NavbarProps {
@@ -12,6 +13,7 @@ export const Navbar: React.FC<NavbarProps> = ({
   onToggleMobileSidebar,
 }) => {
   const { filters, setFilters, stats, setIsCreateModalOpen } = useDevices();
+  const { user, logout } = useAuth();
   const navigate = useNavigate();
 
   return (
@@ -79,7 +81,7 @@ export const Navbar: React.FC<NavbarProps> = ({
         </div>
 
         {/* Right actions */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center gap-2.5">
           <div className="hidden sm:flex items-center gap-1.5 text-xs text-slate-300 bg-blue-950/50 px-2.5 py-1 rounded-md border border-blue-800/50">
             <HardDrive className="w-3.5 h-3.5 text-sky-400" />
             <span>Total:</span>
@@ -91,8 +93,42 @@ export const Navbar: React.FC<NavbarProps> = ({
             className="flex items-center gap-1.5 px-3 py-1.5 rounded-lg bg-sky-500 hover:bg-sky-400 text-blue-950 text-xs md:text-sm font-semibold transition-all cursor-pointer shadow-sm"
           >
             <Plus className="w-4 h-4" />
-            <span>Tambah</span>
+            <span className="hidden sm:inline">Tambah</span>
           </button>
+
+          {/* User Profile & Logout */}
+          <div className="flex items-center gap-2 pl-2 border-l border-blue-800/60">
+            <div
+              onClick={() => navigate('/settings')}
+              className="flex items-center gap-2 px-2 py-1 rounded-lg hover:bg-blue-900/60 transition-colors cursor-pointer"
+              title="Buka profil dan pengaturan akun"
+            >
+              <div className="w-7 h-7 rounded-full bg-blue-800 border border-sky-400/30 flex items-center justify-center text-xs text-sky-300 font-bold shrink-0">
+                {user?.avatar || <UserIcon className="w-3.5 h-3.5" />}
+              </div>
+              <div className="hidden md:block text-left leading-tight">
+                <span className="text-xs font-bold text-white block truncate max-w-[120px]">
+                  {user?.name || 'Administrator'}
+                </span>
+                <span className="text-[10px] text-sky-300 font-medium">
+                  {user?.roleLabel || 'Admin'}
+                </span>
+              </div>
+            </div>
+
+            <button
+              onClick={() => {
+                if (window.confirm('Apakah Anda yakin ingin keluar dari sistem?')) {
+                  logout();
+                  navigate('/login');
+                }
+              }}
+              className="p-1.5 rounded-lg text-slate-400 hover:text-rose-400 hover:bg-rose-500/10 transition-colors cursor-pointer"
+              title="Logout / Keluar Akun"
+            >
+              <LogOut className="w-4 h-4" />
+            </button>
+          </div>
         </div>
       </div>
     </header>
