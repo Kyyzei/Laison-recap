@@ -65,6 +65,8 @@ export const DeviceFilters: React.FC = () => {
             <option value="ALL">Semua Koneksi</option>
             <option value="LoRaWAN">LoRaWAN</option>
             <option value="NB-IoT">NB-IoT</option>
+            <option value="GPRS">GPRS</option>
+            <option value="Cat 1">Cat 1</option>
           </select>
         </div>
 

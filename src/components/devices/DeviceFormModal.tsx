@@ -94,6 +94,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
       return;
     }
 
+    const isCellular = koneksi !== 'LoRaWAN';
     const payload = {
       model,
       seri: seri.trim(),
@@ -102,9 +103,9 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
       devEui: koneksi === 'LoRaWAN' ? devEui.trim() : '',
       appEui: koneksi === 'LoRaWAN' ? appEui.trim() : '',
       devAddr: koneksi === 'LoRaWAN' ? devAddr.trim() : '',
-      noSim: koneksi === 'NB-IoT' ? noSim.trim() : '',
-      apnBand: koneksi === 'NB-IoT' ? apnBand.trim() : '',
-      ip: koneksi === 'NB-IoT' ? ip.trim() : '',
+      noSim: isCellular ? noSim.trim() : '',
+      apnBand: isCellular ? apnBand.trim() : '',
+      ip: isCellular ? ip.trim() : '',
       appKey: appKey.trim(),
       status,
       lokasi: lokasi.trim(),
@@ -148,11 +149,11 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
             <label className="block text-xs font-semibold text-slate-700 mb-1.5">
               Model / Kategori Perangkat <span className="text-rose-500">*</span>
             </label>
-            <div className="grid grid-cols-3 gap-2">
+            <div className="grid grid-cols-2 sm:grid-cols-4 gap-2">
               <button
                 type="button"
                 onClick={() => setModel('AquaLink')}
-                className={`py-2 px-2.5 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                className={`py-2 px-2 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
                   model === 'AquaLink'
                     ? 'bg-blue-900 text-white border-blue-900 shadow-xs ring-2 ring-blue-500/20'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -165,7 +166,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
               <button
                 type="button"
                 onClick={() => setModel('Ultrasonic')}
-                className={`py-2 px-2.5 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                className={`py-2 px-2 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
                   model === 'Ultrasonic'
                     ? 'bg-blue-900 text-white border-blue-900 shadow-xs ring-2 ring-blue-500/20'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -177,8 +178,21 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
 
               <button
                 type="button"
+                onClick={() => setModel('Smart Meter Hybrid')}
+                className={`py-2 px-2 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                  model === 'Smart Meter Hybrid'
+                    ? 'bg-amber-600 text-white border-amber-600 shadow-xs ring-2 ring-amber-500/20'
+                    : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
+                }`}
+              >
+                <span>⚡</span>
+                <span>Hybrid</span>
+              </button>
+
+              <button
+                type="button"
                 onClick={() => setModel('MIU')}
-                className={`py-2 px-2.5 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
+                className={`py-2 px-2 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
                   model === 'MIU'
                     ? 'bg-blue-900 text-white border-blue-900 shadow-xs ring-2 ring-blue-500/20'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
@@ -189,7 +203,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
               </button>
             </div>
             <p className="text-[11px] text-slate-400 mt-1">
-              Perangkat akan ditempatkan di tab kategori {model === 'AquaLink' ? 'AquaLink' : model === 'Ultrasonic' ? 'Ultrasonic' : 'Meter Interface Unit (MIU)'}
+              Perangkat akan ditempatkan di tab kategori {model === 'AquaLink' ? 'AquaLink' : model === 'Ultrasonic' ? 'Ultrasonic' : model === 'Smart Meter Hybrid' ? 'Smart Meter Hybrid' : 'Meter Interface Unit (MIU)'}
             </p>
           </div>
 
@@ -198,7 +212,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
             <label className="block text-xs font-semibold text-slate-700 mb-1">
               Jenis Koneksi
             </label>
-            <div className="grid grid-cols-2 gap-3">
+            <div className={`grid ${(model === 'Ultrasonic' || model === 'Smart Meter Hybrid') ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-2'} gap-2 sm:gap-3`}>
               <button
                 type="button"
                 onClick={() => setKoneksi('LoRaWAN')}
@@ -221,6 +235,32 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
               >
                 NB-IoT
               </button>
+              {(model === 'Ultrasonic' || model === 'Smart Meter Hybrid') && (
+                <>
+                  <button
+                    type="button"
+                    onClick={() => setKoneksi('GPRS')}
+                    className={`py-2 px-3 rounded-lg text-xs font-semibold border text-center transition-colors cursor-pointer ${
+                      koneksi === 'GPRS'
+                        ? 'bg-amber-600 text-white border-amber-600'
+                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                    }`}
+                  >
+                    GPRS
+                  </button>
+                  <button
+                    type="button"
+                    onClick={() => setKoneksi('Cat 1')}
+                    className={`py-2 px-3 rounded-lg text-xs font-semibold border text-center transition-colors cursor-pointer ${
+                      koneksi === 'Cat 1'
+                        ? 'bg-teal-600 text-white border-teal-600'
+                        : 'bg-slate-50 text-slate-600 border-slate-200 hover:bg-slate-100'
+                    }`}
+                  >
+                    Cat 1
+                  </button>
+                </>
+              )}
             </div>
           </div>
 
@@ -301,12 +341,29 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
             </div>
           )}
 
-          {/* NB-IoT specific fields */}
-          {koneksi === 'NB-IoT' && (
-            <div className="space-y-3 p-3 bg-sky-50/40 rounded-xl border border-sky-100">
-              <span className="text-[11px] font-bold text-sky-900 uppercase">
-                Parameter NB-IoT
-              </span>
+          {/* Cellular specific fields (NB-IoT, GPRS, Cat 1) */}
+          {koneksi !== 'LoRaWAN' && (
+            <div className={`space-y-3 p-3 rounded-xl border ${
+              koneksi === 'GPRS'
+                ? 'bg-amber-50/40 border-amber-200'
+                : koneksi === 'Cat 1'
+                ? 'bg-teal-50/40 border-teal-200'
+                : 'bg-sky-50/40 border-sky-100'
+            }`}>
+              <div className="flex items-center justify-between">
+                <span className={`text-[11px] font-bold uppercase ${
+                  koneksi === 'GPRS'
+                    ? 'text-amber-900'
+                    : koneksi === 'Cat 1'
+                    ? 'text-teal-900'
+                    : 'text-sky-900'
+                }`}>
+                  Parameter {koneksi} (Seluler)
+                </span>
+                <span className="text-[10px] text-slate-400">
+                  Sinkron dengan modul SIM Card
+                </span>
+              </div>
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
                 <div>
                   <label className="block text-[11px] font-semibold text-slate-700 mb-1">
@@ -340,7 +397,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
                     type="text"
                     value={apnBand}
                     onChange={(e) => setApnBand(e.target.value)}
-                    placeholder="NBIOT,3,20,28,8"
+                    placeholder={koneksi === 'GPRS' ? 'INTERNET,GPRS' : koneksi === 'Cat 1' ? 'INTERNET,CAT1,BAND3' : 'NBIOT,3,20,28,8'}
                     className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
                   />
                 </div>

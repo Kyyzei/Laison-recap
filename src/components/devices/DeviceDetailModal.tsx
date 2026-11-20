@@ -182,6 +182,8 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
                     ? '💧 AquaLink'
                     : getDeviceModel(device) === 'Ultrasonic'
                     ? '🔊 Ultrasonic'
+                    : getDeviceModel(device) === 'Smart Meter Hybrid'
+                    ? '⚡ Hybrid'
                     : '📟 MIU'}
                 </span>
               </div>
@@ -307,9 +309,21 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
                   </div>
                 </div>
               ) : (
-                <div className="space-y-2 p-3.5 bg-sky-50/50 rounded-xl border border-sky-100">
-                  <span className="text-[11px] uppercase font-bold text-sky-900 flex items-center gap-1.5">
-                    Data Parameter NB-IoT
+                <div className={`space-y-2 p-3.5 rounded-xl border ${
+                  device.koneksi === 'GPRS'
+                    ? 'bg-amber-50/50 border-amber-200'
+                    : device.koneksi === 'Cat 1'
+                    ? 'bg-teal-50/50 border-teal-200'
+                    : 'bg-sky-50/50 border-sky-100'
+                }`}>
+                  <span className={`text-[11px] uppercase font-bold flex items-center gap-1.5 ${
+                    device.koneksi === 'GPRS'
+                      ? 'text-amber-900'
+                      : device.koneksi === 'Cat 1'
+                      ? 'text-teal-900'
+                      : 'text-sky-900'
+                  }`}>
+                    Data Parameter {device.koneksi} (Seluler)
                   </span>
                   <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
                     <div className="bg-white p-2.5 rounded-lg border border-sky-100 flex flex-col justify-between">

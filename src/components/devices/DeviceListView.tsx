@@ -154,6 +154,26 @@ export const DeviceListView: React.FC = () => {
               </span>
             </button>
 
+            {/* Smart Meter Hybrid */}
+            <button
+              onClick={() => setFilters((p) => ({ ...p, model: 'Smart Meter Hybrid' }))}
+              className={`flex items-center gap-2 px-3.5 py-2 rounded-lg text-xs font-bold transition-all cursor-pointer ${
+                filters.model === 'Smart Meter Hybrid'
+                  ? 'bg-amber-600 text-white shadow-xs'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
+              }`}
+            >
+              <span className="text-base leading-none">⚡</span>
+              <span>Smart Meter Hybrid</span>
+              <span
+                className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                  filters.model === 'Smart Meter Hybrid' ? 'bg-amber-200 text-amber-950' : 'bg-slate-100 text-slate-600'
+                }`}
+              >
+                {stats.hybrid}
+              </span>
+            </button>
+
             {/* Meter Interface Unit (MIU) */}
             <button
               onClick={() => setFilters((p) => ({ ...p, model: 'MIU' }))}
@@ -214,6 +234,7 @@ export const DeviceListView: React.FC = () => {
           <div className="text-[11px] text-slate-500 px-2.5 py-1 bg-slate-50 rounded-lg border border-slate-100 shrink-0 self-start md:self-center">
             {filters.model === 'AquaLink' && 'Kategori: AquaLink (Smart Water Meter)'}
             {filters.model === 'Ultrasonic' && 'Kategori: Ultrasonic Flow Meter'}
+            {filters.model === 'Smart Meter Hybrid' && 'Kategori: Smart Meter Hybrid'}
             {filters.model === 'MIU' && 'Kategori: Meter Interface Unit (Pulse Reader)'}
             {filters.model === 'ALL' && 'Kategori: Seluruh Model Perangkat'}
           </div>

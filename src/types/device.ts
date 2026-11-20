@@ -15,7 +15,7 @@ export const DEVICE_STATUS_LIST: DeviceStatus[] = [
   'Dipinjamkan',
 ];
 
-export type DeviceModel = 'AquaLink' | 'Ultrasonic' | 'MIU';
+export type DeviceModel = 'AquaLink' | 'Ultrasonic' | 'MIU' | 'Smart Meter Hybrid';
 
 export interface DeviceModelInfo {
   id: DeviceModel;
@@ -47,11 +47,22 @@ export const DEVICE_MODELS: DeviceModelInfo[] = [
     icon: '📟',
     description: 'Pulse Reader & Interface Unit',
   },
+  {
+    id: 'Smart Meter Hybrid',
+    label: 'Smart Meter Hybrid',
+    shortLabel: 'Hybrid',
+    icon: '⚡',
+    description: 'Smart Water Meter Hybrid Multi-Komunikasi',
+  },
 ];
 
-export type ConnectionType = 'LoRaWAN' | 'NB-IoT';
+export type ConnectionType = 'LoRaWAN' | 'NB-IoT' | 'GPRS' | 'Cat 1';
 
-export const CONNECTION_TYPES: ConnectionType[] = ['LoRaWAN', 'NB-IoT'];
+export const CONNECTION_TYPES: ConnectionType[] = ['LoRaWAN', 'NB-IoT', 'GPRS', 'Cat 1'];
+
+export function isCellularConnection(koneksi: ConnectionType | string): boolean {
+  return koneksi === 'NB-IoT' || koneksi === 'GPRS' || koneksi === 'Cat 1';
+}
 
 export type WarehousePosition = 'DI_GUDANG' | 'DI_LUAR';
 

@@ -18,9 +18,9 @@ export const PairDeviceModal: React.FC<PairDeviceModalProps> = ({ sim, isOpen, o
 
   if (!isOpen || !sim) return null;
 
-  // Filter AquaLink devices
+  // Filter cellular devices (NB-IoT, GPRS, Cat 1)
   const eligibleDevices = devices.filter((d) => {
-    if (d.koneksi !== 'NB-IoT') return false; // Biasanya SIM Card dipasangkan ke NB-IoT
+    if (d.koneksi === 'LoRaWAN') return false; // SIM Card dipasangkan ke perangkat seluler (NB-IoT, GPRS, Cat 1)
     if (!search.trim()) return true;
     const q = search.toLowerCase().trim();
     return (
@@ -117,7 +117,7 @@ export const PairDeviceModal: React.FC<PairDeviceModalProps> = ({ sim, isOpen, o
 
           <div>
             <label className="block text-xs font-bold text-slate-700 mb-1.5">
-              {isCurrentPaired ? 'Atau Pindahkan ke Perangkat AquaLink Lain:' : 'Pilih Perangkat AquaLink (NB-IoT):'}
+              {isCurrentPaired ? 'Atau Pindahkan ke Perangkat Lain:' : 'Pilih Perangkat Seluler (NB-IoT / GPRS / Cat 1):'}
             </label>
 
             {/* Search */}
@@ -136,7 +136,7 @@ export const PairDeviceModal: React.FC<PairDeviceModalProps> = ({ sim, isOpen, o
             <div className="border border-slate-200 rounded-xl max-h-56 overflow-y-auto divide-y divide-slate-100">
               {eligibleDevices.length === 0 ? (
                 <div className="p-4 text-center text-xs text-slate-400">
-                  Tidak ada perangkat NB-IoT yang cocok.
+                  Tidak ada perangkat seluler (NB-IoT / GPRS / Cat 1) yang cocok.
                 </div>
               ) : (
                 eligibleDevices.map((d) => {

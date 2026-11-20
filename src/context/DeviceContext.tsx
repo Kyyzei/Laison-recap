@@ -136,11 +136,14 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       dipinjamkan: 0,
       lopiwan: 0,
       nbiot: 0,
+      gprs: 0,
+      cat1: 0,
       diGudang: 0,
       diLuar: 0,
       aqualink: 0,
       ultrasonic: 0,
       miu: 0,
+      hybrid: 0,
     };
 
     for (const d of devices) {
@@ -153,6 +156,8 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
 
       if (d.koneksi === 'LoRaWAN') s.lopiwan++;
       else if (d.koneksi === 'NB-IoT') s.nbiot++;
+      else if (d.koneksi === 'GPRS') s.gprs++;
+      else if (d.koneksi === 'Cat 1') s.cat1++;
 
       const whStatus = getDeviceWarehouseStatus(d);
       if (whStatus === 'DI_LUAR') s.diLuar++;
@@ -162,6 +167,7 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       if (devModel === 'AquaLink') s.aqualink++;
       else if (devModel === 'Ultrasonic') s.ultrasonic++;
       else if (devModel === 'MIU') s.miu++;
+      else if (devModel === 'Smart Meter Hybrid') s.hybrid++;
     }
 
     return s;

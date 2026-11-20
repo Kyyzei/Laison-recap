@@ -18,6 +18,8 @@ export interface DeviceStats {
   dipinjamkan: number;
   lopiwan: number;
   nbiot: number;
+  gprs: number;
+  cat1: number;
   // Logistik Gudang
   diGudang: number;
   diLuar: number;
@@ -25,6 +27,7 @@ export interface DeviceStats {
   aqualink: number;
   ultrasonic: number;
   miu: number;
+  hybrid: number;
 }
 
 export interface ImportPreviewItem {

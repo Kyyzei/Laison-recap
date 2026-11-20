@@ -182,26 +182,34 @@ export const DashboardView: React.FC = () => {
             <span className="text-xs font-medium">Tipe Koneksi</span>
             <Radio className="w-4 h-4 text-sky-600" />
           </div>
-          <div className="flex items-baseline gap-2">
-            <span className="text-sm font-semibold text-slate-800">LoRa: <span className="font-bold text-blue-900">{stats.lopiwan}</span></span>
+          <div className="flex flex-wrap items-baseline gap-1.5 text-xs">
+            <span className="font-semibold text-slate-800">LoRa: <span className="font-bold text-blue-900">{stats.lopiwan}</span></span>
             <span className="text-slate-300">|</span>
-            <span className="text-sm font-semibold text-slate-800">NB: <span className="font-bold text-sky-600">{stats.nbiot}</span></span>
+            <span className="font-semibold text-slate-800">NB: <span className="font-bold text-sky-600">{stats.nbiot}</span></span>
+            {(stats.gprs > 0 || stats.cat1 > 0) && (
+              <>
+                <span className="text-slate-300">|</span>
+                <span className="font-semibold text-slate-800">GPRS: <span className="font-bold text-amber-600">{stats.gprs}</span></span>
+                <span className="text-slate-300">|</span>
+                <span className="font-semibold text-slate-800">Cat1: <span className="font-bold text-teal-600">{stats.cat1}</span></span>
+              </>
+            )}
           </div>
-          <div className="text-[11px] text-slate-400 mt-1">LoRaWAN & NB-IoT</div>
+          <div className="text-[11px] text-slate-400 mt-1">LoRaWAN, NB-IoT, GPRS, Cat 1</div>
         </div>
       </div>
 
-      {/* 3 Model Perangkat Category Cards */}
+      {/* Model Perangkat Category Cards */}
       <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
         <div className="flex items-center justify-between mb-3.5">
           <div>
             <h2 className="text-sm font-bold text-slate-900">Kategori Model Perangkat</h2>
             <p className="text-xs text-slate-500">Pilih model untuk membuka data di tab kategori masing-masing</p>
           </div>
-          <span className="text-xs font-semibold text-slate-400">3 Model Terdaftar</span>
+          <span className="text-xs font-semibold text-slate-400">4 Model Terdaftar</span>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-3.5">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3.5">
           {/* AquaLink */}
           <div
             onClick={() => handleNavigateModel('AquaLink')}
@@ -244,10 +252,35 @@ export const DashboardView: React.FC = () => {
               Ultrasonic
             </h3>
             <p className="text-[11px] text-slate-500 mt-0.5">
-              Ultrasonic Flow Meter & Sensor
+              Ultrasonic Flow Meter (LoRa/Seluler)
             </p>
             <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-purple-900 font-semibold">
               <span>Buka Tab Ultrasonic</span>
+              <span className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
+            </div>
+          </div>
+
+          {/* Smart Meter Hybrid */}
+          <div
+            onClick={() => handleNavigateModel('Smart Meter Hybrid')}
+            className="p-4 rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50/60 to-white hover:border-amber-400 hover:shadow-xs transition-all cursor-pointer group"
+          >
+            <div className="flex items-center justify-between mb-2">
+              <div className="w-9 h-9 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-xl">
+                ⚡
+              </div>
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-900">
+                {stats.hybrid} unit
+              </span>
+            </div>
+            <h3 className="text-sm font-bold text-slate-900 group-hover:text-amber-900 transition-colors">
+              Smart Meter Hybrid
+            </h3>
+            <p className="text-[11px] text-slate-500 mt-0.5">
+              Hybrid Multi-Komunikasi
+            </p>
+            <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-amber-900 font-semibold">
+              <span>Buka Tab Hybrid</span>
               <span className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
             </div>
           </div>

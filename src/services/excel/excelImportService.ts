@@ -89,6 +89,8 @@ export class ExcelImportService {
             let model: DeviceModel = 'AquaLink';
             if (rawModel.includes('ultra')) {
               model = 'Ultrasonic';
+            } else if (rawModel.includes('hybrid')) {
+              model = 'Smart Meter Hybrid';
             } else if (rawModel.includes('miu') || rawModel.includes('interface')) {
               model = 'MIU';
             }
@@ -96,7 +98,11 @@ export class ExcelImportService {
             // Koneksi normalization
             const rawKoneksi = String(mapped.koneksi || '').toUpperCase();
             let koneksi: ConnectionType = 'LoRaWAN';
-            if (rawKoneksi.includes('NB')) {
+            if (rawKoneksi.includes('GPRS')) {
+              koneksi = 'GPRS';
+            } else if (rawKoneksi.includes('CAT') || rawKoneksi.includes('CAT1') || rawKoneksi.includes('CAT 1')) {
+              koneksi = 'Cat 1';
+            } else if (rawKoneksi.includes('NB')) {
               koneksi = 'NB-IoT';
             } else if (rawKoneksi.includes('LORA')) {
               koneksi = 'LoRaWAN';
@@ -136,6 +142,8 @@ export class ExcelImportService {
             if (errors.length > 0) itemStatus = 'invalid';
             else if (isDuplicateSerial) itemStatus = 'duplicate';
 
+            const isCellular = koneksi !== 'LoRaWAN';
+
             items.push({
               rowNumber,
               data: {
@@ -146,9 +154,9 @@ export class ExcelImportService {
                 devEui: koneksi === 'LoRaWAN' ? (mapped.devEuiOrSim || '') : '',
                 appEui: koneksi === 'LoRaWAN' ? (mapped.appEuiOrApn || '') : '',
                 devAddr: mapped.devAddr || '',
-                noSim: koneksi === 'NB-IoT' ? (mapped.noSim || mapped.devEuiOrSim || '') : '',
-                apnBand: koneksi === 'NB-IoT' ? (mapped.appEuiOrApn || 'NBIOT,3,20,28,8') : '',
-                ip: mapped.ip || (koneksi === 'NB-IoT' ? '147.93.81.149' : ''),
+                noSim: isCellular ? (mapped.noSim || mapped.devEuiOrSim || '') : '',
+                apnBand: isCellular ? (mapped.appEuiOrApn || (koneksi === 'GPRS' ? 'INTERNET,GPRS' : koneksi === 'Cat 1' ? 'INTERNET,CAT1,BAND3' : 'NBIOT,3,20,28,8')) : '',
+                ip: mapped.ip || (isCellular ? '147.93.81.149' : ''),
                 appKey: mapped.appKey || '1AC1EF01E96CAF1BE0D329331A4FC2A8',
                 status: matchedStatus,
                 lokasi: mapped.lokasi || '',
