@@ -64,7 +64,10 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
       setPenerimaKeluar(editDevice.penerimaKeluar || '');
       setKeperluanKeluar(editDevice.keperluanKeluar || '');
     } else {
-      setModel(filters.model !== 'ALL' ? filters.model : 'AquaLink');
+      const activeModel: DeviceModel = filters.model !== 'ALL'
+        ? (filters.model === 'Smart Meter Hybrid' ? 'Hybrid' : filters.model)
+        : 'AquaLink';
+      setModel(activeModel);
       setKoneksi('LoRaWAN');
       setSeri('');
       setReadAddress('');

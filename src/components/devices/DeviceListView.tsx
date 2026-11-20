@@ -245,14 +245,36 @@ export const DeviceListView: React.FC = () => {
       {filteredDevices.length === 0 && filters.model !== 'ALL' && (
         <div className="bg-gradient-to-r from-blue-50/70 via-sky-50/50 to-blue-50/70 p-6 md:p-8 rounded-2xl border border-dashed border-blue-300 text-center space-y-3">
           <div className="w-14 h-14 mx-auto rounded-2xl bg-white shadow-xs border border-blue-200 flex items-center justify-center text-3xl">
-            {filters.model === 'Ultrasonic' ? '🔊' : '📟'}
+            {filters.model === 'Ultrasonic'
+              ? '🔊'
+              : (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid')
+              ? '🚰'
+              : filters.model === 'MIU'
+              ? '📟'
+              : '💧'}
           </div>
           <div>
             <h3 className="text-base font-bold text-slate-900">
-              Kategori {filters.model === 'Ultrasonic' ? 'Ultrasonic' : 'Meter Interface Unit (MIU)'} Siap Digunakan
+              Kategori{' '}
+              {filters.model === 'Ultrasonic'
+                ? 'Ultrasonic'
+                : (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid')
+                ? 'Hybrid (Smart Water Meter)'
+                : filters.model === 'MIU'
+                ? 'Meter Interface Unit (MIU)'
+                : 'AquaLink'}{' '}
+              Siap Digunakan
             </h3>
             <p className="text-xs text-slate-600 max-w-lg mx-auto mt-1">
-              Ruang kategori untuk model {filters.model === 'Ultrasonic' ? 'Ultrasonic Flow Meter' : 'Meter Interface Unit (MIU)'} telah siap. Anda dapat langsung menginput data unit baru atau mengimpor file Excel ke dalam kategori ini.
+              Ruang kategori untuk model{' '}
+              {filters.model === 'Ultrasonic'
+                ? 'Ultrasonic Flow Meter'
+                : (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid')
+                ? 'Smart Water Meter Hybrid'
+                : filters.model === 'MIU'
+                ? 'Meter Interface Unit (MIU)'
+                : 'AquaLink (Smart Water Meter)'}{' '}
+              telah siap. Anda dapat langsung menginput data unit baru atau mengimpor file Excel ke dalam kategori ini.
             </p>
           </div>
           <button
@@ -260,7 +282,17 @@ export const DeviceListView: React.FC = () => {
             className="px-4 py-2 bg-blue-900 hover:bg-blue-800 text-white text-xs font-bold rounded-lg inline-flex items-center gap-1.5 shadow-xs cursor-pointer"
           >
             <Plus className="w-4 h-4" />
-            <span>Tambah Perangkat {filters.model === 'Ultrasonic' ? 'Ultrasonic' : 'MIU'} Baru</span>
+            <span>
+              Tambah Perangkat{' '}
+              {filters.model === 'Ultrasonic'
+                ? 'Ultrasonic'
+                : (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid')
+                ? 'Hybrid'
+                : filters.model === 'MIU'
+                ? 'MIU'
+                : 'AquaLink'}{' '}
+              Baru
+            </span>
           </button>
         </div>
       )}
