@@ -40,6 +40,12 @@ export default defineConfig({
           html = html.replace(/-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;/gi, 'line-clamp:1;-webkit-line-clamp:1;-webkit-box-orient:vertical;display:-webkit-box;');
           html = html.replace(/-webkit-user-select:none;user-select:none/gi, '-webkit-user-select:none;-moz-user-select:none;user-select:none');
 
+          // 4. Sanitize HTML comment closing delimiter `-->` inside inline script to prevent IDE / HTML parser errors
+          // In JavaScript: `s-->0` is `(s--) > 0`. Replacing with `$1-- > ` preserves identical runtime logic while preventing HTML parser errors.
+          html = html.replace(/([a-zA-Z0-9_$]+)-->/g, '$1-- > ');
+          // In SheetJS regexes: replace any remaining `-->` with `-\->`
+          html = html.replace(/--\>/g, '-\\->');
+
           // Write cleaned HTML to dist/index.html for Vercel / Web deployment
           fs.writeFileSync(distFile, html, 'utf8');
 
