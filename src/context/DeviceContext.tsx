@@ -167,7 +167,7 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       if (devModel === 'AquaLink') s.aqualink++;
       else if (devModel === 'Ultrasonic') s.ultrasonic++;
       else if (devModel === 'MIU') s.miu++;
-      else if (devModel === 'Smart Meter Hybrid') s.hybrid++;
+      else if (devModel === 'Hybrid' || devModel === 'Smart Meter Hybrid') s.hybrid++;
     }
 
     return s;
@@ -211,7 +211,11 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       }
       if (filters.model !== 'ALL') {
         const m = getDeviceModel(d);
-        if (m !== filters.model) return false;
+        if (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid') {
+          if (m !== 'Hybrid' && m !== 'Smart Meter Hybrid') return false;
+        } else if (m !== filters.model) {
+          return false;
+        }
       }
 
       return true;

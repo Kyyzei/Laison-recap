@@ -130,8 +130,8 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
               <td colSpan={14} className="py-12 text-center text-slate-400">
                 {filters.model === 'Ultrasonic'
                   ? 'Belum ada data perangkat Ultrasonic. Anda dapat menambahkannya melalui tombol "+ Tambah Device" di atas.'
-                  : filters.model === 'Smart Meter Hybrid'
-                  ? 'Belum ada data perangkat Smart Meter Hybrid. Anda dapat menambahkannya melalui tombol "+ Tambah Device" di atas.'
+                  : filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid'
+                  ? 'Belum ada data perangkat Hybrid (Smart Water Meter). Anda dapat menambahkannya melalui tombol "+ Tambah Device" di atas.'
                   : filters.model === 'MIU'
                   ? 'Belum ada data perangkat Meter Interface Unit (MIU). Anda dapat menambahkannya melalui tombol "+ Tambah Device" di atas.'
                   : 'Tidak ada data perangkat yang cocok dengan pencarian / filter.'}
@@ -182,8 +182,8 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
                               ? 'bg-blue-100 text-blue-800'
                               : getDeviceModel(d) === 'Ultrasonic'
                               ? 'bg-purple-100 text-purple-800'
-                              : getDeviceModel(d) === 'Smart Meter Hybrid'
-                              ? 'bg-amber-100 text-amber-800 border border-amber-300'
+                              : getDeviceModel(d) === 'Hybrid' || getDeviceModel(d) === 'Smart Meter Hybrid'
+                              ? 'bg-cyan-100 text-cyan-800 border border-cyan-300'
                               : 'bg-emerald-100 text-emerald-800'
                           }`}
                         >
@@ -191,8 +191,8 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
                             ? '💧 AquaLink'
                             : getDeviceModel(d) === 'Ultrasonic'
                             ? '🔊 Ultrasonic'
-                            : getDeviceModel(d) === 'Smart Meter Hybrid'
-                            ? '⚡ Hybrid'
+                            : getDeviceModel(d) === 'Hybrid' || getDeviceModel(d) === 'Smart Meter Hybrid'
+                            ? '🚰 Hybrid'
                             : '📟 MIU'}
                         </span>
                       )}

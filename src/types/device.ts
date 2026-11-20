@@ -15,7 +15,7 @@ export const DEVICE_STATUS_LIST: DeviceStatus[] = [
   'Dipinjamkan',
 ];
 
-export type DeviceModel = 'AquaLink' | 'Ultrasonic' | 'MIU' | 'Smart Meter Hybrid';
+export type DeviceModel = 'AquaLink' | 'Ultrasonic' | 'MIU' | 'Hybrid' | 'Smart Meter Hybrid';
 
 export interface DeviceModelInfo {
   id: DeviceModel;
@@ -41,18 +41,18 @@ export const DEVICE_MODELS: DeviceModelInfo[] = [
     description: 'Ultrasonic Flow Meter & Sensor',
   },
   {
+    id: 'Hybrid',
+    label: 'Hybrid',
+    shortLabel: 'Hybrid',
+    icon: '🚰',
+    description: 'Smart Water Meter Hybrid Multi-Komunikasi',
+  },
+  {
     id: 'MIU',
     label: 'Meter Interface Unit (MIU)',
     shortLabel: 'MIU',
     icon: '📟',
     description: 'Pulse Reader & Interface Unit',
-  },
-  {
-    id: 'Smart Meter Hybrid',
-    label: 'Smart Meter Hybrid',
-    shortLabel: 'Hybrid',
-    icon: '⚡',
-    description: 'Smart Water Meter Hybrid Multi-Komunikasi',
   },
 ];
 
@@ -130,6 +130,7 @@ export interface Device {
 }
 
 export function getDeviceModel(d: Device): DeviceModel {
+  if (d.model === 'Smart Meter Hybrid' || d.model === 'Hybrid') return 'Hybrid';
   return d.model || 'AquaLink';
 }
 

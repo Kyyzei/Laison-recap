@@ -178,14 +178,14 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
 
               <button
                 type="button"
-                onClick={() => setModel('Smart Meter Hybrid')}
+                onClick={() => setModel('Hybrid')}
                 className={`py-2 px-2 rounded-lg text-xs font-bold border text-center transition-all cursor-pointer flex items-center justify-center gap-1.5 ${
-                  model === 'Smart Meter Hybrid'
-                    ? 'bg-amber-600 text-white border-amber-600 shadow-xs ring-2 ring-amber-500/20'
+                  model === 'Hybrid' || model === 'Smart Meter Hybrid'
+                    ? 'bg-cyan-700 text-white border-cyan-700 shadow-xs ring-2 ring-cyan-500/20'
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                 }`}
               >
-                <span>⚡</span>
+                <span>🚰</span>
                 <span>Hybrid</span>
               </button>
 
@@ -203,7 +203,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
               </button>
             </div>
             <p className="text-[11px] text-slate-400 mt-1">
-              Perangkat akan ditempatkan di tab kategori {model === 'AquaLink' ? 'AquaLink' : model === 'Ultrasonic' ? 'Ultrasonic' : model === 'Smart Meter Hybrid' ? 'Smart Meter Hybrid' : 'Meter Interface Unit (MIU)'}
+              Perangkat akan ditempatkan di tab kategori {model === 'AquaLink' ? 'AquaLink' : model === 'Ultrasonic' ? 'Ultrasonic' : (model === 'Hybrid' || model === 'Smart Meter Hybrid') ? 'Hybrid (Smart Water Meter)' : 'Meter Interface Unit (MIU)'}
             </p>
           </div>
 
@@ -212,7 +212,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
             <label className="block text-xs font-semibold text-slate-700 mb-1">
               Jenis Koneksi
             </label>
-            <div className={`grid ${(model === 'Ultrasonic' || model === 'Smart Meter Hybrid') ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-2'} gap-2 sm:gap-3`}>
+            <div className={`grid ${(model === 'Ultrasonic' || model === 'Hybrid' || model === 'Smart Meter Hybrid') ? 'grid-cols-2 sm:grid-cols-4' : 'grid-cols-2'} gap-2 sm:gap-3`}>
               <button
                 type="button"
                 onClick={() => setKoneksi('LoRaWAN')}
@@ -235,7 +235,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
               >
                 NB-IoT
               </button>
-              {(model === 'Ultrasonic' || model === 'Smart Meter Hybrid') && (
+              {(model === 'Ultrasonic' || model === 'Hybrid' || model === 'Smart Meter Hybrid') && (
                 <>
                   <button
                     type="button"

@@ -182,8 +182,8 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
                     ? '💧 AquaLink'
                     : getDeviceModel(device) === 'Ultrasonic'
                     ? '🔊 Ultrasonic'
-                    : getDeviceModel(device) === 'Smart Meter Hybrid'
-                    ? '⚡ Hybrid'
+                    : (getDeviceModel(device) === 'Hybrid' || getDeviceModel(device) === 'Smart Meter Hybrid')
+                    ? '🚰 Hybrid'
                     : '📟 MIU'}
                 </span>
               </div>

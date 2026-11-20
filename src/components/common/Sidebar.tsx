@@ -134,23 +134,23 @@ export const Sidebar: React.FC<SidebarProps> = ({
               </span>
             </button>
 
-            {/* Smart Meter Hybrid */}
+            {/* Hybrid */}
             <button
-              onClick={() => handleSelectModel('Smart Meter Hybrid')}
+              onClick={() => handleSelectModel('Hybrid')}
               className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
-                isDevicesPage && filters.model === 'Smart Meter Hybrid'
-                  ? 'bg-amber-600 text-white shadow-xs font-semibold'
+                isDevicesPage && (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid')
+                  ? 'bg-cyan-700 text-white shadow-xs font-semibold'
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
               <div className="flex items-center gap-2">
-                <span className="text-sm">⚡</span>
-                <span className="truncate">Smart Meter Hybrid</span>
+                <span className="text-sm">🚰</span>
+                <span className="truncate">Hybrid</span>
               </div>
               <span
                 className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
-                  isDevicesPage && filters.model === 'Smart Meter Hybrid'
-                    ? 'bg-amber-200 text-amber-950'
+                  isDevicesPage && (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid')
+                    ? 'bg-cyan-200 text-cyan-950'
                     : 'bg-slate-100 text-slate-600'
                 }`}
               >

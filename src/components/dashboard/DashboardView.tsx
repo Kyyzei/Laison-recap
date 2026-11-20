@@ -92,7 +92,7 @@ export const DashboardView: React.FC = () => {
               Laison Recap
             </h1>
             <p className="text-xs md:text-sm text-slate-300 mt-1 max-w-xl">
-              Sistem pencatatan dan monitoring perangkat IoT Laison (AquaLink, Ultrasonic, MIU). Menggantikan pencatatan Excel manual.
+              Sistem pencatatan dan monitoring perangkat IoT Laison (AquaLink, Ultrasonic, Hybrid, MIU). Menggantikan pencatatan Excel manual.
             </p>
           </div>
         </div>
@@ -260,26 +260,26 @@ export const DashboardView: React.FC = () => {
             </div>
           </div>
 
-          {/* Smart Meter Hybrid */}
+          {/* Hybrid */}
           <div
-            onClick={() => handleNavigateModel('Smart Meter Hybrid')}
-            className="p-4 rounded-xl border border-amber-200 bg-gradient-to-br from-amber-50/60 to-white hover:border-amber-400 hover:shadow-xs transition-all cursor-pointer group"
+            onClick={() => handleNavigateModel('Hybrid')}
+            className="p-4 rounded-xl border border-cyan-200 bg-gradient-to-br from-cyan-50/60 to-white hover:border-cyan-400 hover:shadow-xs transition-all cursor-pointer group"
           >
             <div className="flex items-center justify-between mb-2">
-              <div className="w-9 h-9 rounded-lg bg-amber-100 text-amber-900 flex items-center justify-center text-xl">
-                ⚡
+              <div className="w-9 h-9 rounded-lg bg-cyan-100 text-cyan-900 flex items-center justify-center text-xl">
+                🚰
               </div>
-              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-amber-100 text-amber-900">
+              <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-cyan-100 text-cyan-900">
                 {stats.hybrid} unit
               </span>
             </div>
-            <h3 className="text-sm font-bold text-slate-900 group-hover:text-amber-900 transition-colors">
-              Smart Meter Hybrid
+            <h3 className="text-sm font-bold text-slate-900 group-hover:text-cyan-900 transition-colors">
+              Hybrid
             </h3>
             <p className="text-[11px] text-slate-500 mt-0.5">
-              Hybrid Multi-Komunikasi
+              Smart Water Meter Hybrid (LoRa/Seluler)
             </p>
-            <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-amber-900 font-semibold">
+            <div className="mt-3 pt-2.5 border-t border-slate-100 flex items-center justify-between text-xs text-cyan-900 font-semibold">
               <span>Buka Tab Hybrid</span>
               <span className="group-hover:translate-x-0.5 transition-transform">&rarr;</span>
             </div>

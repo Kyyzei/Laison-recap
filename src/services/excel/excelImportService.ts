@@ -90,7 +90,7 @@ export class ExcelImportService {
             if (rawModel.includes('ultra')) {
               model = 'Ultrasonic';
             } else if (rawModel.includes('hybrid')) {
-              model = 'Smart Meter Hybrid';
+              model = 'Hybrid';
             } else if (rawModel.includes('miu') || rawModel.includes('interface')) {
               model = 'MIU';
             }

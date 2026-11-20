@@ -69,6 +69,9 @@ export class LocalStorageService {
         if (!dev.model) {
           needsSave = true;
           dev = { ...dev, model: 'AquaLink' };
+        } else if (dev.model === 'Smart Meter Hybrid') {
+          needsSave = true;
+          dev = { ...dev, model: 'Hybrid' };
         }
         if (!dev.riwayat) {
           needsSave = true;
