@@ -82,6 +82,7 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
   };
 
   const isLora = device.koneksi === 'LoRaWAN';
+  const isAquaLink = getDeviceModel(device) === 'AquaLink';
   const fullHistory = getDeviceFullHistory(device);
 
   const filteredHistory = fullHistory.filter((item) => {
@@ -254,12 +255,21 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
                   </span>
                   <p className="font-semibold text-blue-900 text-sm mt-0.5">{device.koneksi}</p>
                 </div>
-                <div>
-                  <span className="text-[10px] text-slate-500 uppercase font-semibold block">
-                    Read Address
-                  </span>
-                  <p className="font-mono text-slate-800 mt-0.5">{device.readAddress || '-'}</p>
-                </div>
+                {isAquaLink ? (
+                  <div>
+                    <span className="text-[10px] text-slate-500 uppercase font-semibold block">
+                      Read Address
+                    </span>
+                    <p className="font-mono text-slate-800 mt-0.5">{device.readAddress || '-'}</p>
+                  </div>
+                ) : (
+                  <div>
+                    <span className="text-[10px] text-slate-500 uppercase font-semibold block">
+                      Model / Kategori
+                    </span>
+                    <p className="font-semibold text-slate-800 mt-0.5">{getDeviceModel(device)}</p>
+                  </div>
+                )}
                 <div>
                   <span className="text-[10px] text-slate-500 uppercase font-semibold block">
                     Lokasi
@@ -268,116 +278,171 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
                 </div>
               </div>
 
-              {/* Connection Specs */}
-              {isLora ? (
-                <div className="space-y-2 p-3.5 bg-blue-50/50 rounded-xl border border-blue-100">
-                  <span className="text-[11px] uppercase font-bold text-blue-900 flex items-center gap-1.5">
-                    Data Parameter LoRaWAN
-                  </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                    <div className="bg-white p-2.5 rounded-lg border border-blue-100 flex flex-col justify-between">
-                      <span className="text-[10px] text-slate-500 font-medium">DevEUI</span>
-                      <div className="flex items-center justify-between mt-1">
-                        <span className="font-mono font-semibold text-slate-800 break-all text-[11px]">
-                          {device.devEui || '-'}
-                        </span>
-                        {device.devEui && (
-                          <button
-                            onClick={() => copyToClipboard(device.devEui, 'devEui')}
-                            className="p-1 text-slate-400 hover:text-blue-900"
-                            title="Salin DevEUI"
-                          >
-                            {copiedKey === 'devEui' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
-                          </button>
-                        )}
+              {/* PARAMETER KHUSUS AQUALINK */}
+              {isAquaLink && (
+                <>
+                  {isLora ? (
+                    <div className="space-y-2 p-3.5 bg-blue-50/50 rounded-xl border border-blue-100">
+                      <span className="text-[11px] uppercase font-bold text-blue-900 flex items-center gap-1.5">
+                        Data Parameter LoRaWAN
+                      </span>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <div className="bg-white p-2.5 rounded-lg border border-blue-100 flex flex-col justify-between">
+                          <span className="text-[10px] text-slate-500 font-medium">DevEUI</span>
+                          <div className="flex items-center justify-between mt-1">
+                            <span className="font-mono font-semibold text-slate-800 break-all text-[11px]">
+                              {device.devEui || '-'}
+                            </span>
+                            {device.devEui && (
+                              <button
+                                onClick={() => copyToClipboard(device.devEui, 'devEui')}
+                                className="p-1 text-slate-400 hover:text-blue-900"
+                                title="Salin DevEUI"
+                              >
+                                {copiedKey === 'devEui' ? <Check className="w-3.5 h-3.5 text-emerald-600" /> : <Copy className="w-3.5 h-3.5" />}
+                              </button>
+                            )}
+                          </div>
+                        </div>
+
+                        <div className="bg-white p-2.5 rounded-lg border border-blue-100 flex flex-col justify-between">
+                          <span className="text-[10px] text-slate-500 font-medium">AppEUI</span>
+                          <span className="font-mono font-semibold text-slate-800 break-all text-[11px] mt-1">
+                            {device.appEui || '-'}
+                          </span>
+                        </div>
+
+                        <div className="bg-white p-2.5 rounded-lg border border-blue-100 flex flex-col justify-between">
+                          <span className="text-[10px] text-slate-500 font-medium">DevAddr</span>
+                          <span className="font-mono font-semibold text-slate-800 break-all text-[11px] mt-1">
+                            {device.devAddr || '-'}
+                          </span>
+                        </div>
                       </div>
                     </div>
-
-                    <div className="bg-white p-2.5 rounded-lg border border-blue-100 flex flex-col justify-between">
-                      <span className="text-[10px] text-slate-500 font-medium">AppEUI</span>
-                      <span className="font-mono font-semibold text-slate-800 break-all text-[11px] mt-1">
-                        {device.appEui || '-'}
+                  ) : (
+                    <div className={`space-y-2 p-3.5 rounded-xl border ${
+                      device.koneksi === 'GPRS'
+                        ? 'bg-amber-50/50 border-amber-200'
+                        : device.koneksi === 'Cat 1'
+                        ? 'bg-teal-50/50 border-teal-200'
+                        : 'bg-sky-50/50 border-sky-100'
+                    }`}>
+                      <span className={`text-[11px] uppercase font-bold flex items-center gap-1.5 ${
+                        device.koneksi === 'GPRS'
+                          ? 'text-amber-900'
+                          : device.koneksi === 'Cat 1'
+                          ? 'text-teal-900'
+                          : 'text-sky-900'
+                      }`}>
+                        Data Parameter {device.koneksi} (Seluler)
                       </span>
-                    </div>
+                      <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
+                        <div className="bg-white p-2.5 rounded-lg border border-sky-100 flex flex-col justify-between">
+                          <div className="flex items-center justify-between">
+                            <span className="text-[10px] text-slate-500 font-medium">No SIM</span>
+                            {device.noSim && (
+                              <span className="text-[9px] px-1.5 py-0.2 rounded-full font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
+                                <CardSim className="w-2.5 h-2.5" />
+                                <span>Sinkron</span>
+                              </span>
+                            )}
+                          </div>
+                          <span className="font-mono font-bold text-emerald-700 text-xs mt-1">
+                            {device.noSim || '-'}
+                          </span>
+                        </div>
 
-                    <div className="bg-white p-2.5 rounded-lg border border-blue-100 flex flex-col justify-between">
-                      <span className="text-[10px] text-slate-500 font-medium">DevAddr</span>
-                      <span className="font-mono font-semibold text-slate-800 break-all text-[11px] mt-1">
-                        {device.devAddr || '-'}
-                      </span>
+                        <div className="bg-white p-2.5 rounded-lg border border-sky-100 flex flex-col justify-between">
+                          <span className="text-[10px] text-slate-500 font-medium">APN & Band</span>
+                          <span className="font-mono text-slate-800 text-[11px] mt-1">
+                            {device.apnBand || '-'}
+                          </span>
+                        </div>
+
+                        <div className="bg-white p-2.5 rounded-lg border border-sky-100 flex flex-col justify-between">
+                          <span className="text-[10px] text-slate-500 font-medium">IP Server</span>
+                          <span className="font-mono text-slate-800 text-[11px] mt-1">
+                            {device.ip || '-'}
+                          </span>
+                        </div>
+                      </div>
                     </div>
+                  )}
+
+                  {/* AppKey */}
+                  <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
+                    <div className="flex justify-between items-center mb-1">
+                      <span className="text-[10px] text-slate-500 uppercase font-semibold">
+                        AppKey
+                      </span>
+                      {device.appKey && (
+                        <button
+                          onClick={() => copyToClipboard(device.appKey, 'appKey')}
+                          className="text-xs text-blue-700 hover:text-blue-900 flex items-center gap-1 cursor-pointer font-medium"
+                        >
+                          {copiedKey === 'appKey' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
+                          <span>{copiedKey === 'appKey' ? 'Tersalin' : 'Salin'}</span>
+                        </button>
+                      )}
+                    </div>
+                    <p className="font-mono text-slate-700 break-all bg-white p-2 rounded-lg border border-slate-200 text-xs">
+                      {device.appKey || '-'}
+                    </p>
                   </div>
-                </div>
-              ) : (
-                <div className={`space-y-2 p-3.5 rounded-xl border ${
-                  device.koneksi === 'GPRS'
-                    ? 'bg-amber-50/50 border-amber-200'
-                    : device.koneksi === 'Cat 1'
-                    ? 'bg-teal-50/50 border-teal-200'
-                    : 'bg-sky-50/50 border-sky-100'
-                }`}>
-                  <span className={`text-[11px] uppercase font-bold flex items-center gap-1.5 ${
-                    device.koneksi === 'GPRS'
-                      ? 'text-amber-900'
-                      : device.koneksi === 'Cat 1'
-                      ? 'text-teal-900'
-                      : 'text-sky-900'
-                  }`}>
-                    Data Parameter {device.koneksi} (Seluler)
-                  </span>
-                  <div className="grid grid-cols-1 sm:grid-cols-3 gap-2">
-                    <div className="bg-white p-2.5 rounded-lg border border-sky-100 flex flex-col justify-between">
+                </>
+              )}
+
+              {/* PARAMETER NON-AQUALINK (Ultrasonic, Hybrid, MIU) */}
+              {!isAquaLink && (
+                <>
+                  {!isLora ? (
+                    /* Komunikasi Seluler dengan SIM Card */
+                    <div className="space-y-3 p-3.5 bg-sky-50/60 rounded-xl border border-sky-200">
                       <div className="flex items-center justify-between">
-                        <span className="text-[10px] text-slate-500 font-medium">No SIM</span>
+                        <span className="text-xs font-bold text-sky-950 flex items-center gap-1.5">
+                          <CardSim className="w-4 h-4 text-sky-700" />
+                          <span>Informasi SIM Card ({device.koneksi})</span>
+                        </span>
                         {device.noSim && (
-                          <span className="text-[9px] px-1.5 py-0.2 rounded-full font-bold bg-emerald-50 text-emerald-700 border border-emerald-200 flex items-center gap-1">
-                            <CardSim className="w-2.5 h-2.5" />
-                            <span>Sinkron</span>
+                          <span className="text-[10px] px-2 py-0.5 rounded-full font-bold bg-emerald-100 text-emerald-800 border border-emerald-200 flex items-center gap-1">
+                            <Check className="w-3 h-3" />
+                            <span>Tersinkronisasi</span>
                           </span>
                         )}
                       </div>
-                      <span className="font-mono font-bold text-emerald-700 text-xs mt-1">
-                        {device.noSim || '-'}
-                      </span>
+                      <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-1">
+                        <div className="bg-white p-2.5 rounded-lg border border-sky-100">
+                          <span className="text-[10px] text-slate-500 font-medium block">Provider / Operator SIM</span>
+                          <span className="font-semibold text-slate-900 text-xs mt-0.5 block">
+                            {device.operatorSim || 'Telkomsel IoT'}
+                          </span>
+                        </div>
+                        <div className="bg-white p-2.5 rounded-lg border border-sky-100">
+                          <span className="text-[10px] text-slate-500 font-medium block">Nomor SIM Card</span>
+                          <span className="font-mono font-bold text-emerald-700 text-xs mt-0.5 block">
+                            {device.noSim || '(Belum terpasang SIM)'}
+                          </span>
+                        </div>
+                      </div>
+                      <p className="text-[10px] text-slate-500">
+                        Perangkat {getDeviceModel(device)} hanya menggunakan nomor seri, komunikasi, dan SIM Card.
+                      </p>
                     </div>
-
-                    <div className="bg-white p-2.5 rounded-lg border border-sky-100 flex flex-col justify-between">
-                      <span className="text-[10px] text-slate-500 font-medium">APN & Band</span>
-                      <span className="font-mono text-slate-800 text-[11px] mt-1">
-                        {device.apnBand || '-'}
-                      </span>
+                  ) : (
+                    /* Komunikasi LoRaWAN Nirkabel */
+                    <div className="p-3.5 bg-blue-50/50 rounded-xl border border-blue-200 flex items-center gap-2.5 text-xs text-blue-950">
+                      <span className="text-xl">📡</span>
+                      <div>
+                        <span className="font-bold">Komunikasi Nirkabel LoRaWAN</span>
+                        <p className="text-[11px] text-slate-600 mt-0.5">
+                          Perangkat {getDeviceModel(device)} menggunakan komunikasi LoRaWAN nirkabel (tanpa memerlukan SIM Card dan tanpa parameter server).
+                        </p>
+                      </div>
                     </div>
-
-                    <div className="bg-white p-2.5 rounded-lg border border-sky-100 flex flex-col justify-between">
-                      <span className="text-[10px] text-slate-500 font-medium">IP Server</span>
-                      <span className="font-mono text-slate-800 text-[11px] mt-1">
-                        {device.ip || '-'}
-                      </span>
-                    </div>
-                  </div>
-                </div>
-              )}
-
-              {/* AppKey */}
-              <div className="p-3 bg-slate-50 rounded-xl border border-slate-200">
-                <div className="flex justify-between items-center mb-1">
-                  <span className="text-[10px] text-slate-500 uppercase font-semibold">
-                    AppKey
-                  </span>
-                  {device.appKey && (
-                    <button
-                      onClick={() => copyToClipboard(device.appKey, 'appKey')}
-                      className="text-xs text-blue-700 hover:text-blue-900 flex items-center gap-1 cursor-pointer font-medium"
-                    >
-                      {copiedKey === 'appKey' ? <Check className="w-3 h-3 text-emerald-600" /> : <Copy className="w-3 h-3" />}
-                      <span>{copiedKey === 'appKey' ? 'Tersalin' : 'Salin'}</span>
-                    </button>
                   )}
-                </div>
-                <p className="font-mono text-slate-700 break-all bg-white p-2 rounded-lg border border-slate-200 text-xs">
-                  {device.appKey || '-'}
-                </p>
-              </div>
+                </>
+              )}
 
               {/* Logistik Gudang Summary Card */}
               {(() => {

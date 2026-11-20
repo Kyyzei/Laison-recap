@@ -110,6 +110,7 @@ export interface Device {
   devAddr: string;         // e.g. 00193D62
   // NB-IoT fields
   noSim: string;           // e.g. 0851-5378-4819
+  operatorSim?: string;    // Provider / Operator SIM Card (e.g. Telkomsel IoT, XL, Indosat)
   apnBand: string;         // e.g. NB1,B8
   ip: string;              // e.g. 147.93.81.149
   // Common fields
@@ -132,6 +133,10 @@ export interface Device {
 export function getDeviceModel(d: Device): DeviceModel {
   if (d.model === 'Smart Meter Hybrid' || d.model === 'Hybrid') return 'Hybrid';
   return d.model || 'AquaLink';
+}
+
+export function isAquaLinkModel(model?: DeviceModel | string): boolean {
+  return !model || model === 'AquaLink';
 }
 
 export function getDeviceWarehouseStatus(d: Device): WarehousePosition {

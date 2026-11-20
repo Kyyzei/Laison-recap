@@ -13,6 +13,7 @@ export class ExcelImportService {
     if (['readaddress', 'readaddr', 'address'].includes(clean)) return 'readAddress';
     if (['deveui', 'deveuiimei', 'deveuinosim'].includes(clean)) return 'devEuiOrSim';
     if (['nosim', 'sim', 'simcard'].includes(clean)) return 'noSim';
+    if (['operatorsim', 'providersim', 'provider', 'operator', 'providersimcard'].includes(clean)) return 'operatorSim';
     if (['appeui', 'appeuiapnband', 'apnband', 'apn'].includes(clean)) return 'appEuiOrApn';
     if (['devaddr'].includes(clean)) return 'devAddr';
     if (['appkey'].includes(clean)) return 'appKey';
@@ -142,6 +143,7 @@ export class ExcelImportService {
             if (errors.length > 0) itemStatus = 'invalid';
             else if (isDuplicateSerial) itemStatus = 'duplicate';
 
+            const isAquaLink = model === 'AquaLink';
             const isCellular = koneksi !== 'LoRaWAN';
 
             items.push({
@@ -150,14 +152,15 @@ export class ExcelImportService {
                 model,
                 seri,
                 koneksi,
-                readAddress: mapped.readAddress || '',
-                devEui: koneksi === 'LoRaWAN' ? (mapped.devEuiOrSim || '') : '',
-                appEui: koneksi === 'LoRaWAN' ? (mapped.appEuiOrApn || '') : '',
-                devAddr: mapped.devAddr || '',
+                operatorSim: isCellular ? (mapped.operatorSim || '') : '',
+                readAddress: isAquaLink ? (mapped.readAddress || '') : '',
+                devEui: (isAquaLink && koneksi === 'LoRaWAN') ? (mapped.devEuiOrSim || '') : '',
+                appEui: (isAquaLink && koneksi === 'LoRaWAN') ? (mapped.appEuiOrApn || '') : '',
+                devAddr: isAquaLink ? (mapped.devAddr || '') : '',
                 noSim: isCellular ? (mapped.noSim || mapped.devEuiOrSim || '') : '',
-                apnBand: isCellular ? (mapped.appEuiOrApn || (koneksi === 'GPRS' ? 'INTERNET,GPRS' : koneksi === 'Cat 1' ? 'INTERNET,CAT1,BAND3' : 'NBIOT,3,20,28,8')) : '',
-                ip: mapped.ip || (isCellular ? '147.93.81.149' : ''),
-                appKey: mapped.appKey || '1AC1EF01E96CAF1BE0D329331A4FC2A8',
+                apnBand: (isAquaLink && isCellular) ? (mapped.appEuiOrApn || (koneksi === 'GPRS' ? 'INTERNET,GPRS' : koneksi === 'Cat 1' ? 'INTERNET,CAT1,BAND3' : 'NBIOT,3,20,28,8')) : '',
+                ip: (isAquaLink && isCellular) ? (mapped.ip || '147.93.81.149') : '',
+                appKey: isAquaLink ? (mapped.appKey || '1AC1EF01E96CAF1BE0D329331A4FC2A8') : '',
                 status: matchedStatus,
                 lokasi: mapped.lokasi || '',
                 catatan: mapped.catatan || '',

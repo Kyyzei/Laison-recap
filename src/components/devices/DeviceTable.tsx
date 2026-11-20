@@ -55,6 +55,12 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
   const isAllSelected =
     devices.length > 0 && selectedDeviceIds.length === devices.length;
 
+  const isNonAquaLinkTab =
+    filters.model === 'Ultrasonic' ||
+    filters.model === 'Hybrid' ||
+    filters.model === 'Smart Meter Hybrid' ||
+    filters.model === 'MIU';
+
   return (
     <div className="overflow-x-auto border border-slate-200 rounded-xl bg-white shadow-2xs">
       <table className="w-full text-left text-xs">
@@ -83,16 +89,22 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
               className="py-3 px-3 cursor-pointer hover:text-blue-900"
             >
               <div className="flex items-center gap-1">
-                <span>KONEKSI</span>
+                <span>KOMUNIKASI</span>
                 <ArrowUpDown className="w-3 h-3 text-slate-400" />
               </div>
             </th>
-            <th className="py-3 px-3">READ ADDRESS</th>
-            <th className="py-3 px-3">DEVEUI / NO SIM</th>
-            <th className="py-3 px-3">APPEUI / APN&BAND</th>
-            <th className="py-3 px-3">DEVADDR</th>
-            <th className="py-3 px-3">APPKEY</th>
-            <th className="py-3 px-3">IP</th>
+            {isNonAquaLinkTab ? (
+              <th className="py-3 px-3">SIM CARD (PROVIDER & NOMOR)</th>
+            ) : (
+              <>
+                <th className="py-3 px-3">READ ADDRESS</th>
+                <th className="py-3 px-3">DEVEUI / NO SIM</th>
+                <th className="py-3 px-3">APPEUI / APN&BAND</th>
+                <th className="py-3 px-3">DEVADDR</th>
+                <th className="py-3 px-3">APPKEY</th>
+                <th className="py-3 px-3">IP</th>
+              </>
+            )}
             <th
               onClick={() => handleSort('status')}
               className="py-3 px-3 cursor-pointer hover:text-blue-900"
@@ -127,7 +139,7 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
         <tbody className="divide-y divide-slate-100 text-slate-700">
           {devices.length === 0 ? (
             <tr>
-              <td colSpan={14} className="py-12 text-center text-slate-400">
+              <td colSpan={isNonAquaLinkTab ? 9 : 14} className="py-12 text-center text-slate-400">
                 {filters.model === 'Ultrasonic'
                   ? 'Belum ada data perangkat Ultrasonic. Anda dapat menambahkannya melalui tombol "+ Tambah Device" di atas.'
                   : filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid'
@@ -216,48 +228,76 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
                     </span>
                   </td>
 
-                  {/* READ ADDRESS */}
-                  <td className="py-2.5 px-3 font-mono text-[11px] text-slate-600">
-                    {d.readAddress || '-'}
-                  </td>
+                  {isNonAquaLinkTab ? (
+                    /* Kolom Khusus Non-AquaLink: SIM Card & Nomor */
+                    <td className="py-2.5 px-3">
+                      {d.koneksi !== 'LoRaWAN' ? (
+                        d.noSim ? (
+                          <div className="flex items-center gap-1.5 flex-wrap">
+                            <span className="inline-flex items-center gap-1 text-emerald-800 bg-emerald-50 border border-emerald-200 text-xs px-2 py-0.5 rounded-lg font-medium" title="SIM Card Terhubung">
+                              <CardSim className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
+                              {d.operatorSim && <span className="font-semibold text-slate-700">{d.operatorSim} :</span>}
+                              <span className="font-mono font-bold text-emerald-700">{d.noSim}</span>
+                            </span>
+                          </div>
+                        ) : (
+                          <span className="text-slate-400 italic text-[11px]">Tanpa SIM Card</span>
+                        )
+                      ) : (
+                        <span className="text-slate-400 text-[11px] italic font-medium">
+                          Nirkabel (Non-SIM)
+                        </span>
+                      )}
+                    </td>
+                  ) : (
+                    /* Kolom Lengkap AquaLink / Tab Semua Model */
+                    <>
+                      {/* READ ADDRESS */}
+                      <td className="py-2.5 px-3 font-mono text-[11px] text-slate-600">
+                        {getDeviceModel(d) === 'AquaLink' ? (d.readAddress || '-') : '-'}
+                      </td>
 
-                  {/* DEVEUI / NO SIM */}
-                  <td className="py-2.5 px-3 font-mono text-[11px] text-slate-700">
-                    {isLora ? (
-                      d.devEui || '-'
-                    ) : d.noSim ? (
-                      <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold" title="SIM Card Terhubung & Tersinkronisasi">
-                        <CardSim className="w-3 h-3 text-emerald-600 shrink-0" />
-                        <span>{d.noSim}</span>
-                      </span>
-                    ) : (
-                      <span className="text-slate-400 italic">Tanpa SIM</span>
-                    )}
-                  </td>
+                      {/* DEVEUI / NO SIM */}
+                      <td className="py-2.5 px-3 font-mono text-[11px] text-slate-700">
+                        {isLora ? (
+                          getDeviceModel(d) === 'AquaLink' ? (d.devEui || '-') : '-'
+                        ) : d.noSim ? (
+                          <span className="inline-flex items-center gap-1 text-emerald-700 font-semibold" title="SIM Card Terhubung & Tersinkronisasi">
+                            <CardSim className="w-3 h-3 text-emerald-600 shrink-0" />
+                            <span>{d.operatorSim ? `${d.operatorSim}: ` : ''}{d.noSim}</span>
+                          </span>
+                        ) : (
+                          <span className="text-slate-400 italic">Tanpa SIM</span>
+                        )}
+                      </td>
 
-                  {/* APPEUI / APN&BAND */}
-                  <td className="py-2.5 px-3 font-mono text-[11px] text-slate-600">
-                    {isLora ? d.appEui || '-' : d.apnBand || '-'}
-                  </td>
+                      {/* APPEUI / APN&BAND */}
+                      <td className="py-2.5 px-3 font-mono text-[11px] text-slate-600">
+                        {getDeviceModel(d) === 'AquaLink'
+                          ? (isLora ? d.appEui || '-' : d.apnBand || '-')
+                          : '-'}
+                      </td>
 
-                  {/* DEVADDR */}
-                  <td className="py-2.5 px-3 font-mono text-[11px] text-slate-600">
-                    {d.devAddr || '-'}
-                  </td>
+                      {/* DEVADDR */}
+                      <td className="py-2.5 px-3 font-mono text-[11px] text-slate-600">
+                        {getDeviceModel(d) === 'AquaLink' ? (d.devAddr || '-') : '-'}
+                      </td>
 
-                  {/* APPKEY */}
-                  <td
-                    className="py-2.5 px-3 font-mono text-[10px] text-slate-500 max-w-[120px] truncate cursor-pointer hover:text-slate-900"
-                    title={`Klik untuk salin AppKey: ${d.appKey}`}
-                    onClick={() => copyToClipboard(d.appKey)}
-                  >
-                    {d.appKey ? `${d.appKey.slice(0, 10)}...` : '-'}
-                  </td>
+                      {/* APPKEY */}
+                      <td
+                        className="py-2.5 px-3 font-mono text-[10px] text-slate-500 max-w-[120px] truncate cursor-pointer hover:text-slate-900"
+                        title={getDeviceModel(d) === 'AquaLink' && d.appKey ? `Klik untuk salin AppKey: ${d.appKey}` : undefined}
+                        onClick={() => getDeviceModel(d) === 'AquaLink' && copyToClipboard(d.appKey)}
+                      >
+                        {getDeviceModel(d) === 'AquaLink' && d.appKey ? `${d.appKey.slice(0, 10)}...` : '-'}
+                      </td>
 
-                  {/* IP */}
-                  <td className="py-2.5 px-3 font-mono text-[11px] text-slate-600">
-                    {d.ip || '-'}
-                  </td>
+                      {/* IP */}
+                      <td className="py-2.5 px-3 font-mono text-[11px] text-slate-600">
+                        {getDeviceModel(d) === 'AquaLink' ? (d.ip || '-') : '-'}
+                      </td>
+                    </>
+                  )}
 
                   {/* STATUS */}
                   <td className="py-2.5 px-3">

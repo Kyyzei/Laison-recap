@@ -12,17 +12,20 @@ export class ExcelExportService {
   private static formatDevicesForExport(devices: Device[]) {
     return devices.map((d, index) => {
       const posisiGudang = getDeviceWarehouseStatus(d);
+      const isAquaLink = !d.model || d.model === 'AquaLink';
+
       return {
         NO: index + 1,
         MODEL: d.model || 'AquaLink',
         SERI: d.seri,
         KONEKSI: d.koneksi,
-        'READ ADDRESS': d.readAddress,
-        'DEVEUI / NOSIM': d.koneksi === 'LoRaWAN' ? d.devEui : d.noSim,
-        'APPEUI / APN&BAND': d.koneksi === 'LoRaWAN' ? d.appEui : d.apnBand,
-        DEVADDR: d.devAddr,
-        APPKEY: d.appKey,
-        IP: d.ip,
+        'PROVIDER SIM': d.operatorSim || '',
+        'READ ADDRESS': isAquaLink ? d.readAddress : '',
+        'DEVEUI / NOSIM': isAquaLink ? (d.koneksi === 'LoRaWAN' ? d.devEui : d.noSim) : (d.koneksi !== 'LoRaWAN' ? d.noSim : ''),
+        'APPEUI / APN&BAND': isAquaLink ? (d.koneksi === 'LoRaWAN' ? d.appEui : d.apnBand) : '',
+        DEVADDR: isAquaLink ? d.devAddr : '',
+        APPKEY: isAquaLink ? d.appKey : '',
+        IP: isAquaLink ? d.ip : '',
         STATUS: d.status,
         'POSISI GUDANG': posisiGudang === 'DI_GUDANG' ? 'Di Gudang' : 'Di Luar',
         'TGL KELUAR': d.tanggalKeluar || '',

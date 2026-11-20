@@ -13,6 +13,7 @@ const FIELD_LABELS: Record<string, string> = {
   appEui: 'AppEUI',
   devAddr: 'DevAddr',
   noSim: 'No SIM',
+  operatorSim: 'Provider / Operator SIM',
   apnBand: 'APN & Band',
   ip: 'IP Server',
   appKey: 'AppKey',

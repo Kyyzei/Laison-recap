@@ -24,8 +24,9 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
   const [devEui, setDevEui] = useState('');
   const [appEui, setAppEui] = useState('');
   const [devAddr, setDevAddr] = useState('');
-  // NB-IoT
+  // NB-IoT / Cellular
   const [noSim, setNoSim] = useState('');
+  const [operatorSim, setOperatorSim] = useState('');
   const [apnBand, setApnBand] = useState('');
   const [ip, setIp] = useState('');
   // Common
@@ -53,6 +54,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
       setAppEui(editDevice.appEui || '');
       setDevAddr(editDevice.devAddr || '');
       setNoSim(editDevice.noSim || '');
+      setOperatorSim(editDevice.operatorSim || '');
       setApnBand(editDevice.apnBand || '');
       setIp(editDevice.ip || '');
       setAppKey(editDevice.appKey || '');
@@ -75,6 +77,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
       setAppEui('8CF9572000000000');
       setDevAddr('');
       setNoSim('');
+      setOperatorSim('');
       setApnBand('NBIOT,3,20,28,8');
       setIp('147.93.81.149');
       setAppKey('1AC1EF01E96CAF1BE0D329331A4FC2A8');
@@ -97,19 +100,22 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
       return;
     }
 
+    const isAquaLink = model === 'AquaLink';
     const isCellular = koneksi !== 'LoRaWAN';
+
     const payload = {
       model,
       seri: seri.trim(),
       koneksi,
-      readAddress: readAddress.trim(),
-      devEui: koneksi === 'LoRaWAN' ? devEui.trim() : '',
-      appEui: koneksi === 'LoRaWAN' ? appEui.trim() : '',
-      devAddr: koneksi === 'LoRaWAN' ? devAddr.trim() : '',
+      readAddress: isAquaLink ? readAddress.trim() : '',
+      devEui: (isAquaLink && koneksi === 'LoRaWAN') ? devEui.trim() : '',
+      appEui: (isAquaLink && koneksi === 'LoRaWAN') ? appEui.trim() : '',
+      devAddr: (isAquaLink && koneksi === 'LoRaWAN') ? devAddr.trim() : '',
       noSim: isCellular ? noSim.trim() : '',
-      apnBand: isCellular ? apnBand.trim() : '',
-      ip: isCellular ? ip.trim() : '',
-      appKey: appKey.trim(),
+      operatorSim: isCellular ? operatorSim.trim() : '',
+      apnBand: (isAquaLink && isCellular) ? apnBand.trim() : '',
+      ip: (isAquaLink && isCellular) ? ip.trim() : '',
+      appKey: isAquaLink ? appKey.trim() : '',
       status,
       lokasi: lokasi.trim(),
       catatan: catatan.trim(),
@@ -267,8 +273,37 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
             </div>
           </div>
 
-          {/* Grid 2 cols: Seri & Read Address */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          {/* Grid Seri & Read Address (Read Address hanya untuk AquaLink) */}
+          {model === 'AquaLink' ? (
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  Nomor Seri (SERI) <span className="text-rose-500">*</span>
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={seri}
+                  onChange={(e) => setSeri(e.target.value)}
+                  placeholder="Contoh: 6604290016"
+                  className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono font-medium"
+                />
+              </div>
+
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  Read Address
+                </label>
+                <input
+                  type="text"
+                  value={readAddress}
+                  onChange={(e) => setReadAddress(e.target.value)}
+                  placeholder="Contoh: AF066604290016"
+                  className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
+                />
+              </div>
+            </div>
+          ) : (
             <div>
               <label className="block text-xs font-semibold text-slate-700 mb-1">
                 Nomor Seri (SERI) <span className="text-rose-500">*</span>
@@ -279,148 +314,209 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
                 value={seri}
                 onChange={(e) => setSeri(e.target.value)}
                 placeholder="Contoh: 6604290016"
-                className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500"
+                className="w-full px-3 py-2 border border-slate-300 rounded-lg text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono font-bold"
               />
-            </div>
-
-            <div>
-              <label className="block text-xs font-semibold text-slate-700 mb-1">
-                Read Address
-              </label>
-              <input
-                type="text"
-                value={readAddress}
-                onChange={(e) => setReadAddress(e.target.value)}
-                placeholder="Contoh: AF066604290016"
-                className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs md:text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 font-mono"
-              />
-            </div>
-          </div>
-
-          {/* LoRaWAN specific fields */}
-          {koneksi === 'LoRaWAN' && (
-            <div className="space-y-3 p-3 bg-blue-50/40 rounded-xl border border-blue-100">
-              <span className="text-[11px] font-bold text-blue-900 uppercase">
-                Parameter LoRaWAN
-              </span>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
-                    DevEUI
-                  </label>
-                  <input
-                    type="text"
-                    value={devEui}
-                    onChange={(e) => setDevEui(e.target.value)}
-                    placeholder="Contoh: 8CF9572000193D62"
-                    className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
-                    DevAddr
-                  </label>
-                  <input
-                    type="text"
-                    value={devAddr}
-                    onChange={(e) => setDevAddr(e.target.value)}
-                    placeholder="Contoh: 00193D62"
-                    className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
-                  />
-                </div>
-                <div className="sm:col-span-2">
-                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
-                    AppEUI
-                  </label>
-                  <input
-                    type="text"
-                    value={appEui}
-                    onChange={(e) => setAppEui(e.target.value)}
-                    placeholder="8CF9572000000000"
-                    className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
-                  />
-                </div>
-              </div>
             </div>
           )}
 
-          {/* Cellular specific fields (NB-IoT, GPRS, Cat 1) */}
-          {koneksi !== 'LoRaWAN' && (
-            <div className={`space-y-3 p-3 rounded-xl border ${
-              koneksi === 'GPRS'
-                ? 'bg-amber-50/40 border-amber-200'
-                : koneksi === 'Cat 1'
-                ? 'bg-teal-50/40 border-teal-200'
-                : 'bg-sky-50/40 border-sky-100'
-            }`}>
-              <div className="flex items-center justify-between">
-                <span className={`text-[11px] font-bold uppercase ${
+          {/* PARAMETER KHUSUS AQUALINK */}
+          {model === 'AquaLink' && (
+            <>
+              {/* LoRaWAN specific fields */}
+              {koneksi === 'LoRaWAN' && (
+                <div className="space-y-3 p-3 bg-blue-50/40 rounded-xl border border-blue-100">
+                  <span className="text-[11px] font-bold text-blue-900 uppercase">
+                    Parameter LoRaWAN
+                  </span>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                        DevEUI
+                      </label>
+                      <input
+                        type="text"
+                        value={devEui}
+                        onChange={(e) => setDevEui(e.target.value)}
+                        placeholder="Contoh: 8CF9572000193D62"
+                        className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                        DevAddr
+                      </label>
+                      <input
+                        type="text"
+                        value={devAddr}
+                        onChange={(e) => setDevAddr(e.target.value)}
+                        placeholder="Contoh: 00193D62"
+                        className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
+                      />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                        AppEUI
+                      </label>
+                      <input
+                        type="text"
+                        value={appEui}
+                        onChange={(e) => setAppEui(e.target.value)}
+                        placeholder="8CF9572000000000"
+                        className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* Cellular specific fields (NB-IoT, GPRS, Cat 1) */}
+              {koneksi !== 'LoRaWAN' && (
+                <div className={`space-y-3 p-3 rounded-xl border ${
                   koneksi === 'GPRS'
-                    ? 'text-amber-900'
+                    ? 'bg-amber-50/40 border-amber-200'
                     : koneksi === 'Cat 1'
-                    ? 'text-teal-900'
-                    : 'text-sky-900'
+                    ? 'bg-teal-50/40 border-teal-200'
+                    : 'bg-sky-50/40 border-sky-100'
                 }`}>
-                  Parameter {koneksi} (Seluler)
-                </span>
-                <span className="text-[10px] text-slate-400">
-                  Sinkron dengan modul SIM Card
-                </span>
+                  <div className="flex items-center justify-between">
+                    <span className={`text-[11px] font-bold uppercase ${
+                      koneksi === 'GPRS'
+                        ? 'text-amber-900'
+                        : koneksi === 'Cat 1'
+                        ? 'text-teal-900'
+                        : 'text-sky-900'
+                    }`}>
+                      Parameter {koneksi} (Seluler)
+                    </span>
+                    <span className="text-[10px] text-slate-400">
+                      Sinkron dengan modul SIM Card
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                        No SIM
+                      </label>
+                      <input
+                        type="text"
+                        value={noSim}
+                        onChange={(e) => setNoSim(e.target.value)}
+                        placeholder="0851-5378-4819"
+                        className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
+                      />
+                    </div>
+                    <div>
+                      <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                        IP Server
+                      </label>
+                      <input
+                        type="text"
+                        value={ip}
+                        onChange={(e) => setIp(e.target.value)}
+                        placeholder="147.93.81.149"
+                        className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
+                      />
+                    </div>
+                    <div className="sm:col-span-2">
+                      <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                        APN & Band
+                      </label>
+                      <input
+                        type="text"
+                        value={apnBand}
+                        onChange={(e) => setApnBand(e.target.value)}
+                        placeholder={koneksi === 'GPRS' ? 'INTERNET,GPRS' : koneksi === 'Cat 1' ? 'INTERNET,CAT1,BAND3' : 'NBIOT,3,20,28,8'}
+                        className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
+                      />
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {/* AppKey */}
+              <div>
+                <label className="block text-xs font-semibold text-slate-700 mb-1">
+                  AppKey
+                </label>
+                <input
+                  type="text"
+                  value={appKey}
+                  onChange={(e) => setAppKey(e.target.value)}
+                  placeholder="1AC1EF01E96CAF1BE0D329331A4FC2A8"
+                  className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
+                />
               </div>
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-                <div>
-                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
-                    No SIM
-                  </label>
-                  <input
-                    type="text"
-                    value={noSim}
-                    onChange={(e) => setNoSim(e.target.value)}
-                    placeholder="0851-5378-4819"
-                    className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
-                  />
-                </div>
-                <div>
-                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
-                    IP Server
-                  </label>
-                  <input
-                    type="text"
-                    value={ip}
-                    onChange={(e) => setIp(e.target.value)}
-                    placeholder="147.93.81.149"
-                    className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
-                  />
-                </div>
-                <div className="sm:col-span-2">
-                  <label className="block text-[11px] font-semibold text-slate-700 mb-1">
-                    APN & Band
-                  </label>
-                  <input
-                    type="text"
-                    value={apnBand}
-                    onChange={(e) => setApnBand(e.target.value)}
-                    placeholder={koneksi === 'GPRS' ? 'INTERNET,GPRS' : koneksi === 'Cat 1' ? 'INTERNET,CAT1,BAND3' : 'NBIOT,3,20,28,8'}
-                    className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
-                  />
-                </div>
-              </div>
-            </div>
+            </>
           )}
 
-          {/* AppKey */}
-          <div>
-            <label className="block text-xs font-semibold text-slate-700 mb-1">
-              AppKey
-            </label>
-            <input
-              type="text"
-              value={appKey}
-              onChange={(e) => setAppKey(e.target.value)}
-              placeholder="1AC1EF01E96CAF1BE0D329331A4FC2A8"
-              className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono"
-            />
-          </div>
+          {/* PARAMETER NON-AQUALINK (Ultrasonic, Hybrid, MIU) */}
+          {model !== 'AquaLink' && (
+            <>
+              {koneksi !== 'LoRaWAN' ? (
+                /* Komunikasi Seluler dengan SIM Card */
+                <div className="space-y-3 p-3.5 bg-sky-50/60 rounded-xl border border-sky-200">
+                  <div className="flex items-center justify-between">
+                    <span className="text-xs font-bold text-sky-950 flex items-center gap-1.5">
+                      <span>📶</span>
+                      <span>Informasi SIM Card ({koneksi})</span>
+                    </span>
+                    <span className="text-[10px] text-sky-700 font-semibold bg-sky-100 px-2 py-0.5 rounded-full">
+                      Seluler / SIM
+                    </span>
+                  </div>
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                    <div>
+                      <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                        Provider / Nama SIM Card <span className="text-slate-400 font-normal">(Opsional)</span>
+                      </label>
+                      <input
+                        type="text"
+                        list="provider-suggestions"
+                        value={operatorSim}
+                        onChange={(e) => setOperatorSim(e.target.value)}
+                        placeholder="Contoh: Telkomsel IoT / XL"
+                        className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500"
+                      />
+                      <datalist id="provider-suggestions">
+                        <option value="Telkomsel IoT" />
+                        <option value="XL Axiata" />
+                        <option value="Indosat Ooredoo" />
+                        <option value="Smartfren" />
+                        <option value="Tri (3)" />
+                      </datalist>
+                    </div>
+
+                    <div>
+                      <label className="block text-[11px] font-semibold text-slate-700 mb-1">
+                        Nomor SIM Card
+                      </label>
+                      <input
+                        type="text"
+                        value={noSim}
+                        onChange={(e) => setNoSim(e.target.value)}
+                        placeholder="Contoh: 0851-5378-4819"
+                        className="w-full px-3 py-1.5 border border-slate-300 rounded-lg text-xs font-mono font-semibold bg-white focus:outline-none focus:ring-2 focus:ring-sky-500/20 focus:border-sky-500"
+                      />
+                    </div>
+                  </div>
+                  <p className="text-[10px] text-slate-500">
+                    Perangkat {model} hanya memerlukan nomor seri, jenis komunikasi, dan SIM Card jika memakai koneksi seluler.
+                  </p>
+                </div>
+              ) : (
+                /* Komunikasi LoRaWAN Nirkabel */
+                <div className="p-3.5 bg-blue-50/50 rounded-xl border border-blue-200 flex items-center gap-2.5 text-xs text-blue-950">
+                  <span className="text-xl">📡</span>
+                  <div>
+                    <span className="font-bold">Komunikasi Nirkabel LoRaWAN</span>
+                    <p className="text-[11px] text-slate-600 mt-0.5">
+                      Perangkat {model} menggunakan komunikasi LoRaWAN nirkabel (tanpa memerlukan SIM Card dan tanpa parameter server).
+                    </p>
+                  </div>
+                </div>
+              )}
+            </>
+          )}
 
           {/* Status & Lokasi */}
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">

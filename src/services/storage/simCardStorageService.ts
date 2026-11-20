@@ -331,6 +331,7 @@ export class SimCardStorageService {
     // Update Device
     const oldSimNumber = targetDev.noSim;
     targetDev.noSim = targetSim.noSim;
+    targetDev.operatorSim = targetSim.operator;
     targetDev.updatedAt = new Date().toISOString();
 
     // Catat ke riwayat device
@@ -541,6 +542,7 @@ export class SimCardStorageService {
 
     const oldSim = dev.noSim;
     dev.noSim = '';
+    dev.operatorSim = '';
     dev.updatedAt = new Date().toISOString();
 
     LocalStorageService.addDeviceHistory(dev.id, {
@@ -593,6 +595,7 @@ export class SimCardStorageService {
           targetSim.deviceModel = device.model || 'AquaLink';
           targetSim.status = device.status === 'Rusak' ? 'Offline' : 'Online';
           targetSim.lokasi = device.lokasi || targetSim.lokasi;
+          if (device.operatorSim) targetSim.operator = device.operatorSim;
           targetSim.updatedAt = new Date().toISOString();
         } else {
           // Buat kartu baru
@@ -600,7 +603,7 @@ export class SimCardStorageService {
             id: `sim-${newNo.replace(/[^0-9]/g, '') || Date.now()}`,
             noSim: newNo,
             iccid: `89620100${newNo.replace(/[^0-9]/g, '').padEnd(12, '0')}`,
-            operator: 'Telkomsel IoT',
+            operator: device.operatorSim || 'Telkomsel IoT',
             status: device.status === 'Rusak' ? 'Offline' : 'Online',
             deviceId: device.id,
             deviceSeri: device.seri,
