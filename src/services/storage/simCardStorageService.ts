@@ -2,7 +2,7 @@ import { SimCard, SimCardStatus, SimCardStats } from '../../types/simcard';
 import { Device } from '../../types/device';
 import { LocalStorageService } from './localStorageService';
 
-const SIM_STORAGE_KEY = 'laison_simcards_v2';
+const SIM_STORAGE_KEY = 'laison_simcards_v3';
 
 export class SimCardStorageService {
   /**
@@ -104,24 +104,10 @@ export class SimCardStorageService {
    */
   static getSimCards(): SimCard[] {
     try {
-      // Bersihkan atau migrasi cache v1 jika ada
-      const oldRaw = localStorage.getItem('laison_simcards_v1');
+      // Bersihkan atau migrasi cache v1 & v2 jika ada
+      localStorage.removeItem('laison_simcards_v1');
+      localStorage.removeItem('laison_simcards_v2');
       let raw = localStorage.getItem(SIM_STORAGE_KEY);
-
-      if (!raw && oldRaw) {
-        try {
-          const oldList: any[] = JSON.parse(oldRaw);
-          const migratedList: SimCard[] = oldList.map((item) => ({
-            ...item,
-            status: item.status === 'Terpakai' ? 'Online' : item.status,
-          }));
-          this.saveSimCards(migratedList);
-          localStorage.removeItem('laison_simcards_v1');
-          return migratedList;
-        } catch {
-          // ignore
-        }
-      }
 
       let list: SimCard[] = [];
 

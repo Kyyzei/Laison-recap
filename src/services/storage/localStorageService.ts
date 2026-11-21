@@ -2,7 +2,7 @@ import { Device, WarehousePosition, DeviceHistoryEntry, ParameterDiff, DeviceHis
 import { DUMMY_DEVICES } from '../../data/dummyDevices';
 import { SimCardStorageService } from './simCardStorageService';
 
-const STORAGE_KEY = 'laison_devices_v7';
+const STORAGE_KEY = 'laison_devices_v8';
 
 const FIELD_LABELS: Record<string, string> = {
   model: 'Model Perangkat',
@@ -34,7 +34,7 @@ export class LocalStorageService {
   static getDevices(): Device[] {
     try {
       // Bersihkan cache versi lama
-      ['aqualink_devices', 'aqualink_devices_v2', 'aqualink_devices_v3', 'aqualink_devices_v4', 'laison_devices_v5', 'laison_devices_v6'].forEach((oldKey) => {
+      ['aqualink_devices', 'aqualink_devices_v2', 'aqualink_devices_v3', 'aqualink_devices_v4', 'laison_devices_v5', 'laison_devices_v6', 'laison_devices_v7'].forEach((oldKey) => {
         try {
           if (localStorage.getItem(oldKey)) {
             localStorage.removeItem(oldKey);
