@@ -52,7 +52,7 @@ export const DeviceListView: React.FC = () => {
 
   const handleExportFiltered = () => {
     ExcelExportService.exportDevices(filteredDevices, {
-      filename: `Laison_Device_Export_${filteredDevices.length}units`,
+      format: 'xlsx',
     });
   };
 
