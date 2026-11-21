@@ -1,6 +1,7 @@
 import { Device } from '../../types/device';
 import { BackupData } from '../../types/common';
 import { LocalStorageService } from '../storage/localStorageService';
+import { SupabaseDeviceService } from '../supabase/supabaseDeviceService';
 
 export class BackupService {
   static exportBackup(): void {
@@ -61,6 +62,7 @@ export class BackupService {
 
     if (mode === 'overwrite') {
       LocalStorageService.saveDevices(backup.devices);
+      SupabaseDeviceService.upsertDevicesBatch(backup.devices);
       return { restoredCount: backup.devices.length, skippedCount: 0 };
     } else {
       const current = LocalStorageService.getDevices();
@@ -77,7 +79,9 @@ export class BackupService {
         }
       }
 
-      LocalStorageService.saveDevices([...current, ...toAdd]);
+      const merged = [...current, ...toAdd];
+      LocalStorageService.saveDevices(merged);
+      SupabaseDeviceService.upsertDevicesBatch(merged);
       return { restoredCount: toAdd.length, skippedCount: skipped };
     }
   }

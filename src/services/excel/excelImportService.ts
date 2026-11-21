@@ -2,6 +2,7 @@ import * as XLSX from 'xlsx';
 import { Device, DeviceStatus, ConnectionType, DeviceModel } from '../../types/device';
 import { ImportPreviewItem, ImportSummary } from '../../types/common';
 import { LocalStorageService } from '../storage/localStorageService';
+import { SupabaseDeviceService } from '../supabase/supabaseDeviceService';
 
 export class ExcelImportService {
   private static normalizeKey(header: string): string {
@@ -257,7 +258,9 @@ export class ExcelImportService {
       }
     }
 
-    LocalStorageService.saveDevices(Array.from(map.values()));
+    const allUpdated = Array.from(map.values());
+    LocalStorageService.saveDevices(allUpdated);
+    SupabaseDeviceService.upsertDevicesBatch(allUpdated);
     return { imported, updated, skipped };
   }
 }

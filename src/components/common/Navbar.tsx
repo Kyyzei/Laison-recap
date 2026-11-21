@@ -82,6 +82,11 @@ export const Navbar: React.FC<NavbarProps> = ({
 
         {/* Right actions */}
         <div className="flex items-center gap-2.5">
+          <div className="hidden lg:flex items-center gap-1.5 text-[11px] text-emerald-300 bg-emerald-950/60 px-2.5 py-1 rounded-md border border-emerald-500/30 shadow-2xs" title="Terhubung ke Database Cloud Supabase (Real-Time Sync)">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+            <span>Cloud Realtime</span>
+          </div>
+
           <div className="hidden sm:flex items-center gap-1.5 text-xs text-slate-300 bg-blue-950/50 px-2.5 py-1 rounded-md border border-blue-800/50">
             <HardDrive className="w-3.5 h-3.5 text-sky-400" />
             <span>Total:</span>

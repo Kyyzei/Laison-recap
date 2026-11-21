@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useEffect, useMemo, useCall
 import { Device, DeviceFilters, DeviceSort, getDeviceWarehouseStatus, getDeviceModel, DeviceHistoryEntry } from '../types/device';
 import { DeviceStats } from '../types/common';
 import { LocalStorageService } from '../services/storage/localStorageService';
+import { SupabaseDeviceService } from '../services/supabase/supabaseDeviceService';
 import { useToast } from './ToastContext';
 import { WarehouseMovementModal } from '../components/devices/WarehouseMovementModal';
 
@@ -118,6 +119,65 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       window.removeEventListener('storage', handleStorageChange);
     };
   }, [refreshDevices]);
+
+  // Sinkronisasi Otomatis Cloud Supabase & Realtime Broadcast
+  useEffect(() => {
+    let isMounted = true;
+
+    async function syncFromCloud() {
+      try {
+        const cloudDevices = await SupabaseDeviceService.fetchAllDevices();
+        if (cloudDevices !== null && isMounted) {
+          if (cloudDevices.length > 0) {
+            LocalStorageService.saveDevices(cloudDevices);
+            setDevices(cloudDevices);
+          } else {
+            // Jika tabel Supabase masih kosong, unggah data awal dari lokal
+            const local = LocalStorageService.getDevices();
+            if (local.length > 0) {
+              await SupabaseDeviceService.upsertDevicesBatch(local);
+            }
+          }
+        }
+      } catch (err) {
+        console.warn('Supabase sync skipped:', err);
+      }
+    }
+
+    syncFromCloud();
+
+    // Subscribe to realtime changes from other users / devices
+    const unsubscribe = SupabaseDeviceService.subscribeToChanges(
+      (upsertedDev) => {
+        if (!isMounted) return;
+        setDevices((prev) => {
+          const idx = prev.findIndex((d) => d.id === upsertedDev.id);
+          let next: Device[];
+          if (idx !== -1) {
+            next = [...prev];
+            next[idx] = upsertedDev;
+          } else {
+            next = [upsertedDev, ...prev];
+          }
+          LocalStorageService.saveDevices(next);
+          return next;
+        });
+      },
+      (deletedId) => {
+        if (!isMounted) return;
+        setDevices((prev) => {
+          const next = prev.filter((d) => d.id !== deletedId);
+          LocalStorageService.saveDevices(next);
+          return next;
+        });
+      }
+    );
+
+    return () => {
+      isMounted = false;
+      unsubscribe();
+    };
+  }, []);
 
   const resetFilters = useCallback(() => {
     setCurrentPage(1);
@@ -265,6 +325,8 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       try {
         const created = LocalStorageService.addDevice(data);
         refreshDevices();
+        // Sync ke cloud Supabase
+        SupabaseDeviceService.upsertDevice(created);
         success('Perangkat Ditambahkan', `Perangkat seri ${created.seri} berhasil disimpan.`);
         return true;
       } catch (err: any) {
@@ -280,6 +342,8 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       try {
         const updated = LocalStorageService.updateDevice(id, updates, pic);
         refreshDevices();
+        // Sync ke cloud Supabase
+        SupabaseDeviceService.upsertDevice(updated);
         success('Perangkat Diperbarui', `Perangkat seri ${updated.seri} berhasil diperbarui.`);
         return true;
       } catch (err: any) {
@@ -295,6 +359,8 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       try {
         const updated = LocalStorageService.addDeviceHistory(deviceId, entry);
         refreshDevices();
+        // Sync ke cloud Supabase
+        SupabaseDeviceService.upsertDevice(updated);
         success('Riwayat Ditambahkan', `Catatan riwayat untuk perangkat seri ${updated.seri} berhasil disimpan.`);
         return true;
       } catch (err: any) {
@@ -310,6 +376,8 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
       try {
         const dup = LocalStorageService.duplicateDevice(id);
         refreshDevices();
+        // Sync ke cloud Supabase
+        SupabaseDeviceService.upsertDevice(dup);
         success('Perangkat Diduplikasi', `Dibuat salinan baru: ${dup.seri}.`);
         return true;
       } catch (err: any) {
@@ -327,6 +395,8 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         LocalStorageService.deleteDevice(id);
         refreshDevices();
         clearSelection();
+        // Sync ke cloud Supabase
+        SupabaseDeviceService.deleteDevice(id);
         success('Perangkat Dihapus', `Perangkat seri ${target?.seri || id} berhasil dihapus.`);
         return true;
       } catch (err: any) {
@@ -343,6 +413,8 @@ export const DeviceProvider: React.FC<{ children: React.ReactNode }> = ({ childr
         const count = LocalStorageService.bulkDeleteDevices(ids);
         refreshDevices();
         clearSelection();
+        // Sync ke cloud Supabase
+        ids.forEach((id) => SupabaseDeviceService.deleteDevice(id));
         success('Penghapusan Berhasil', `${count} perangkat berhasil dihapus.`);
         return true;
       } catch (err: any) {
