@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../../context/AuthContext';
 import { LAISON_LOGO_DATA_URI } from '../../assets/logo';
+import waterMeterBg from '../../assets/water-meter-bg.jpg';
 import {
   User as UserIcon,
   Lock,
@@ -10,6 +11,8 @@ import {
   ArrowRight,
   ShieldCheck,
   AlertCircle,
+  Droplets,
+  Wifi,
 } from 'lucide-react';
 
 export const LoginView: React.FC = () => {
@@ -54,13 +57,26 @@ export const LoginView: React.FC = () => {
   };
 
   return (
-    <div className="min-h-screen w-full bg-gradient-to-br from-[#071629] via-[#0c2340] to-[#11325d] flex flex-col justify-center items-center p-4 relative selection:bg-sky-500 selection:text-white overflow-hidden">
-      {/* Decorative background glow circles */}
-      <div className="absolute top-1/4 -left-20 w-80 h-80 bg-sky-500/10 rounded-full blur-3xl pointer-events-none" />
-      <div className="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+    <div className="min-h-screen w-full relative flex flex-col justify-center items-center p-4 selection:bg-sky-500 selection:text-white overflow-hidden bg-slate-950">
+      {/* Background Image: Smart Water Meter & Environment */}
+      <div
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat transform scale-105 filter brightness-95 transition-transform duration-1000 ease-out"
+        style={{ backgroundImage: `url(${waterMeterBg})` }}
+      />
+
+      {/* Atmospheric Overlays for Depth, Contrast, and Corporate Aesthetic */}
+      <div className="absolute inset-0 bg-gradient-to-tr from-slate-950/80 via-slate-900/40 to-slate-950/70 backdrop-blur-[1.5px]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_var(--tw-gradient-stops))] from-sky-500/10 via-slate-950/30 to-slate-950/80 pointer-events-none" />
+
+      {/* Top Left Water Utility Branding / Environment Pill */}
+      <div className="absolute top-5 left-5 hidden sm:flex items-center gap-2 px-3 py-1.5 rounded-full bg-slate-900/70 backdrop-blur-md border border-white/10 text-white/90 text-xs shadow-lg z-10">
+        <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse" />
+        <span className="font-semibold text-sky-300">IoT Water Grid</span>
+        <span className="text-slate-400 text-[11px]">• Smart Environmental Metering</span>
+      </div>
 
       {/* Main Login Card */}
-      <div className="w-full max-w-md bg-white rounded-3xl shadow-2xl border border-slate-200/80 overflow-hidden relative z-10 animate-in fade-in zoom-in-95 duration-200">
+      <div className="w-full max-w-md bg-white/95 backdrop-blur-md rounded-3xl shadow-2xl border border-white/40 overflow-hidden relative z-10 animate-in fade-in zoom-in-95 duration-200">
         {/* Card Header with Brand Logo */}
         <div className="p-8 pb-6 text-center border-b border-slate-100 bg-gradient-to-b from-slate-50/80 to-white">
           <div className="flex justify-center mb-4">
@@ -187,6 +203,18 @@ export const LoginView: React.FC = () => {
         {/* Footer info */}
         <div className="px-6 py-3 bg-slate-50 border-t border-slate-100 text-center text-[11px] text-slate-400">
           <span>Laison IoT Recap System • L'AISON Technologies</span>
+        </div>
+      </div>
+
+      {/* Bottom Floating Environment & Connectivity Footer */}
+      <div className="relative z-10 mt-6 flex flex-wrap items-center justify-center gap-3 text-xs text-white/80">
+        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/60 backdrop-blur-sm border border-white/10">
+          <Droplets className="w-3.5 h-3.5 text-sky-400" />
+          <span>Smart Water Metering</span>
+        </div>
+        <div className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-slate-900/60 backdrop-blur-sm border border-white/10">
+          <Wifi className="w-3.5 h-3.5 text-emerald-400" />
+          <span>LoRaWAN & NB-IoT Telemetry</span>
         </div>
       </div>
     </div>
