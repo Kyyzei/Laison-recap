@@ -124,19 +124,28 @@ export class SimCardStorageService {
         return list;
       }
 
-      // Pastikan tidak ada status 'Terpakai' yang tersisa di storage
-      let hasTerpakai = false;
+      // Pastikan tidak ada status 'Terpakai' yang tersisa & lokasi terhubung selaras dengan perangkat
+      const devices = LocalStorageService.getDevices();
+      const devBySeri = new Map(devices.map((d) => [d.seri, d]));
+      let needsSave = false;
       const sanitized = list.map((item: any) => {
+        let updated = item as SimCard;
         if (item.status === 'Terpakai') {
-          hasTerpakai = true;
-          return { ...item, status: 'Online' as SimCardStatus };
+          needsSave = true;
+          updated = { ...updated, status: 'Online' as SimCardStatus };
         }
-        return item as SimCard;
+        if (updated.deviceSeri) {
+          const linkedDev = devBySeri.get(updated.deviceSeri);
+          if (linkedDev && linkedDev.lokasi && (!updated.lokasi || updated.lokasi === 'Gudang Utama Laison')) {
+            needsSave = true;
+            updated = { ...updated, lokasi: linkedDev.lokasi };
+          }
+        }
+        return updated;
       });
 
-      if (hasTerpakai) {
+      if (needsSave) {
         this.saveSimCards(sanitized);
-        return sanitized;
       }
 
       return sanitized;

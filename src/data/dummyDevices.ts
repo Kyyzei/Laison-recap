@@ -9776,13 +9776,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290081",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290081",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290081",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -9793,7 +9817,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290084",
@@ -9807,13 +9834,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290084",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290084",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290084",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -9824,7 +9875,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290085",
@@ -9869,13 +9923,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290086",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290086",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290086",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -9886,7 +9964,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290088",
@@ -9931,13 +10012,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290089",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290089",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290089",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -9948,7 +10053,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290091",
@@ -9993,13 +10101,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290092",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290092",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290092",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -10010,7 +10142,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290093",
@@ -10024,13 +10159,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290093",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290093",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290093",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -10041,7 +10200,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290094",
@@ -10055,13 +10217,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290094",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290094",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290094",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -10072,7 +10258,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290095",
@@ -10086,13 +10275,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290095",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290095",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290095",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -10103,7 +10316,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290096",
@@ -10118,12 +10334,28 @@ export const DUMMY_DEVICES: Device[] = [
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
     "status": "Rusak",
-    "lokasi": "",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
     "posisiGudang": "DI_GUDANG",
     "riwayatGudang": [],
     "riwayat": [
+      {
+        "id": "hist-loc-ba-6604290096",
+        "timestamp": "2026-11-25T04:18:18.563Z",
+        "kategori": "PARAMETER",
+        "judul": "Penyesuaian Lokasi Bukit Asam",
+        "deskripsi": "Lokasi perangkat disesuaikan ke Bukit Asam sesuai data resmi Excel NBIOT Recap.",
+        "pic": "Sistem",
+        "perubahan": [
+          {
+            "field": "lokasi",
+            "fieldLabel": "Lokasi",
+            "oldValue": "(Kosong)",
+            "newValue": "Bukit Asam"
+          }
+        ]
+      },
       {
         "id": "hist-1795141125598-9px8",
         "timestamp": "2026-11-20T02:18:45.598Z",
@@ -10150,7 +10382,7 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-20T02:19:05.381Z",
+    "updatedAt": "2026-11-25T04:18:18.563Z",
     "tanggalKeluar": "",
     "tanggalKembali": "",
     "penerimaKeluar": "",
@@ -10199,13 +10431,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290099",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290099",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290099",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -10216,7 +10472,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6604290100",
@@ -10230,13 +10489,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6604290100",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6604290100",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6604290100",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -10247,7 +10530,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6601230001",
@@ -10292,13 +10578,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6601230003",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6601230003",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6601230003",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -10309,7 +10619,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6601230008",
@@ -10323,13 +10636,37 @@ export const DUMMY_DEVICES: Device[] = [
     "apnBand": "NBIOT,3,20,28,8",
     "ip": "147.93.81.149",
     "appKey": "1AC1EF01E96CAF1BE0D329331A4FC2A8",
-    "status": "Aktif",
-    "lokasi": "",
+    "status": "Terpasang",
+    "lokasi": "Bukit Asam",
     "catatan": "",
     "model": "AquaLink",
-    "posisiGudang": "DI_GUDANG",
-    "riwayatGudang": [],
+    "posisiGudang": "DI_LUAR",
+    "riwayatGudang": [
+      {
+        "id": "mov-ba-6601230008",
+        "tipe": "KELUAR",
+        "tanggal": "2026-07-14",
+        "lokasi": "Bukit Asam",
+        "penerima": "Teknisi Bukit Asam",
+        "keperluan": "Instalasi Lapangan",
+        "catatan": "Pengiriman dan instalasi unit di lokasi Bukit Asam (sinkronisasi Excel)",
+        "createdAt": "2026-07-14T08:00:00.000Z"
+      }
+    ],
     "riwayat": [
+      {
+        "id": "hist-mov-6601230008",
+        "timestamp": "2026-07-14T08:00:00.000Z",
+        "kategori": "GUDANG",
+        "judul": "Keluar dari Gudang",
+        "deskripsi": "Pengiriman dan instalasi unit di lokasi Bukit Asam (PIC: Teknisi Bukit Asam)",
+        "pic": "Teknisi Bukit Asam",
+        "metadata": {
+          "tipe": "KELUAR",
+          "lokasi": "Bukit Asam",
+          "keperluan": "Instalasi Lapangan"
+        }
+      },
       {
         "id": "hist-reg-6601230008",
         "timestamp": "2026-10-29T08:00:00.000Z",
@@ -10340,7 +10677,10 @@ export const DUMMY_DEVICES: Device[] = [
       }
     ],
     "createdAt": "2026-10-29T08:00:00.000Z",
-    "updatedAt": "2026-11-19T10:00:00.000Z"
+    "updatedAt": "2026-11-25T04:18:18.563Z",
+    "tanggalKeluar": "2026-07-14",
+    "penerimaKeluar": "Teknisi Bukit Asam",
+    "keperluanKeluar": "Instalasi Lapangan"
   },
   {
     "id": "dev-6601230010",

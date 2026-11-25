@@ -4,6 +4,22 @@ import { SimCardStorageService } from './simCardStorageService';
 
 const STORAGE_KEY = 'laison_devices_v8';
 
+const MISSING_BUKIT_ASAM_SERIS = new Set([
+  '6601230003',
+  '6601230008',
+  '6604290081',
+  '6604290084',
+  '6604290086',
+  '6604290089',
+  '6604290092',
+  '6604290093',
+  '6604290094',
+  '6604290095',
+  '6604290096',
+  '6604290099',
+  '6604290100',
+]);
+
 const FIELD_LABELS: Record<string, string> = {
   model: 'Model Perangkat',
   seri: 'Nomor Seri',
@@ -86,6 +102,22 @@ export class LocalStorageService {
               tanggalKeluar: '2026-07-14',
               penerimaKeluar: 'Enviro',
               posisiGudang: (dev.tanggalKembali ? 'DI_GUDANG' : 'DI_LUAR') as WarehousePosition,
+              keperluanKeluar: dev.keperluanKeluar || 'Instalasi Lapangan',
+            };
+          }
+        }
+        if (MISSING_BUKIT_ASAM_SERIS.has(dev.seri) && !dev.lokasi) {
+          needsSave = true;
+          if (dev.seri === '6604290096') {
+            dev = { ...dev, lokasi: 'Bukit Asam' };
+          } else {
+            dev = {
+              ...dev,
+              status: dev.status === 'Aktif' ? 'Terpasang' : dev.status,
+              lokasi: 'Bukit Asam',
+              posisiGudang: 'DI_LUAR',
+              tanggalKeluar: dev.tanggalKeluar || '2026-07-14',
+              penerimaKeluar: dev.penerimaKeluar || 'Teknisi Bukit Asam',
               keperluanKeluar: dev.keperluanKeluar || 'Instalasi Lapangan',
             };
           }

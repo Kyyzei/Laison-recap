@@ -79,9 +79,11 @@ export const SimCardProvider: React.FC<{ children: React.ReactNode }> = ({ child
   useEffect(() => {
     const handleSimChange = () => refreshSimCards();
     window.addEventListener('laison-simcards-changed', handleSimChange);
+    window.addEventListener('aqualink-devices-changed', handleSimChange);
     window.addEventListener('storage', handleSimChange);
     return () => {
       window.removeEventListener('laison-simcards-changed', handleSimChange);
+      window.removeEventListener('aqualink-devices-changed', handleSimChange);
       window.removeEventListener('storage', handleSimChange);
     };
   }, [refreshSimCards]);
