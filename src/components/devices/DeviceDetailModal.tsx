@@ -7,6 +7,7 @@ import {
   DeviceHistoryCategory,
 } from '../../types/device';
 import { StatusBadge } from '../common/StatusBadge';
+import { ModelIcon } from '../common/ModelIcon';
 import { useDevices } from '../../context/DeviceContext';
 import { ExcelExportService } from '../../services/excel/excelExportService';
 import {
@@ -178,14 +179,17 @@ export const DeviceDetailModal: React.FC<DeviceDetailModalProps> = ({
                 <span className="text-[10px] text-sky-300 font-mono tracking-wider uppercase font-semibold">
                   {device.koneksi} DEVICE
                 </span>
-                <span className="text-[10px] font-bold px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30">
-                  {getDeviceModel(device) === 'AquaLink'
-                    ? '💧 AquaLink'
-                    : getDeviceModel(device) === 'Ultrasonic'
-                    ? '🔊 Ultrasonic'
-                    : (getDeviceModel(device) === 'Hybrid' || getDeviceModel(device) === 'Smart Meter Hybrid')
-                    ? '🚰 Hybrid'
-                    : '📟 MIU'}
+                <span className="inline-flex items-center gap-1.5 text-[10px] font-bold px-2 py-0.5 rounded bg-sky-500/20 text-sky-300 border border-sky-400/30">
+                  <ModelIcon model={getDeviceModel(device)} isActive size="xs" />
+                  <span>
+                    {getDeviceModel(device) === 'AquaLink'
+                      ? 'AquaLink'
+                      : getDeviceModel(device) === 'Ultrasonic'
+                      ? 'Ultrasonic'
+                      : (getDeviceModel(device) === 'Hybrid' || getDeviceModel(device) === 'Smart Meter Hybrid')
+                      ? 'Hybrid'
+                      : 'MIU'}
+                  </span>
                 </span>
               </div>
               <h2 className="text-xl font-bold font-mono tracking-tight">SERI: {device.seri}</h2>

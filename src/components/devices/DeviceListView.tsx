@@ -18,6 +18,7 @@ import {
 import { useNavigate } from 'react-router-dom';
 import { ExcelExportService } from '../../services/excel/excelExportService';
 import { useSimCards } from '../../context/SimCardContext';
+import { ModelIcon } from '../common/ModelIcon';
 
 export const DeviceListView: React.FC = () => {
   const {
@@ -123,7 +124,7 @@ export const DeviceListView: React.FC = () => {
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <span className="text-base leading-none">💧</span>
+              <ModelIcon model="AquaLink" isActive={filters.model === 'AquaLink'} size="md" />
               <span>AquaLink</span>
               <span
                 className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
@@ -143,7 +144,7 @@ export const DeviceListView: React.FC = () => {
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <span className="text-base leading-none">🔊</span>
+              <ModelIcon model="Ultrasonic" isActive={filters.model === 'Ultrasonic'} size="md" />
               <span>Ultrasonic</span>
               <span
                 className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
@@ -163,7 +164,11 @@ export const DeviceListView: React.FC = () => {
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <span className="text-base leading-none">🚰</span>
+              <ModelIcon
+                model="Hybrid"
+                isActive={filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid'}
+                size="md"
+              />
               <span>Hybrid</span>
               <span
                 className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
@@ -183,7 +188,7 @@ export const DeviceListView: React.FC = () => {
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <span className="text-base leading-none">📟</span>
+              <ModelIcon model="MIU" isActive={filters.model === 'MIU'} size="md" />
               <span>Meter Interface Unit (MIU)</span>
               <span
                 className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
@@ -199,12 +204,13 @@ export const DeviceListView: React.FC = () => {
             {/* Semua Model */}
             <button
               onClick={() => setFilters((p) => ({ ...p, model: 'ALL' }))}
-              className={`flex items-center gap-1.5 px-3 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
+              className={`flex items-center gap-2 px-3 py-2 rounded-lg text-xs font-medium transition-all cursor-pointer ${
                 filters.model === 'ALL'
                   ? 'bg-slate-800 text-white font-bold shadow-xs'
                   : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
               }`}
             >
+              <ModelIcon model="ALL" isActive={filters.model === 'ALL'} size="md" />
               <span>Semua Model</span>
               <span
                 className={`text-[10px] px-1.5 py-0.5 rounded-full font-semibold ${
@@ -244,14 +250,8 @@ export const DeviceListView: React.FC = () => {
       {/* Empty State Banner when category has 0 items */}
       {filteredDevices.length === 0 && filters.model !== 'ALL' && (
         <div className="bg-gradient-to-r from-blue-50/70 via-sky-50/50 to-blue-50/70 p-6 md:p-8 rounded-2xl border border-dashed border-blue-300 text-center space-y-3">
-          <div className="w-14 h-14 mx-auto rounded-2xl bg-white shadow-xs border border-blue-200 flex items-center justify-center text-3xl">
-            {filters.model === 'Ultrasonic'
-              ? '🔊'
-              : (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid')
-              ? '🚰'
-              : filters.model === 'MIU'
-              ? '📟'
-              : '💧'}
+          <div className="w-14 h-14 mx-auto rounded-2xl bg-white shadow-xs border border-blue-200 flex items-center justify-center">
+            <ModelIcon model={filters.model} size="xl" />
           </div>
           <div>
             <h3 className="text-base font-bold text-slate-900">

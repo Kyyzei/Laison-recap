@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Device, ConnectionType, DeviceStatus, DEVICE_STATUS_LIST, WarehousePosition, DeviceModel } from '../../types/device';
 import { useDevices } from '../../context/DeviceContext';
 import { X, Check, Calendar } from 'lucide-react';
+import { ModelIcon } from '../common/ModelIcon';
 
 interface DeviceFormModalProps {
   isOpen: boolean;
@@ -168,7 +169,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                 }`}
               >
-                <span>💧</span>
+                <ModelIcon model="AquaLink" isActive={model === 'AquaLink'} size="sm" />
                 <span>AquaLink</span>
               </button>
 
@@ -181,7 +182,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                 }`}
               >
-                <span>🔊</span>
+                <ModelIcon model="Ultrasonic" isActive={model === 'Ultrasonic'} size="sm" />
                 <span>Ultrasonic</span>
               </button>
 
@@ -194,7 +195,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                 }`}
               >
-                <span>🚰</span>
+                <ModelIcon model="Hybrid" isActive={model === 'Hybrid' || model === 'Smart Meter Hybrid'} size="sm" />
                 <span>Hybrid</span>
               </button>
 
@@ -207,7 +208,7 @@ export const DeviceFormModal: React.FC<DeviceFormModalProps> = ({
                     : 'bg-slate-50 text-slate-700 border-slate-200 hover:bg-slate-100'
                 }`}
               >
-                <span>📟</span>
+                <ModelIcon model="MIU" isActive={model === 'MIU'} size="sm" />
                 <span>MIU</span>
               </button>
             </div>

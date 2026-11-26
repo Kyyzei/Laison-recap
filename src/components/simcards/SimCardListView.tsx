@@ -7,6 +7,7 @@ import { PairDeviceModal } from './PairDeviceModal';
 import { ConfirmModal } from '../common/ConfirmModal';
 import { Pagination } from '../common/Pagination';
 import { ExcelExportService } from '../../services/excel/excelExportService';
+import { ModelIcon } from '../common/ModelIcon';
 import {
   CardSim,
   Plus,
@@ -441,7 +442,7 @@ export const SimCardListView: React.FC = () => {
                             className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-lg bg-blue-50/80 hover:bg-blue-100 text-blue-900 border border-blue-200/80 transition-colors text-xs font-semibold cursor-pointer group"
                             title="Klik untuk membuka detail perangkat AquaLink ini"
                           >
-                            <span>💧</span>
+                            <ModelIcon model={sim.deviceModel || 'AquaLink'} size="xs" />
                             <span className="font-mono">{sim.deviceSeri}</span>
                             <ArrowRight className="w-3 h-3 text-blue-400 group-hover:translate-x-0.5 transition-transform" />
                           </button>

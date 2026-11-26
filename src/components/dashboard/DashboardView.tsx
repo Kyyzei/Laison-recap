@@ -22,6 +22,7 @@ import {
 } from 'lucide-react';
 import { ExcelExportService } from '../../services/excel/excelExportService';
 import { useSimCards } from '../../context/SimCardContext';
+import { ModelIcon } from '../common/ModelIcon';
 
 export const DashboardView: React.FC = () => {
   const { devices, stats, setFilters, setIsCreateModalOpen, refreshDevices, openWarehouseModal } = useDevices();
@@ -216,8 +217,8 @@ export const DashboardView: React.FC = () => {
             className="p-4 rounded-xl border border-blue-200 bg-gradient-to-br from-blue-50/60 to-white hover:border-blue-400 hover:shadow-xs transition-all cursor-pointer group"
           >
             <div className="flex items-center justify-between mb-2">
-              <div className="w-9 h-9 rounded-lg bg-blue-100 text-blue-900 flex items-center justify-center text-xl">
-                💧
+              <div className="w-9 h-9 rounded-lg bg-sky-100 flex items-center justify-center">
+                <ModelIcon model="AquaLink" size="lg" />
               </div>
               <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-blue-100 text-blue-900">
                 {stats.aqualink} unit
@@ -241,8 +242,8 @@ export const DashboardView: React.FC = () => {
             className="p-4 rounded-xl border border-purple-200 bg-gradient-to-br from-purple-50/60 to-white hover:border-purple-400 hover:shadow-xs transition-all cursor-pointer group"
           >
             <div className="flex items-center justify-between mb-2">
-              <div className="w-9 h-9 rounded-lg bg-purple-100 text-purple-900 flex items-center justify-center text-xl">
-                🔊
+              <div className="w-9 h-9 rounded-lg bg-violet-100 flex items-center justify-center">
+                <ModelIcon model="Ultrasonic" size="lg" />
               </div>
               <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-purple-100 text-purple-900">
                 {stats.ultrasonic} unit
@@ -266,8 +267,8 @@ export const DashboardView: React.FC = () => {
             className="p-4 rounded-xl border border-cyan-200 bg-gradient-to-br from-cyan-50/60 to-white hover:border-cyan-400 hover:shadow-xs transition-all cursor-pointer group"
           >
             <div className="flex items-center justify-between mb-2">
-              <div className="w-9 h-9 rounded-lg bg-cyan-100 text-cyan-900 flex items-center justify-center text-xl">
-                🚰
+              <div className="w-9 h-9 rounded-lg bg-cyan-100 flex items-center justify-center">
+                <ModelIcon model="Hybrid" size="lg" />
               </div>
               <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-cyan-100 text-cyan-900">
                 {stats.hybrid} unit
@@ -291,8 +292,8 @@ export const DashboardView: React.FC = () => {
             className="p-4 rounded-xl border border-emerald-200 bg-gradient-to-br from-emerald-50/60 to-white hover:border-emerald-400 hover:shadow-xs transition-all cursor-pointer group"
           >
             <div className="flex items-center justify-between mb-2">
-              <div className="w-9 h-9 rounded-lg bg-emerald-100 text-emerald-900 flex items-center justify-center text-xl">
-                📟
+              <div className="w-9 h-9 rounded-lg bg-emerald-100 flex items-center justify-center">
+                <ModelIcon model="MIU" size="lg" />
               </div>
               <span className="text-xs font-bold px-2 py-0.5 rounded-full bg-emerald-100 text-emerald-900">
                 {stats.miu} unit

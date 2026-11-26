@@ -1,6 +1,7 @@
 import React from 'react';
 import { Device, SortField, getDeviceWarehouseStatus, getDeviceModel } from '../../types/device';
 import { StatusBadge } from '../common/StatusBadge';
+import { ModelIcon } from '../common/ModelIcon';
 import { useDevices } from '../../context/DeviceContext';
 import {
   ArrowUpDown,
@@ -189,7 +190,7 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
                       </button>
                       {filters.model === 'ALL' && (
                         <span
-                          className={`text-[9px] font-sans font-bold px-1.5 py-0.2 rounded ${
+                          className={`inline-flex items-center gap-1 w-fit text-[9px] font-sans font-bold px-1.5 py-0.5 rounded ${
                             getDeviceModel(d) === 'AquaLink'
                               ? 'bg-blue-100 text-blue-800'
                               : getDeviceModel(d) === 'Ultrasonic'
@@ -199,13 +200,16 @@ export const DeviceTable: React.FC<DeviceTableProps> = ({
                               : 'bg-emerald-100 text-emerald-800'
                           }`}
                         >
-                          {getDeviceModel(d) === 'AquaLink'
-                            ? '💧 AquaLink'
-                            : getDeviceModel(d) === 'Ultrasonic'
-                            ? '🔊 Ultrasonic'
-                            : getDeviceModel(d) === 'Hybrid' || getDeviceModel(d) === 'Smart Meter Hybrid'
-                            ? '🚰 Hybrid'
-                            : '📟 MIU'}
+                          <ModelIcon model={getDeviceModel(d)} size="xs" />
+                          <span>
+                            {getDeviceModel(d) === 'AquaLink'
+                              ? 'AquaLink'
+                              : getDeviceModel(d) === 'Ultrasonic'
+                              ? 'Ultrasonic'
+                              : getDeviceModel(d) === 'Hybrid' || getDeviceModel(d) === 'Smart Meter Hybrid'
+                              ? 'Hybrid'
+                              : 'MIU'}
+                          </span>
                         </span>
                       )}
                     </div>

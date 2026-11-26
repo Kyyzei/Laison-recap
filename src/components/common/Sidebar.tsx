@@ -2,7 +2,6 @@ import React from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import {
   LayoutDashboard,
-  Cpu,
   FileSpreadsheet,
   Database,
   Settings,
@@ -16,6 +15,7 @@ import { useSimCards } from '../../context/SimCardContext';
 import { useAuth } from '../../context/AuthContext';
 import { DeviceModel } from '../../types/device';
 import { LAISON_LOGO_DATA_URI } from '../../assets/logo';
+import { ModelIcon } from './ModelIcon';
 
 interface SidebarProps {
   isMobileOpen: boolean;
@@ -95,8 +95,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <div className="flex items-center gap-2">
-                <span className="text-sm">💧</span>
+              <div className="flex items-center gap-2.5">
+                <ModelIcon model="AquaLink" isActive={isDevicesPage && filters.model === 'AquaLink'} size="md" />
                 <span>AquaLink</span>
               </div>
               <span
@@ -119,8 +119,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <div className="flex items-center gap-2">
-                <span className="text-sm">🔊</span>
+              <div className="flex items-center gap-2.5">
+                <ModelIcon model="Ultrasonic" isActive={isDevicesPage && filters.model === 'Ultrasonic'} size="md" />
                 <span>Ultrasonic</span>
               </div>
               <span
@@ -143,8 +143,12 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <div className="flex items-center gap-2">
-                <span className="text-sm">🚰</span>
+              <div className="flex items-center gap-2.5">
+                <ModelIcon
+                  model="Hybrid"
+                  isActive={isDevicesPage && (filters.model === 'Hybrid' || filters.model === 'Smart Meter Hybrid')}
+                  size="md"
+                />
                 <span className="truncate">Hybrid</span>
               </div>
               <span
@@ -167,8 +171,8 @@ export const Sidebar: React.FC<SidebarProps> = ({
                   : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <div className="flex items-center gap-2">
-                <span className="text-sm">📟</span>
+              <div className="flex items-center gap-2.5">
+                <ModelIcon model="MIU" isActive={isDevicesPage && filters.model === 'MIU'} size="md" />
                 <span className="truncate">MIU (Interface Unit)</span>
               </div>
               <span
@@ -185,17 +189,23 @@ export const Sidebar: React.FC<SidebarProps> = ({
             {/* Semua Model */}
             <button
               onClick={() => handleSelectModel('ALL')}
-              className={`w-full flex items-center justify-between px-3 py-1.5 rounded-lg text-xs transition-colors cursor-pointer ${
+              className={`w-full flex items-center justify-between px-3 py-2 rounded-lg text-xs font-medium transition-colors cursor-pointer ${
                 isDevicesPage && filters.model === 'ALL'
-                  ? 'bg-slate-800 text-white font-semibold'
-                  : 'text-slate-500 hover:bg-slate-100 hover:text-slate-800'
+                  ? 'bg-slate-800 text-white font-semibold shadow-xs'
+                  : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'
               }`}
             >
-              <div className="flex items-center gap-2">
-                <Cpu className="w-3.5 h-3.5 text-slate-400" />
+              <div className="flex items-center gap-2.5">
+                <ModelIcon model="ALL" isActive={isDevicesPage && filters.model === 'ALL'} size="md" />
                 <span>Semua Perangkat</span>
               </div>
-              <span className="text-[10px] px-1.5 py-0.2 rounded-full bg-slate-100 text-slate-600 font-semibold">
+              <span
+                className={`text-[10px] px-2 py-0.5 rounded-full font-bold ${
+                  isDevicesPage && filters.model === 'ALL'
+                    ? 'bg-slate-700 text-white'
+                    : 'bg-slate-100 text-slate-600'
+                }`}
+              >
                 {stats.total}
               </span>
             </button>
@@ -218,7 +228,10 @@ export const Sidebar: React.FC<SidebarProps> = ({
               }`}
             >
               <div className="flex items-center gap-2.5">
-                <CardSim className={`w-4 h-4 ${currentPath === 'simcards' ? 'text-sky-300' : 'text-slate-500'}`} />
+                <CardSim
+                  className={`w-4 h-4 shrink-0 ${currentPath === 'simcards' ? 'text-rose-300' : 'text-rose-500'}`}
+                  strokeWidth={2}
+                />
                 <span>Stok SIM Card</span>
               </div>
               <div className="flex items-center gap-1">
