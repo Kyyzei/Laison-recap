@@ -8,19 +8,19 @@ export class ExcelImportService {
   private static normalizeKey(header: string): string {
     const clean = header.trim().toLowerCase().replace(/[^a-z0-9]/g, '');
     if (['no', 'nomor'].includes(clean)) return 'no';
-    if (['model', 'modeldevice', 'kategori', 'kategoriperangkat', 'device'].includes(clean)) return 'model';
-    if (['seri', 'serial', 'serialnumber', 'noseri'].includes(clean)) return 'seri';
-    if (['koneksi', 'connection', 'tipe'].includes(clean)) return 'koneksi';
+    if (['model', 'modeldevice', 'kategori', 'kategoriperangkat', 'kategorimodel', 'device'].includes(clean)) return 'model';
+    if (['seri', 'serial', 'serialnumber', 'noseri', 'nomorseri'].includes(clean)) return 'seri';
+    if (['koneksi', 'connection', 'tipe', 'tipekoneksi'].includes(clean)) return 'koneksi';
     if (['readaddress', 'readaddr', 'address'].includes(clean)) return 'readAddress';
     if (['deveui', 'deveuiimei', 'deveuinosim'].includes(clean)) return 'devEuiOrSim';
-    if (['nosim', 'sim', 'simcard'].includes(clean)) return 'noSim';
+    if (['nosim', 'sim', 'simcard', 'nomorsim', 'nomorsimcard'].includes(clean)) return 'noSim';
     if (['operatorsim', 'providersim', 'provider', 'operator', 'providersimcard'].includes(clean)) return 'operatorSim';
     if (['appeui', 'appeuiapnband', 'apnband', 'apn'].includes(clean)) return 'appEuiOrApn';
     if (['devaddr'].includes(clean)) return 'devAddr';
     if (['appkey'].includes(clean)) return 'appKey';
-    if (['ip', 'ip1ip2', 'serverip'].includes(clean)) return 'ip';
+    if (['ip', 'ip1ip2', 'serverip', 'ipserver'].includes(clean)) return 'ip';
     if (['status'].includes(clean)) return 'status';
-    if (['lokasi', 'location'].includes(clean)) return 'lokasi';
+    if (['lokasi', 'location', 'lokasipenempatan'].includes(clean)) return 'lokasi';
     if (['catatan', 'notes', 'keterangan'].includes(clean)) return 'catatan';
     if (['tglkeluar', 'tanggalkeluar', 'outdate'].includes(clean)) return 'tanggalKeluar';
     if (['tglkembali', 'tanggalkembali', 'indate', 'returndate'].includes(clean)) return 'tanggalKembali';
@@ -28,6 +28,11 @@ export class ExcelImportService {
     if (['pic', 'teknisi', 'picpembawa', 'penerima', 'picteknisi'].includes(clean)) return 'penerimaKeluar';
     if (['keperluan', 'alasan', 'purpose'].includes(clean)) return 'keperluanKeluar';
     return clean;
+  }
+
+  private static cleanCellValue(val: any): string {
+    const s = typeof val === 'string' ? val.trim() : String(val ?? '').trim();
+    return s === '-' ? '' : s;
   }
 
   static async parseFile(file: File): Promise<ImportSummary> {
@@ -43,7 +48,22 @@ export class ExcelImportService {
           if (!firstSheet) throw new Error('File tidak memiliki sheet data.');
 
           const worksheet = workbook.Sheets[firstSheet];
-          const rawRows: Record<string, any>[] = XLSX.utils.sheet_to_json(worksheet, { defval: '' });
+          const aoa: any[][] = XLSX.utils.sheet_to_json(worksheet, { header: 1, defval: '' });
+
+          // Auto-detect header row (mendukung file hasil export dengan judul banner di baris atas)
+          let headerRowIdx = 0;
+          for (let r = 0; r < Math.min(aoa.length, 20); r++) {
+            const normHeaders = (aoa[r] || []).map((cell) => this.normalizeKey(String(cell || '')));
+            if (normHeaders.includes('seri') && (normHeaders.includes('koneksi') || normHeaders.includes('status') || normHeaders.includes('model'))) {
+              headerRowIdx = r;
+              break;
+            }
+          }
+
+          const rawRows: Record<string, any>[] = XLSX.utils.sheet_to_json(worksheet, {
+            range: headerRowIdx,
+            defval: '',
+          });
 
           if (!rawRows || rawRows.length === 0) {
             throw new Error('File Excel / CSV kosong.');
@@ -58,10 +78,16 @@ export class ExcelImportService {
             const mapped: Record<string, any> = {};
             for (const [key, val] of Object.entries(row)) {
               const normKey = this.normalizeKey(key);
-              mapped[normKey] = typeof val === 'string' ? val.trim() : String(val);
+              mapped[normKey] = this.cleanCellValue(val);
             }
 
-            const rowNumber = idx + 2;
+            // Lewati baris kosong atau baris pemisah kategori (misal: "▸ KATEGORI AQUALINK...")
+            const firstColRaw = String(Object.values(row)[0] || '').trim();
+            if (firstColRaw.startsWith('▸') || (!mapped.seri && !mapped.koneksi && !mapped.status && !mapped.model)) {
+              return;
+            }
+
+            const rowNumber = headerRowIdx + idx + 2;
             const errors: string[] = [];
             const warnings: string[] = [];
 

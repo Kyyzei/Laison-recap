@@ -86,7 +86,7 @@ export const ImportExportView: React.FC = () => {
   };
 
   // Handle Export
-  const handleExecuteExport = () => {
+  const handleExecuteExport = async () => {
     const targetData = exportScope === 'all' ? devices : filteredDevices;
 
     if (targetData.length === 0) {
@@ -95,7 +95,7 @@ export const ImportExportView: React.FC = () => {
     }
 
     const filename = customFilename.trim() || undefined;
-    ExcelExportService.exportDevices(targetData, {
+    await ExcelExportService.exportDevices(targetData, {
       filename,
       format: exportFormat,
     });
